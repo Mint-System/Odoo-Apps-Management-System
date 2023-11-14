@@ -1,0 +1,4 @@
+<odoo> 
+  <!-- Main Menu -->
+  <menuitem id="menu_mgmt" name="Management" /> 
+</odoo>

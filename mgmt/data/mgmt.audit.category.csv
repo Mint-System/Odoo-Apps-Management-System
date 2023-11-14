@@ -1,0 +1,7 @@
+id,name
+mgmt_audit_category_1,System-Audit
+mgmt_audit_category_2,Prozess-Audit
+mgmt_audit_category_3,Produkt-Audit
+mgmt_audit_category_4,Lieferanten-Audit
+mgmt_audit_category_5,Desktop-Audit
+mgmt_audit_category_6,Spot checks

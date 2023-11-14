@@ -1,0 +1,35 @@
+<odoo> 
+  
+  <menuitem id="menu_mgmt_configuration" 
+    name="Configuration"
+    sequence="60"
+    parent="menu_mgmt"   
+  />
+  
+  <record id="action_mgmt_audit_category" model=
+    "ir.actions.act_window">
+    <field name="name">Categories</field>
+    <field name="res_model">mgmt.audit.category</field>
+    <field name="view_mode">tree,form</field>
+  </record>  
+
+  <menuitem id="menu_mgmt_audit_category" 
+    name="Categories" 
+    parent="menu_mgmt_configuration"
+    action="action_mgmt_audit_category"
+  />
+ 
+  <record id="action_mgmt_audit_type" model=
+    "ir.actions.act_window">
+    <field name="name">Types</field>
+    <field name="res_model">mgmt.audit.type</field>
+    <field name="view_mode">tree,form</field>
+  </record>  
+
+  <menuitem id="menu_mgmt_audit_type" 
+    name="Types" 
+    parent="menu_mgmt_configuration"
+    action="action_mgmt_audit_type"
+  />
+
+</odoo>

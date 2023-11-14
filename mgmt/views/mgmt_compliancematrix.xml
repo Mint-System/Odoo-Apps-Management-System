@@ -1,0 +1,55 @@
+<odoo>
+
+  <record id="view_tree_mgmt_compliancematrix" model="ir.ui.view">
+    <field name="name">Compliancematrix Tree</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="requirement_description"/>
+        <field string="Statement" name="description"/>
+        <field name="document_id"/>
+        <field name="audit_name"/>
+        <field name="audit_category_id" />
+      </tree>
+    </field>
+  </record>
+  <record id="view_form_mgmt_compliancematrix" model="ir.ui.view">
+    <field name="name">Compliancematrix Form</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <form>
+        <header>
+
+        </header>
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name"/>
+            </h1>
+          </div>
+          <group name="compliancematrix_header">
+            <group name="compliancematrix_details">
+              <field name="description"/>
+              <field name="requirement_id"/>
+              <field name="document_id"/>
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_search_mgmt_compliancematrix" model="ir.ui.view">
+    <field name="name">Compliancematrix Search</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name"/>
+        <field name="document_id"/>
+        <field name="audit_category_id"/>
+        <filter name="filter_category_desktop" string="Desktop-Audit" domain="[('audit_category_id','=',5)]" context="{'default_filter_category_desktop': 1}"/>
+      </search>
+    </field>
+  </record>
+
+</odoo>

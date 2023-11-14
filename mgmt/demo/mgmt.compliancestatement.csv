@@ -1,0 +1,4 @@
+id,name,description,document_id/id,audit_ids/id
+mgmt_compliancestatement_1,Zertifikat vorhanden,«Aviation Experts» haben ein gültiges Zertifikat nach EN 9100 : 2003,mgmt_document_4,mgmt_audit_2
+mgmt_compliancestatement_2,Drei Stichproben erfolgreich,"Die Produkte ""AD 224 Power Supply"", ""332-1 Bolzen"" und ""KK-328 Loctite"" der Lieferung PO00342 wurden als Stichprobe ausgewählt. Die QS-Prüfung wurde konform zur RL 312 durchgeführt.",mgmt_document_1,mgmt_audit_1
+mgmt_compliancestatement_3,Fähigkeitsausweis vorhanden,Die QS-Prüfer konnten einen gültigen Fähigkeitsausweis vorlegen.,mgmt_document_3,mgmt_audit_1

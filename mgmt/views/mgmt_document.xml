@@ -1,0 +1,17 @@
+<odoo> 
+  
+  <record id="action_mgmt_document" model=
+    "ir.actions.act_window">
+    <field name="name">Documents</field>
+    <field name="res_model">mgmt.document</field>
+    <field name="view_mode">tree,form</field>
+  </record>   
+
+  <menuitem id="menu_mgmt_document" 
+    name="Documents"
+    sequence="30"
+    parent="menu_mgmt"
+    action="action_mgmt_document"
+  />
+
+</odoo>

@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mgmt_1,ManagementUser,mgmt.model_mgmt_audit,base.group_user,1,1,1,1
+access_mgmt_2,ManagementManager,mgmt.model_mgmt_audit,base.group_user,1,1,1,1
+access_mgmt_3,ManagementUser,mgmt.model_mgmt_audit_category,base.group_user,1,1,1,1
+access_mgmt_4,ManagementManager,mgmt.model_mgmt_audit_category,base.group_user,1,1,1,1
+access_mgmt_5,ManagementUser,mgmt.model_mgmt_audit_type,base.group_user,1,1,1,1
+access_mgmt_6,ManagementManager,mgmt.model_mgmt_audit_type,base.group_user,1,1,1,1
+access_mgmt_7,ManagementUser,mgmt.model_mgmt_requirement,base.group_user,1,1,1,1
+access_mgmt_8,ManagementManager,mgmt.model_mgmt_requirement,base.group_user,1,1,1,1
+access_mgmt_9,ManagementUser,mgmt.model_mgmt_document,base.group_user,1,1,1,1
+access_mgmt_10,ManagementManager,mgmt.model_mgmt_document,base.group_user,1,1,1,1
+access_mgmt_11,ManagementUser,mgmt.model_mgmt_compliancestatement,base.group_user,1,1,1,1
+access_mgmt_12,ManagementManager,mgmt.model_mgmt_compliancestatement,base.group_user,1,1,1,1
+access_mgmt_13,ManagementUser,mgmt.model_mgmt_nonconformity,base.group_user,1,1,1,1
+access_mgmt_14,ManagementManager,mgmt.model_mgmt_nonconformity,base.group_user,1,1,1,1

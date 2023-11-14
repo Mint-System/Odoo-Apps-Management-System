@@ -1,0 +1,18 @@
+<odoo>
+
+  <record id="view_tree_mgmt_compliancestatement" model="ir.ui.view">
+    <field name="name">Compliancestatement Tree</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <tree>
+       <field name="id"/>
+       <field name="requirement_description"/>
+        <field string="Statement" name="description"/>
+        <field name="document_id"/>
+        <field name="audit_name"/>
+        <field name="audit_category_id" />
+      </tree>
+    </field>
+  </record>
+  
+</odoo>

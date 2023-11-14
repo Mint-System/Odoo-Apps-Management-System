@@ -1,0 +1,102 @@
+id,name,description
+mgmt_requirement_1,QMS etablieren,"Die Organisation muss ein Qualitätsmanagementsystem aufbauen, dokumentieren und verwirklichen."
+mgmt_requirement_2,QMS aufrechterhalten,Die Organisation muss ein Qualitätsmanagementsystem aufrechterhalten. 
+mgmt_requirement_3,QMS ständig verbessern,Die Organisation muss die Wirksamkeit des Qualitätsmanagementsystems ständig verbessern.
+mgmt_requirement_4,Im Kundenanforderungen berücksichtigen,Das Qualitätsmanagementsystem muss Kundenanforderungen ansprechen.
+mgmt_requirement_5,Im QMS Gesetze berücksichtigen,Das Qualitätsmanagementsystem muss anwendbare gesetzliche Anforderungen ansprechen.
+mgmt_requirement_6,Im QMS Behördenvorgaben berücksichtigen,Das Qualitätsmanagementsystem muss anwendbare behördliche Anforderungen ansprechen.
+mgmt_requirement_7,7,Die Organisation muss die für das Qualitätsmanagementsystem erforderlichen Prozesse und ihre Anwendung in der gesamten Organisation festlegen (siehe EN 9100 Absatz 1.2).
+mgmt_requirement_8,8,"Das Qualitätsmanagementsystem von RTW muss, abhängig von den Tätigkeiten, die Anforderungen von EN/AS/JISQ 9100/9110/9120 erfüllen."
+mgmt_requirement_9,9,Die Organisation muss die Entwicklung des Produkts planen.
+mgmt_requirement_10,10,Die Organisation muss die Entwicklung des Produkts lenken.
+mgmt_requirement_11,11,Bei der Entwicklungsplanung muss die Organisation die Entwicklungsphasen festlegen.
+mgmt_requirement_12,12,Bei der Entwicklungsplanung muss die Organisation für jede Entwicklungsphase die angemessene Bewertung festlegen.
+mgmt_requirement_13,13,Bei der Entwicklungsplanung muss die Organisation für jede Entwicklungsphase die angemessene Verifizierung festlegen.
+mgmt_requirement_14,14,Bei der Entwicklungsplanung muss die Organisation für jede Entwicklungsphase die angemessene Validierung festlegen.
+mgmt_requirement_15,15,Bei der Entwicklungsplanung muss die Organisation die Verantwortungen und Befugnisse für die Entwicklung festlegen.
+mgmt_requirement_16,16,"Soweit angemessen, muss die Organisation die Entwicklungsleistung in verschiedene Tätigkeiten unterteilen und für jede Tätigkeit die Aufgaben, die notwendigen Ressourcen, Verantwortlichkeiten, den Entwicklungsinhalt, die Eingangs- und Ausgangsdaten sowie Randbedingungen für die Planung definieren."
+mgmt_requirement_17,17,Die auszuführenden unterschiedlichen Entwicklungsaufgaben müssen auf den Sicherheits- und Funktionszielen des Produkts in Übereinstimmung mit den Kundenanforderungen und den gesetzlichen sowie behördlichen Anforderungen beruhen.
+mgmt_requirement_18,18,"Die Entwicklungsplanung muss die Fähigkeit zur Herstellung, Untersuchung, Prüfung und Instandhaltung des Produkts einbeziehen."
+mgmt_requirement_19,19,"Die Organisation muss die Schnittstellen zwischen den verschiedenen an der Entwicklung beteiligten Gruppen leiten und lenken, um eine wirksame Kommunikation und eine klare Zuordnung der Verantwortung sicherzustellen."
+mgmt_requirement_20,20,"Das Ergebnis der Planung muss, soweit angemessen, mit dem Fortschreiten der Entwicklung aktualisiert werden."
+mgmt_requirement_21,21,Eingaben in Bezug auf die Produktanforderungen müssen ermittelt und  aufgezeichnet werden (siehe EN 9100 4.2.4).
+mgmt_requirement_22,22,Die Eingaben in Bezug auf die Produktanforderungen müssen Funktions- und Leistungsanforderungen enthalten.
+mgmt_requirement_23,23,Die Eingaben in Bezug auf die Produktanforderungen müssen zutreffende gesetzliche und behördliche Anforderungen enthalten.
+mgmt_requirement_24,24,"Die Eingaben in Bezug auf die Produktanforderungen müssen (wo zutreffend) Informationen, die aus früheren ähnlichen Entwicklungen abgeleitet wurden enthalten."
+mgmt_requirement_25,25,Die Eingaben in Bezug auf die Produktanforderungen müssen alle für die Entwicklung wesentlichen Anforderungen enthalten.
+mgmt_requirement_26,26,Die Eingaben in Bezug auf die Produktanforderungen müssen auf Angemessenheit bewertet werden.
+mgmt_requirement_27,27,Anforderungen müssen vollständig und eindeutig sein und dürfen einander nicht widersprechen.
+mgmt_requirement_28,28,"Die Entwicklungsergebnisse müssen eine Form haben, die für die Verifizierung gegenüber den Entwicklungseingaben geeignet ist."
+mgmt_requirement_29,29,Die Entwicklungsergebnisse vor der Freigabe genehmigt werden.
+mgmt_requirement_30,30,Entwicklungsergebnisse müssen die Entwicklungsvorgaben erfüllen.
+mgmt_requirement_31,31,"Entwicklungsergebnisse müssen angemessene Informationen für die  Beschaffung, Produktion und Dienstleistungserbringung bereitstellen."
+mgmt_requirement_32,32,Entwicklungsergebnisse müssen Annahmekriterien für das Produkt enthalten oder darauf verweisen.
+mgmt_requirement_33,33,"Entwicklungsergebnisse müssen die Merkmale des Produktes festlegen, die für einen sicheren und bestimmungsgemässen Gebrauch wesentlich sind."
+mgmt_requirement_34,34,"Entwicklungsergebnisse müssen (soweit zutreffend) mögliche kritische Einheiten, einschliesslich Schlüsselmerkmalen, sowie besondere
+Massnahmen festlegen, die für diese Einheiten ergriffen werden müssen."
+mgmt_requirement_35,35,"Die Organisation muss die Daten bestimmen, die die Identifizierung, Fertigung, Prüfung, Verwendung und Instandhaltung des Produktes ermöglichen."
+mgmt_requirement_36,36,"Die Organisation muss die Zeichnungen, Teilelisten und Spezifikationen, die zum Festlegen der Konfiguration und der Entwicklungsmerkmale des Produkts notwendig sind, bestimmen."
+mgmt_requirement_37,37,"Die Organisation muss die erforderlichen Angaben zu Material, Prozessen, Fertigung und Zusammenbau, um die Konformität des Produktes sicherzustellen, bestimmen."
+mgmt_requirement_38,38,"In geeigneten Phasen müssen systematische Entwicklungsbewertungen gemäss geplanten Regelungen (siehe EN 9100 7.3.1) durchgeführt werden, um  die Fähigkeit der Entwicklungsergebnisse zur Erfüllung der Anforderungen zu beurteilen."
+mgmt_requirement_39,39,"In geeigneten Phasen müssen systematische Entwicklungsbewertungen gemäss geplanten Regelungen (siehe EN 9100 7.3.1) durchgeführt werden, um jegliche Probleme zu erkennen und notwendige Massnahmen vorzuschlagen."
+mgmt_requirement_40,40,"In geeigneten Phasen müssen systematische Entwicklungsbewertungen gemäss geplanten Regelungen (siehe EN 9100 7.3.1) durchgeführt werden, um den Übergang zur nächsten Phase zu genehmigen."
+mgmt_requirement_41,41,"Zu den Teilnehmern an Entwicklungsbewertungen (siehe EN 9100 7.3.4) müssen die Vertreter der Funktionsbereiche gehören, die von der bewerteten Entwicklungsphase oder den bewerteten Entwicklungsphasen betroffen sind."
+mgmt_requirement_42,42,Es müssen Aufzeichnungen über die Ergebnisse der Bewertungen (siehe EN 9100 7.3.4) und über notwendige Massnahmen müssen geführt werden (siehe EN 9100 4.2.4).
+mgmt_requirement_43,43,"Eine Verifizierung muss gemäss geplanten Regelungen (siehe EN 9100 7.3.1) durchgeführt werden, um sicherzustellen, dass die Entwicklungsergebnisse die Entwicklungsvorgaben erfüllen."
+mgmt_requirement_44,44,Es müssen Aufzeichnungen über die Ergebnisse der Verifizierung und über notwendige Massnahmen müssen geführt werden (siehe EN 9100 4.2.4).
+mgmt_requirement_45,45,"Eine Entwicklungsvalidierung muss gemäss geplanten Regelungen (siehe EN 9100 7.3.1) durchgeführt werden, um sicherzustellen, dass das resultierende Produkt in der Lage ist, die Anforderungen für die festgelegte Anwendung oder den beabsichtigten Gebrauch, soweit bekannt, zu erfüllen."
+mgmt_requirement_46,46,"Wenn möglich, muss die Validierung vor Auslieferung oder Einführung des Produkts abgeschlossen werden."
+mgmt_requirement_47,47,Aufzeichnungen über die Ergebnisse der Validierung und über notwendige Massnahmen müssen geführt werden (siehe EN 9100 4.2.4).
+mgmt_requirement_48,48,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass in den Testplänen oder Spezifikationen das zu prüfende Produkt und die zu verwendenden Mittel angegeben sind."
+mgmt_requirement_49,49,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass in den Testplänen oder Spezifikationen die Zielsetzungen und Bedingungen der Tests, die aufzuzeichnenden Parameter und jeweiligen Annahmekriterien festgelegt sind."
+mgmt_requirement_50,50,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass in den Testanweisungen die Einsatzmethode, die Durchführung der Tests und die Aufzeichnung der Ergebnisse beschrieben sind."
+mgmt_requirement_51,51,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass die korrekte Konfiguration des Produktes zum Test vorgelegt wird."
+mgmt_requirement_52,52,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass die Anforderungen des Testplans und der Testanweisungen eingehalten werden."
+mgmt_requirement_53,53,"Sind Tests für die Verifizierung und Validierung notwendig, müssen diese geplant, gelenkt, bewertet und dokumentiert werden, um sicherzustellen und nachzuweisen, dass die Annahmekriterien werden erfüllt."
+mgmt_requirement_54,54,"Nach abgeschlossener Entwicklung muss die Organisation sicherstellen, dass Berichte, Berechnungen, Testergebnisse usw. aufzeigen, dass die Produktdefinition die Anforderungen aus der Spezifikation für alle festgelegten Einsatzbedingungen erfüllt."
+mgmt_requirement_55,55,Entwicklungsänderungen müssen gekennzeichnet und aufgezeichnet werden.
+mgmt_requirement_56,56,"Entwicklungsänderungen müssen, soweit angemessen, bewertet, verifiziert und validiert sowie vor ihrer Einführung genehmigt werden."
+mgmt_requirement_57,57,Die Bewertung der Entwicklungsänderungen muss die Beurteilung der Auswirkungen der Änderungen auf Bestandteile und auf bereits gelieferte Produkte einschliessen.
+mgmt_requirement_58,58,Es müssen Aufzeichnungen über die Ergebnisse der Bewertung der Entwicklungsänderungen und über notwendige Massnahmen geführt werden (siehe EN 9100 4.2.4).
+mgmt_requirement_59,59,Entwicklungsänderungen sind in Übereinstimmung mit dem Konfigurationsmanagementprozess zu lenken (siehe EN 9100 7.1.3).
+mgmt_requirement_60,60,"Die Organisation muss die Prozesse planen und entwickeln, die für die Produktrealisierung erforderlich sind."
+mgmt_requirement_61,61,Die Planung der Produktrealisierung muss mit den Anforderungen der anderen Prozesse des Qualitätsmanagementsystems im Einklang stehen (siehe EN 9100 4.1).
+mgmt_requirement_62,62,"Bei der Planung der Produktrealisierung muss die Organisation, soweit angemessen Qualitätsziele und Anforderungen an das Produkt festlegen."
+mgmt_requirement_63,63,Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigung der Produktsicherheit und Persönlichen Sicherheit einschliessen.
+mgmt_requirement_64,64,"Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigung der Zuverlässigkeit, Verfügbarkeit und Instandhaltbarkeit einschliessen."
+mgmt_requirement_65,65,Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigung die Herstellbarkeit und Prüfbarkeit einschliessen.
+mgmt_requirement_66,66,Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigung der Eignung der in dem Produkt verwendeten Teile und Werkstoffe einschliessen.
+mgmt_requirement_67,67,Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigungder der Auswahl und Entwicklung der integrierten Software einschliessen.
+mgmt_requirement_68,68,Die Qualitätsziele und Anforderungen an das Produkt müssen die Berücksichtigung des Recycling oder Entsorgung des Produkts am Ende seiner Lebensdauer einschliessen.
+mgmt_requirement_69,69,"Bei der Planung der Produktrealisierung muss die Organisation, soweit angemessen, die Notwendigkeit Prozesse einzuführen, Dokumente zu erstellen und die produktspezifischen Ressourcen bereitzustellen festlegen."
+mgmt_requirement_70,70,"Die beherrschten Bedingungen für die Produktion und Dienstleistungserbringung müssen die Verfügbarkeit von Arbeitsanweisungen, soweit notwendig, enthalten."
+mgmt_requirement_71,71,Die Organisation muss die Abfolge und Wechselwirkung der Prozesse in der gesamten Organisation festlegen.
+mgmt_requirement_72,72,Die Organisation muss die erforderlichen Kriterien und Methoden für das wirksame Durchführen und Lenken der Prozesse in der gesamten Organisation festlegen.
+mgmt_requirement_73,73,"Die Organisation muss die Verfügbarkeit von Ressourcen und Informationen sicherstellen, die zur Durchführung und Überwachung der Prozesse in der gesamten Organisation benötigt werden."
+mgmt_requirement_74,74,"Die Organisation muss die Prozesse in der gesamten Organisation  überwachen, soweit zutreffend, messen und analysieren."
+mgmt_requirement_75,75,"Die Organisation muss die erforderlichen Massnahmen treffen, um die geplanten Ergebnisse sowie eine ständige Verbesserung der Prozesse in der gesamten Organisation zu erreichen."
+mgmt_requirement_76,76,Die Organisation muss die Prozesse in der gesamten Organisation in Übereinstimmung mit den Anforderungen der Norm EN 9100 leiten und lenken.
+mgmt_requirement_77,77,"Wenn sich eine Organisation dafür entscheidet, einen Prozess auszugliedern, der die Produktkonformität mit den Anforderungen beeinflusst, muss die Organisation die Lenkung derartiger Prozesse sicherstellen."
+mgmt_requirement_78,78,Die Art und der Umfang der Lenkung von ausgegliederten Prozessen müssen im Qualitätsmanagementsystem festgelegt sein.
+mgmt_requirement_79,79,Der Inhalt des Qualitätsmanagementsystems muss vollständig schriftlich erfasst sein.
+mgmt_requirement_80,80,Es muss eindeutig erkennbar sein welche Dokumente Bestandteil des Qualitätsmanagementsystem sind.
+mgmt_requirement_81,81,Alle anwendbaren gesetzlichen Anforderungen müssen identifiziert sein.
+mgmt_requirement_82,82,Die Dokumentation zum Qualitätsmanagementsystem muss eine  dokumentierte Qualitätspolitik enthalten.
+mgmt_requirement_83,83,Die Dokumentation zum Qualitätsmanagementsystem muss dokumentierte Qualitätsziele enthalten.
+mgmt_requirement_84,84,Die Dokumentation zum Qualitätsmanagementsystem muss ein Qualitätsmanagementhandbuch enthalten.
+mgmt_requirement_85,85,"Die Dokumentation zum Qualitätsmanagementsystem muss dokumentierte Verfahren und Aufzeichnungen, die von der EN 9100 gefordert werden, enthalten."
+mgmt_requirement_86,86,"Die Dokumentation zum Qualitätsmanagementsystem muss Dokumente, einschliesslich Aufzeichnungen, die die Organisation zur Sicherstellung der wirksamen Planung, Durchführung und Lenkung ihrer Prozesse als notwendig eingestuft hat, enthalten."
+mgmt_requirement_87,87,"Die Organisation muss sicherstellen, dass das Personal Zugang zur Dokumentation des QM-Systems hat."
+mgmt_requirement_88,88,"Die Organisation muss sicherstellen, dass das Personal Zugang zu Änderungen des QM-Systems hat."
+mgmt_requirement_89,89,"Die Organisation muss sicherstellen, dass das Personal sich der jeweiligen Verfahren bewusst ist."
+mgmt_requirement_90,90,Die Organisation muss ein Qualitätsmanagementhandbuch erstellen und führen.
+mgmt_requirement_91,91,"Das Qualitätsmanagementhandbuch muss den Anwendungsbereich des Qualitätsmanagementsystems, einschliesslich Einzelheiten und Begründungen für jegliche Ausschlüsse (siehe EN 9100 1.2) enthalten."
+mgmt_requirement_92,92,Das Qualitätsmanagementhandbuch muss die für das Qualitätsmanagementsystem erstellten dokumentierten Verfahren oder Verweise darauf enthalten.
+mgmt_requirement_93,93,Das Qualitätsmanagementhandbuch muss eine Beschreibung der Wechselwirkung der Prozesse des Qualitätsmanagementsystems enthalten.
+mgmt_requirement_94,94,Die vom Qualitätsmanagementsystem geforderten Dokumente müssen gelenkt werden.
+mgmt_requirement_95,95,Aufzeichnungen stellen einen besonderen Dokumententyp dar und müssen nach den in EN 9100 4.2.4 genannten Anforderungen gelenkt werden.
+mgmt_requirement_96,96,"Ein dokumentiertes Verfahren zur Festlegung der erforderlichen Lenkungsmassnahmen muss eingeführt werden, um Dokumente bezüglich ihrer Angemessenheit vor ihrer Herausgabe zu genehmigen."
+mgmt_requirement_97,97,"Ein dokumentiertes Verfahren zur Festlegung der erforderlichen Lenkungsmassnahmen muss eingeführt werden, um Dokumente zu bewerten, sie bei Bedarf zu aktualisieren und erneut zu genehmigen."
+mgmt_requirement_98,98,"Ein dokumentiertes Verfahren zur Festlegung der erforderlichen Lenkungsmassnahmen muss eingeführt werden, um sicherzustellen, dass Änderungen und der aktuelle Überarbeitungsstatus von Dokumenten gekennzeichnet werden."
+mgmt_requirement_99,99,"Ein dokumentiertes Verfahren zur Festlegung der erforderlichen Lenkungsmassnahmen muss eingeführt werden um sicherzustellen, dass gültige Fassungen zutreffender Dokumente an den jeweiligen Einsatzorten verfügbar sind."
+mgmt_requirement_100,100,"Ein dokumentiertes Verfahren zur Festlegung der erforderlichen Lenkungsmassnahmen muss eingeführt werden um sicherzustellen, dass Dokumente lesbar und leicht erkennbar bleiben."
