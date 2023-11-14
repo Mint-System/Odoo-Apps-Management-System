@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "Management",
     'summary': """Various functionalities in the context of management""",
