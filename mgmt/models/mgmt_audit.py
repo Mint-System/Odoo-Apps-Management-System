@@ -1,5 +1,6 @@
 from odoo import fields, models
 class Management(models.Model):
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _name = "mgmt.audit"
     _description = "Audit"    
     name = fields.Char("Title", required=True)  
@@ -36,3 +37,5 @@ class Management(models.Model):
       relation="audit_team_member_rel",
       column1="audit_id", 
       column2="partner_id")
+
+          

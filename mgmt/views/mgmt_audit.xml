@@ -1,24 +1,15 @@
 <odoo>
 
-<record id="action_mgmt_audit" model=
+  <record id="action_mgmt_audit" model=
     "ir.actions.act_window">
     <field name="name">Audits</field>
     <field name="res_model">mgmt.audit</field>
     <field name="view_mode">tree,form</field>
-  </record> 
+  </record>
 
-  <menuitem id="menu_mgmt_auditing" 
-    name="Auditing"
-    sequence="10"
-    parent="menu_mgmt"
-    action="action_mgmt_audit"
-  />
+  <menuitem id="menu_mgmt_auditing" name="Auditing" sequence="10" parent="menu_mgmt" action="action_mgmt_audit" />
 
-  <menuitem id="menu_mgmt_audit" 
-    name="Audits" 
-    parent="menu_mgmt_auditing"
-    action="action_mgmt_audit"
-  />
+  <menuitem id="menu_mgmt_audit" name="Audits" parent="menu_mgmt_auditing" action="action_mgmt_audit" />
 
   <record id="view_tree_mgmt_audit" model="ir.ui.view">
     <field name="name">Audit Tree</field>
@@ -93,6 +84,13 @@
           </notebook>
 
         </sheet>
+  
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+
       </form>
 
     </field>

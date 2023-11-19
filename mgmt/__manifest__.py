@@ -6,7 +6,7 @@
     'license': "AGPL-3",
     'category': 'Services/Management',
     'version': "16.0.0.0.1",
-    'depends': ['base'],
+    'depends': ['base', 'mail'],    
     'data': [
         'views/mgmt.xml',
         'views/mgmt_audit.xml',
@@ -16,7 +16,7 @@
         'views/mgmt_configuration.xml',
         'views/mgmt_nonconformity.xml',
         'views/mgmt_compliancematrix.xml',
-        'views/mgmt_regulation_template.xml',
+        'views/mgmt_regulation_template.xml',  
         # 'views/mgmt_compliancestatement.xml',
         'security/mgmt_security.xml',
         'security/ir.model.access.csv', 
