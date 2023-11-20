@@ -1,22 +1,22 @@
 <odoo>
 
-    <menuitem id="menu_mgmt_document" name="DMS" sequence="60" parent="menu_mgmt" />
+    <menuitem id="menu_mgmt_document" name="Documents" sequence="60" parent="menu_mgmt" />
 
     <record id="action_mgmt_document" model=
     "ir.actions.act_window">
-        <field name="name">Documents</field>
+        <field name="name">QMS</field>
         <field name="res_model">mgmt.document</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_mgmt_dms_document" name="Documents" parent="menu_mgmt_document" action="action_mgmt_document" />
+    <menuitem id="menu_mgmt_dms_document" name="QMS" parent="menu_mgmt_document" action="action_mgmt_document" />
 
     <record id="view_tree_mgmt_document" model="ir.ui.view">
         <field name="name">Document Tree</field>
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>               
+                <field name="name"/>
                 <field name="url" options="{'text': 'name'}" widget="url"/>
                 <field name="mid"/>
             </tree>

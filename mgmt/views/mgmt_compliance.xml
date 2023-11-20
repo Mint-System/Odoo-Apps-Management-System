@@ -1,23 +1,15 @@
-<odoo> 
+<odoo>
 
- <menuitem id="menu_mgmt_compliance" 
-    name="Compliance" 
-    sequence="20"
-    parent="menu_mgmt"
-  />
-  
+  <menuitem id="menu_mgmt_compliance" name="Compliance" sequence="20" parent="menu_mgmt" />
+
   <record id="action_mgmt_requirement" model=
     "ir.actions.act_window">
     <field name="name">Requirements</field>
     <field name="res_model">mgmt.requirement</field>
     <field name="view_mode">tree,form</field>
-  </record>    
+  </record>
 
-  <menuitem id="menu_mgmt_requirement" 
-    name="Requirements" 
-    parent="menu_mgmt_compliance"
-    action="action_mgmt_requirement"
-  />
+  <menuitem id="menu_mgmt_requirement" name="Requirements" parent="menu_mgmt_compliance" action="action_mgmt_requirement" />
 
   <record id="action_mgmt_nonconformity" model=
     "ir.actions.act_window">
@@ -26,11 +18,7 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_nonconformity" 
-    name="Nonconformities" 
-    parent="menu_mgmt_compliance"
-    action="action_mgmt_nonconformity"
-  />  
+  <menuitem id="menu_mgmt_nonconformity" name="Nonconformities" parent="menu_mgmt_compliance" action="action_mgmt_nonconformity" />
 
   <record id="action_mgmt_compliancematrix" model=
     "ir.actions.act_window">
@@ -39,25 +27,6 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_compliancematrix" 
-    name="Compliancematrix" 
-    parent="menu_mgmt_compliance"
-    action="action_mgmt_compliancematrix"
-  />  
+  <menuitem id="menu_mgmt_compliancematrix" name="Compliancematrix" parent="menu_mgmt_compliance" action="action_mgmt_compliancematrix" />
 
-  <!--
-  <record id="action_mgmt_compliancestatement" model=
-    "ir.actions.act_window">
-    <field name="name">Compliancestatement</field>
-    <field name="res_model">mgmt.compliancestatement</field>
-    <field name="view_mode">tree,form</field>
-  </record>
-
-  <menuitem id="menu_mgmt_compliancestatement" 
-    name="Compliancestatement" 
-    parent="menu_mgmt_compliance"
-    action="action_mgmt_compliancestatement"
-  /> 
-  -->
- 
 </odoo>

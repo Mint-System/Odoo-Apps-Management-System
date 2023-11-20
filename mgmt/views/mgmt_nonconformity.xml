@@ -1,12 +1,12 @@
 <odoo>
 
-<record id="view_tree_mgmt_nonconformity" model="ir.ui.view">
+  <record id="view_tree_mgmt_nonconformity" model="ir.ui.view">
     <field name="name">Nonconformity Tree</field>
     <field name="model">mgmt.nonconformity</field>
     <field name="arch" type="xml">
-      <tree>        
+      <tree>
         <field name="name"/>
-        <field name="description"/>        
+        <field name="description"/>
       </tree>
     </field>
   </record>
@@ -25,10 +25,10 @@
             </h1>
           </div>
           <group name="nonconformity_header">
-            <group name="nonconformity_details">              
+            <group name="nonconformity_details">
               <field name="description"/>
-            </group>            
-          </group>   
+            </group>
+          </group>
         </sheet>
       </form>
     </field>
