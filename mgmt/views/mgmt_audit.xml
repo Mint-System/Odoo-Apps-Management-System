@@ -7,7 +7,7 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_auditing" name="Auditing" sequence="10" parent="menu_mgmt" action="action_mgmt_audit" />
+  <menuitem id="menu_mgmt_auditing" name="Auditing" sequence="90" parent="menu_mgmt" action="action_mgmt_audit" />
 
   <menuitem id="menu_mgmt_audit" name="Audits" parent="menu_mgmt_auditing" action="action_mgmt_audit" />
 
@@ -75,7 +75,7 @@
             </page>
             <page string="Nonconformities" name="nonconformity">
               <p>Nonconformities:</p>
-              <field name="nonconformity_ids" placeholder="Nonconformity" context="{'tree_view_ref': 'mgmt_audit.mgmt_monconformity'}"/>
+              <field name="nonconformity_ids" placeholder="Nonconformity" context="{'tree_view_ref': 'mgmt_audit.mgmt_nonconformity'}"/>
             </page>
             <page string="Comment" name="comment">
               <field name="comment" placeholder="Comment"/>
@@ -84,7 +84,7 @@
           </notebook>
 
         </sheet>
-  
+
         <div class="oe_chatter">
           <field name="message_follower_ids" widget="mail_followers"/>
           <field name="activity_ids" widget="mail_activity"/>

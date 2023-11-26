@@ -7,3 +7,6 @@ from . import mgmt_requirement
 from . import mgmt_document
 from . import mgmt_compliancestatement
 from . import mgmt_nonconformity
+from . import mgmt_task
+from . import mgmt_meeting
+from . import mgmt_paragraph

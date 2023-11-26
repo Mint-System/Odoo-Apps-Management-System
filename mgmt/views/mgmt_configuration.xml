@@ -1,6 +1,6 @@
 <odoo>
 
-  <menuitem id="menu_mgmt_configuration" name="Configuration" sequence="60" parent="menu_mgmt" />
+  <menuitem id="menu_mgmt_configuration" name="Configuration" sequence="100" parent="menu_mgmt" />
 
   <record id="action_mgmt_audit_category" model=
     "ir.actions.act_window">

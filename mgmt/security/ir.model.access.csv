@@ -13,3 +13,9 @@ access_mgmt_11,ManagementUser,mgmt.model_mgmt_compliancestatement,base.group_use
 access_mgmt_12,ManagementManager,mgmt.model_mgmt_compliancestatement,base.group_user,1,1,1,1
 access_mgmt_13,ManagementUser,mgmt.model_mgmt_nonconformity,base.group_user,1,1,1,1
 access_mgmt_14,ManagementManager,mgmt.model_mgmt_nonconformity,base.group_user,1,1,1,1
+access_mgmt_15,ManagementUser,mgmt.model_mgmt_meeting,base.group_user,1,1,1,1
+access_mgmt_16,ManagementManager,mgmt.model_mgmt_meeting,base.group_user,1,1,1,1
+access_mgmt_17,ManagementUser,mgmt.model_mgmt_task,base.group_user,1,1,1,1
+access_mgmt_18,ManagementManager,mgmt.model_mgmt_task,base.group_user,1,1,1,1
+access_mgmt_19,ManagementUser,mgmt.model_mgmt_paragraph,base.group_user,1,1,1,1
+access_mgmt_20,ManagementManager,mgmt.model_mgmt_paragraph,base.group_user,1,1,1,1

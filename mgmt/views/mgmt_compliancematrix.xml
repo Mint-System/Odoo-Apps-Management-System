@@ -37,19 +37,6 @@
         </sheet>
       </form>
     </field>
-  </record>
-
-  <record id="view_search_mgmt_compliancematrix" model="ir.ui.view">
-    <field name="name">Compliancematrix Search</field>
-    <field name="model">mgmt.compliancestatement</field>
-    <field name="arch" type="xml">
-      <search>
-        <field name="name"/>
-        <field name="document_id"/>
-        <field name="audit_category_id"/>
-        <filter name="filter_category_desktop" string="Desktop-Audit" domain="[('audit_category_id','=',5)]" context="{'default_filter_category_desktop': 1}"/>
-      </search>
-    </field>
-  </record>
+  </record>  
 
 </odoo>

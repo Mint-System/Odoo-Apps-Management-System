@@ -1,6 +1,6 @@
 <odoo>
 
-  <menuitem id="menu_mgmt_compliance" name="Compliance" sequence="20" parent="menu_mgmt" />
+  <menuitem id="menu_mgmt_compliance" name="Compliance" sequence="10" parent="menu_mgmt" />
 
   <record id="action_mgmt_requirement" model=
     "ir.actions.act_window">

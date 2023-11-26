@@ -4,3 +4,11 @@ class Management(models.Model):
     _description = "Requirement"    
     name = fields.Char("Title")
     description = fields.Text("Description")
+    parent_id = fields.Many2one("mgmt.requirement", "Hierarchy")
+    compliancestatement_ids = fields.One2many("mgmt.compliancestatement", "requirement_id",
+        string="Compliancestatements",)        
+    paragraph_ids = fields.Many2many("mgmt.paragraph", 
+        string="Paragraphs")   
+    paragraph_name = fields.Char(
+        string="Paragraph",
+        related="paragraph_ids.name")

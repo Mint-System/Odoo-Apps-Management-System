@@ -1,23 +1,22 @@
 <odoo>
 
-<record id="view_tree_mgmt_requirement" model="ir.ui.view">
+  <record id="view_tree_mgmt_requirement" model="ir.ui.view">
     <field name="name">Requirement Tree</field>
     <field name="model">mgmt.requirement</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="paragraph_name"/>
         <field name="name"/>
         <field name="description"/>        
       </tree>
     </field>
   </record>
+
   <record id="view_form_mgmt_requirement" model="ir.ui.view">
     <field name="name">Requirement Form</field>
     <field name="model">mgmt.requirement</field>
     <field name="arch" type="xml">
       <form>
-        <header>
-
-        </header>
         <sheet>
           <div class="oe_title">
             <h1>
@@ -25,10 +24,17 @@
             </h1>
           </div>
           <group name="requirement_header">
-            <group name="requirement_details">              
+            <group name="requirement_details">
               <field name="description"/>
-            </group>            
-          </group>   
+              <field name="paragraph_name"/>
+            </group>
+          </group>
+          <notebook colspan="4">
+            <page string="Compliancestatement">    
+              <p>Compliancestatement list from audits performed:</p>
+              <field name="compliancestatement_ids"  attrs="{'readonly':1}" options="{'no_create': True}" context="{'tree_view_ref': 'mgmt.mgmt_compliancestatement_requirement'}"/>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>

@@ -7,7 +7,7 @@ class Management(models.Model):
     document_id = fields.Many2one("mgmt.document", 
       string="Document")
     requirement_id = fields.Many2one("mgmt.requirement", 
-      string="Requirement")    
+      string="Requirement")
     audit_ids = fields.Many2many('mgmt.audit', 
         string="Audits")   
     audit_name = fields.Char(

@@ -4,5 +4,8 @@ class Management(models.Model):
     _description = "Nonconformity"    
     name = fields.Char("Title", required=True)
     description = fields.Text("Description")
-    audit_id = fields.Many2one("mgmt.audit", 
-      string="Audit")
+    audit_ids = fields.Many2many('mgmt.audit', 
+        string="Audits")   
+    audit_name = fields.Char(
+        string="Audit",
+        related="audit_ids.name")    

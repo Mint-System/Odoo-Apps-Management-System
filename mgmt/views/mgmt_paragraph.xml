@@ -1,0 +1,108 @@
+<odoo>
+
+  <record id="action_mgmt_paragraph" model=
+    "ir.actions.act_window">
+    <field name="name">Paragraphs</field>
+    <field name="res_model">mgmt.paragraph</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_mgmt_paragraph" name="Paragraphs" parent="menu_mgmt_compliance" action="action_mgmt_paragraph" />
+
+  <record id="view_tree_mgmt_paragraph" model="ir.ui.view">
+    <field name="name">Paragraph Tree</field>
+    <field name="model">mgmt.paragraph</field>
+    <field name="arch" type="xml">
+      <tree>        
+        <field name="name"/> 
+        <field name="description"/>
+        <field name="requirement_ids"/> 
+      </tree>
+    </field>
+  </record>  
+  
+  <!-- document tree -->
+    <record id="view_paragraph_tree" model="ir.ui.view">
+        <field name="name">mgmt.paragraph.search</field>
+        <field name="model">mgmt.paragraph</field>
+        <field name="arch" type="xml">
+            <search string="Paragraph">
+                <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
+                <field name="parent_id" />
+                <field name="create_uid" />
+                <field name="name" string="Title" />
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />                    
+                </group>
+                <searchpanel>
+                    <field name="parent_id" icon="fa-folder" string="EASA" enable_counters="1" />
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+      <record id="view_tree_mgmt_audit" model="ir.ui.view">
+    <field name="name">Audit Tree</field>
+    <field name="model">mgmt.audit</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="reference"/>
+        <field name="type_id"/>
+        <field name="category_id"/>
+        <field name="auditor_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_form_mgmt_paragraph" model="ir.ui.view">
+    <field name="name">Paragraph Form</field>
+    <field name="model">mgmt.paragraph</field>
+    <field name="arch" type="xml">
+      <form>
+        <header>
+
+        </header>
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name"/>
+            </h1>
+          </div>
+          <group name="paragraph_header">
+            <group name="paragraph_details">
+              <field name="name"/>
+             
+            </group>
+
+            <group name="paragraph_metadata">           
+              <div class="w-100" invisible="False">
+                <div class="o_row">
+               
+                </div>
+              </div>              
+            </group>
+
+          </group>
+
+          <notebook colspan="4">
+            <page string="Requirements">
+              <p>Requirement list:</p>
+              <field name="requirement_ids"/>
+            </page>
+          </notebook>
+
+        </sheet>
+
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+
+      </form>
+
+    </field>
+  </record>
+
+</odoo>

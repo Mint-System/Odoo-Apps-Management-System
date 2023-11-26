@@ -6,10 +6,12 @@
     <field name="arch" type="xml">
       <tree>
         <field name="name"/>
-        <field name="description"/>
+        <field name="description"/>        
+        <field name="audit_name"/>
       </tree>
     </field>
   </record>
+ 
   <record id="view_form_mgmt_nonconformity" model="ir.ui.view">
     <field name="name">Nonconformity Form</field>
     <field name="model">mgmt.nonconformity</field>
@@ -27,11 +29,12 @@
           <group name="nonconformity_header">
             <group name="nonconformity_details">
               <field name="description"/>
+              <field name="audit_name"/>
             </group>
           </group>
         </sheet>
       </form>
     </field>
-  </record>
+  </record>  
 
 </odoo>
