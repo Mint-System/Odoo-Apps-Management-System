@@ -11,14 +11,17 @@
   <template id="audit_report">
 
     <t t-call="web.html_container">
-    <t t-set="title" t-value="'Audit-Bericht'"/>
+      <t t-set="title" t-value="'Audit-Bericht'"/>
       <t t-call="mgmt.custom_layout">
+        <t t-set="title" t-value="'Audit-Bericht'"/>
+        <t t-set="code" t-value="'RPT 1000968'"/>
+        <t t-set="version" t-value="'1.00'"/>
         <div class="page">
           <t t-foreach="docs" t-as="o">
 
             <head>
               <div class="container">
-                <h1 style="margin-bottom: 30px">Audit-Bericht</h1>
+                <h1 style="margin-bottom: 30px"><span t-field="o.name"/></h1>
                 <div class="table table-sm small">
                   <div class="thead">
                     <div class="row">
