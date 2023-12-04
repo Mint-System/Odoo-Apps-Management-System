@@ -1,0 +1,41 @@
+<odoo>
+    <template id="custom_layout">
+        <t t-set="company" t-value="env.company"/>
+        
+        <t t-if="not o" t-set="o" t-value="doc"/>
+
+        <div class="header">
+            <div t-if="report_type == 'pdf'">
+                <table style="width: 100%; border: solid 1px;">
+                    <tr>
+                        <td style="width: 20%">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-start" alt="Logo" width="250"/>
+                        </td>
+                        <td style="width: 60%">
+                        </td>
+                        <td style="width: 20%">rechts
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div t-if="report_type == 'pdf'">
+                <table style="width: 100%; border: solid 1px;">
+                    <tr>
+                        <td style="padding: 3px; text-align: right">                        
+                        Page: <span class="page"/>
+/                        <span class="topage"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+        <t t-out="0"/>
+    </div>
+
+</template>
+</odoo>

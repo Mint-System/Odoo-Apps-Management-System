@@ -23,6 +23,7 @@
         'security/mgmt_security.xml',
         'security/ir.model.access.csv', 
         'reports/audit_report.xml',
+        'reports/custom_layout.xml',
         'data/mgmt.audit.type.csv',
         'data/mgmt.audit.category.csv',     
         'demo/res.partner.csv',   
