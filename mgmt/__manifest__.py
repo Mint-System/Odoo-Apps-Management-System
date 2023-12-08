@@ -32,6 +32,7 @@
         'demo/mgmt.requirement.csv',
         'demo/mgmt.compliancestatement.csv',
         'demo/mgmt.nonconformity.csv',
-
+        'demo/base.document.layout.csv',
+        'demo/report.paperformat.csv',
     ], 
 }
