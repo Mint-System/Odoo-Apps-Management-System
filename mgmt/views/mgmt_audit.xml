@@ -1,5 +1,21 @@
 <odoo>
 
+  <record id="view_tree_mgmt_compliancestatement" model="ir.ui.view">
+    <field name="name">Compliancestatement Tree</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="id"/>
+        <field name="requirement_description"/>
+        <field string="Statement Test" name="description"/>
+        <field name="document_id"/>
+        <field name="audit_name"/>
+        <field name="audit_category_id" />
+      </tree>
+    </field>
+  </record>
+
+
   <record id="action_mgmt_audit" model=
     "ir.actions.act_window">
     <field name="name">Audits</field>
@@ -30,7 +46,11 @@
     <field name="arch" type="xml">
       <form>
         <header>
-
+          <button name="button_prepared" string="Close Preparation" states="open" type="object" />
+          <button name="button_close" string="Close" states="prepared" type="object" />
+          <button name="button_open" string="Set back to open" states="prepared" type="object" />
+          <button name="button_reset" string="Set back to prepared" states="closed" type="object" />
+          <field name="state" widget="statusbar" select="1" readonly="1" />
         </header>
         <sheet>
           <div class="oe_title">
@@ -67,17 +87,17 @@
           <notebook colspan="4">
             <page string="Preparation">
               <p>Document list:</p>
-              <field name="document_ids"/>
+              <field name="document_ids" attrs="{'readonly':['|',('state','=','prepared'),('state','=','closed')]}"/>
             </page>
-            <page string="Compliancestatements">
+            <page string="Compliancestatements" attrs="{'invisible': [('state', '=', 'open')]}">
               <p></p>
-              <field name="compliancestatement_ids" context="{'tree_view_ref': 'mgmt_audit.mgmt_compliancestatement'}"/>
+              <field name="compliancestatement_ids" context="{'tree_view_ref': 'mgmt.mgmt_compliancestatement'}"/>
             </page>
-            <page string="Nonconformities" name="nonconformity">
+            <page string="Nonconformities" name="nonconformity" attrs="{'invisible': [('state', '=', 'open')]}">
               <p>Nonconformities:</p>
-              <field name="nonconformity_ids" placeholder="Nonconformity" context="{'tree_view_ref': 'mgmt_audit.mgmt_nonconformity'}"/>
+              <field name="nonconformity_ids" placeholder="Nonconformity" context="{'tree_view_ref': 'mgmt.mgmt_nonconformity'}"/>
             </page>
-            <page string="Comment" name="comment">
+            <page string="Comment" name="comment" attrs="{'invisible': [('state', '=', 'open')]}">
               <field name="comment" placeholder="Comment"/>
             </page>
 

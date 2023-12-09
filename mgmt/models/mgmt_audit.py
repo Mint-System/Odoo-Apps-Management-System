@@ -38,4 +38,25 @@ class Management(models.Model):
       column1="audit_id", 
       column2="partner_id")
 
+    state = fields.Selection(
+      [("open", "Open"), ("prepared", "Prepared"), ("closed", "Closed")], default="open", required=True)
+
+    def button_prepared(self):
+        self.message_post(body= ("Audit prepared"))
+        return self.write({"state": "prepared"})
+
+    def button_close(self):
+        self.message_post(body= ("Audit closed"))
+        return self.write({"state": "closed"})
+
+    def button_open(self):
+        self.message_post(body= ("Audit set to open"))
+        return self.write({"state": "open"})
+
+    def button_reset(self):
+        self.message_post(body= ("Audit reset to prepared"))
+        return self.write({"state": "prepared"})
+
+   
+
           
