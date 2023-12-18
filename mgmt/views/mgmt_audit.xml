@@ -8,6 +8,7 @@
         <field name="id"/>
         <field name="requirement_description"/>
         <field string="Statement Test" name="description"/>
+        <field string="Statement Test" name="description"/>
         <field name="document_id"/>
         <field name="audit_name"/>
         <field name="audit_category_id" />
@@ -91,7 +92,7 @@
             </page>
             <page string="Compliancestatements" attrs="{'invisible': [('state', '=', 'open')]}">
               <p></p>
-              <field name="compliancestatement_ids" context="{'tree_view_ref': 'mgmt.mgmt_compliancestatement'}"/>
+              <field name="compliancestatement_ids" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_compliancestatement'}"/>
             </page>
             <page string="Nonconformities" name="nonconformity" attrs="{'invisible': [('state', '=', 'open')]}">
               <p>Nonconformities:</p>

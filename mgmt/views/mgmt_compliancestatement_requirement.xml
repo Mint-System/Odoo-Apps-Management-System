@@ -5,6 +5,8 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="id"/>
+        <field name="name"/>
         <field name="name"/>
         <field name="description"/>
         <field name="audit_name"/>

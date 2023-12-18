@@ -10,3 +10,4 @@ from . import mgmt_nonconformity
 from . import mgmt_task
 from . import mgmt_meeting
 from . import mgmt_paragraph
+from . import mgmt_docustructure

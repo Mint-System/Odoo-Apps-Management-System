@@ -19,3 +19,5 @@ access_mgmt_17,ManagementUser,mgmt.model_mgmt_task,base.group_user,1,1,1,1
 access_mgmt_18,ManagementManager,mgmt.model_mgmt_task,base.group_user,1,1,1,1
 access_mgmt_19,ManagementUser,mgmt.model_mgmt_paragraph,base.group_user,1,1,1,1
 access_mgmt_20,ManagementManager,mgmt.model_mgmt_paragraph,base.group_user,1,1,1,1
+access_mgmt_21,ManagementUser,mgmt.model_mgmt_docustructure,base.group_user,1,1,1,1
+access_mgmt_22,ManagementManager,mgmt.model_mgmt_docustructure,base.group_user,1,1,1,1

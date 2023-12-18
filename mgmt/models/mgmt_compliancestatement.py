@@ -16,6 +16,9 @@ class Management(models.Model):
     audit_category_id = fields.Many2one('mgmt.audit.category',
         string="Category",
         related="audit_ids.category_id")
+    requirement_name = fields.Char(
+        string="Requirement Name",
+        related="requirement_id.name")
     requirement_description = fields.Text(
         string="Requirement Description",
         related="requirement_id.description")

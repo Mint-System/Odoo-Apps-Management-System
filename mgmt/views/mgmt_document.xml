@@ -16,9 +16,9 @@
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="id"/>
                 <field name="name"/>
                 <field name="url" options="{'text': 'name'}" widget="url"/>
-                <field name="mid"/>
             </tree>
         </field>
     </record>

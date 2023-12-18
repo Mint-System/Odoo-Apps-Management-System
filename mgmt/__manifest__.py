@@ -20,6 +20,7 @@
         'views/mgmt_compliancematrix.xml',
         'views/mgmt_operation.xml',
         'views/mgmt_paragraph.xml',
+        'views/mgmt_docustructure.xml',
         'security/mgmt_security.xml',
         'security/ir.model.access.csv', 
         'reports/audit_report.xml',
@@ -34,5 +35,6 @@
         'demo/mgmt.nonconformity.csv',
         'demo/base.document.layout.csv',
         'demo/report.paperformat.csv',
+        'demo/res.lang.csv',
     ], 
 }
