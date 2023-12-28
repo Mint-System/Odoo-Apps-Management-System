@@ -1,0 +1,75 @@
+<odoo>
+
+  <record id="action_mgmt_paragraph_report_html" model="ir.actions.report">
+    <field name="name">Paragraphs</field>
+    <field name="model">mgmt.paragraph</field>
+    <field name="report_type">qweb-html</field>
+    <field name="report_name">mgmt.paragraph_report</field>
+    <field name="binding_model_id" ref="model_mgmt_paragraph"/>
+    <field name="binding_type">report</field>
+  </record>
+
+  <template id="paragraph_report">
+
+    <t t-call="web.html_container">
+      <t t-set="title" t-value="'Paragraphs'"/>
+      <t t-call="mgmt.custom_layout">
+        <t t-set="title" t-value="'Paragraphs'"/>
+        <t t-set="code" t-value="'RPT xy'"/>
+        <t t-set="version" t-value="'1.00'"/>
+        <div class="page">
+
+          <style>
+          h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+          .paragraph {
+            background-color: lightgrey;
+            margin-left: 10px;
+          }
+          .requirement {
+            background-color: #d7fad2;
+          }
+          </style>
+
+          <div t-foreach="docs" t-as="doc">
+            <div class="row">
+              <div class="col">
+                <t t-if="doc.docustructure_id and doc.docustructure_id != prev_docustructure_id">
+                  <h1 t-field="doc.docustructure_id"/>
+                  <t t-set="prev_docustructure_id" t-value="doc.docustructure_id"/>
+                </t>
+              </div>
+            </div>
+            <div class="row">
+              <t t-if="doc.name != prev_name">
+                <div class="paragraph" style="width: 5%;">
+                  <p t-field="doc.name"/>
+                </div>
+                <t t-set="prev_name" t-value="doc.name"/>
+              </t>
+              <t t-else="">
+                <div class="paragraph" style="width: 5%;">
+                </div>
+              </t>
+              <div style="width: 50%;">
+                <p t-field="doc.description"/>
+              </div>
+              <div style="width: 35%;">
+                <t t-set="requirements" t-value="doc.requirement_ids"/>
+                <div class="row" t-foreach="requirements" t-as="requirement_line">
+                  <t t-if="requirement_line.description">
+                    <p class="requirement" t-field="requirement_line.description"/>
+                  </t>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

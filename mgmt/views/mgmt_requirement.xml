@@ -5,7 +5,6 @@
     <field name="model">mgmt.requirement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="paragraph_name"/>
         <field name="name"/>
         <field name="description"/>        
       </tree>
@@ -26,10 +25,13 @@
           <group name="requirement_header">
             <group name="requirement_details">
               <field name="description"/>
-              <field name="paragraph_name"/>
             </group>
           </group>
           <notebook colspan="4">
+            <page string="Paragraphs">    
+              <p>Paragraphs in relation to the requirement:</p>
+              <field name="paragraph_ids"  attrs="{'readonly':1}" options="{'no_create': True}" context="{'tree_view_ref': 'mgmt.mgmt_paragraph'}"/>
+            </page>      
             <page string="Compliancestatement">    
               <p>Compliancestatement list from audits performed:</p>
               <field name="compliancestatement_ids"  attrs="{'readonly':1}" options="{'no_create': True}" context="{'tree_view_ref': 'mgmt.mgmt_compliancestatement_requirement'}"/>

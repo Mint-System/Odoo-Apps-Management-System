@@ -1,23 +1,24 @@
-id,mid,name,parent_id,url
-mgmt_document_0,90003,Richtlinien [RL],,
-mgmt_document_1,1100001,"RL 1100001 Vision, Mission, Strategie",Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100001.pdf
-mgmt_document_2,1100002,RL 1100002 IT-Strategie,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100002.pdf
-mgmt_document_3,1100003,RL 1100003 Verwendete Software,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100003.pdf
-mgmt_document_4,1100004,RL 1100004 IT-Konzept,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100004.pdf
-mgmt_document_5,1100078,RL 1100078 Production Organisation Exposition,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100078.pdf
-mgmt_document_6,1100079,RL 1100079 Maintenance Organisation Exposition,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100079.pdf
-mgmt_document_7,1100165,RL 1100165 Firmenbeschreibung,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100165.pdf
-mgmt_document_8,1102191,RL 1102191 Personalreglement Nr. 1,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102191.pdf
-mgmt_document_9,1102192,RL 1102192 Spesenregelement,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102192.pdf
-mgmt_document_10,1102497,RL 1102497 Rollendiagramm Design Organisation,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102497.pdf
-mgmt_document_11,1104088,RL 1104088 Krankheitsabsenzen,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1104088.pdf
-mgmt_document_12,1106134,RL 10002144 Feststellungen,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1106134.pdf
-mgmt_document_13,1106923,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1106923.pdf
-mgmt_document_14,1110938,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1110938.pdf
-mgmt_document_15,1111941,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1111941.pdf
-mgmt_document_16,1112382,RL 1112382 List of Certifying Staff ,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1112382.pdf
-mgmt_document_17,1113859,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1113859.pdf
-mgmt_document_18,1114387,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114387.pdf
-mgmt_document_19,1114876,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114876.pdf
-mgmt_document_20,1114879,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114879.pdf
-mgmt_document_21,1115604,RL1000126 Aufbau MHB,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1115604.pdf
+id,mid,name,description,parent_id,url
+__import__.mgmt_document_1,1,EASA: Initial Airworthiness,Airworthiness and Environmental Certification (Regulation (EU) No 748/2012),,
+__import__.mgmt_document_2,90003,Richtlinien [RL],,,
+__import__.mgmt_document_3,1100001,"RL 1100001 Vision, Mission, Strategie",,Richtlinien [RL],
+__import__.mgmt_document_4,1100002,RL 1100002 IT-Strategie,,Richtlinien [RL],
+__import__.mgmt_document_5,1100003,RL 1100003 Verwendete Software,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100003.pdf
+__import__.mgmt_document_6,1100004,RL 1100004 IT-Konzept,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100004.pdf
+__import__.mgmt_document_7,1100078,RL 1100078 Production Organisation Exposition,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100078.pdf
+__import__.mgmt_document_8,1100079,RL 1100079 Maintenance Organisation Exposition,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100079.pdf
+__import__.mgmt_document_9,1100165,RL 1100165 Firmenbeschreibung,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1100165.pdf
+__import__.mgmt_document_10,1102191,RL 1102191 Personalreglement Nr. 1,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102191.pdf
+__import__.mgmt_document_11,1102192,RL 1102192 Spesenregelement,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102192.pdf
+__import__.mgmt_document_12,1102497,RL 1102497 Rollendiagramm Design Organisation,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1102497.pdf
+__import__.mgmt_document_13,1104088,RL 1104088 Krankheitsabsenzen,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1104088.pdf
+__import__.mgmt_document_14,1106134,RL 10002144 Feststellungen,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1106134.pdf
+__import__.mgmt_document_15,1106923,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1106923.pdf
+__import__.mgmt_document_16,1110938,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1110938.pdf
+__import__.mgmt_document_17,1111941,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1111941.pdf
+__import__.mgmt_document_18,1112382,RL 1112382 List of Certifying Staff ,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1112382.pdf
+__import__.mgmt_document_19,1113859,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1113859.pdf
+__import__.mgmt_document_20,1114387,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114387.pdf
+__import__.mgmt_document_21,1114876,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114876.pdf
+__import__.mgmt_document_22,1114879,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1114879.pdf
+__import__.mgmt_document_23,1115604,RL1000126 Aufbau MHB,,Richtlinien [RL],https://intern.sathom.com/mhb/com/sathom/documents/1115604.pdf

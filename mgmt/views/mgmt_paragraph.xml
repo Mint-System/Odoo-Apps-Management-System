@@ -14,9 +14,9 @@
     <field name="model">mgmt.paragraph</field>
     <field name="arch" type="xml">
       <tree>        
-        <field name="name"/> 
+        <field name="display_name"/>
         <field name="description"/>
-        <field name="requirement_ids"/> 
+        <field name="requirement_ids"/>
       </tree>
     </field>
   </record>  
@@ -35,7 +35,7 @@
                     <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />                    
                 </group>
                 <searchpanel>
-                    <field name="parent_id" icon="fa-folder" string="EASA" enable_counters="1" />
+                    <field name="docustructure_id" icon="fa-folder" string="EASA" enable_counters="1" />
                 </searchpanel>
             </search>
         </field>
@@ -55,6 +55,7 @@
     </field>
   </record>
 
+  <!-- document form -->
   <record id="view_form_mgmt_paragraph" model="ir.ui.view">
     <field name="name">Paragraph Form</field>
     <field name="model">mgmt.paragraph</field>
@@ -63,15 +64,13 @@
         <header>
 
         </header>
-        <sheet>
-          <div class="oe_title">
-            <h1>
-              <field name="name"/>
-            </h1>
-          </div>
+        <sheet>          
           <group name="paragraph_header">
             <group name="paragraph_details">
-              <field name="parent_id"/>             
+              <field name="id" readonly="True"/>
+              <field name="docustructure_id"/> 
+              <field name="name"/>              
+              <field name="description"/>                          
             </group>
 
             <group name="paragraph_metadata">           
