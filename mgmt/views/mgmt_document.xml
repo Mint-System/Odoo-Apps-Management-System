@@ -15,10 +15,10 @@
         <field name="name">Document Tree</field>
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="id"/>
+            <tree>                
                 <field name="name"/>
                 <field name="url" options="{'text': 'name'}" widget="url"/>
+                <field name="id"/>
             </tree>
         </field>
     </record>

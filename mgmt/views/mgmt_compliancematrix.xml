@@ -4,13 +4,13 @@
     <field name="name">Compliancematrix Tree</field>
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
-      <tree>
-        <field name="id"/>
+      <tree>        
         <field name="requirement_description"/>
-        <field string="Statement test1" name="description"/>
+        <field string="Statement" name="description"/>        
         <field name="document_id"/>
         <field name="audit_name"/>
         <field name="audit_category_id" />
+        <field name="id"/>
       </tree>
     </field>
   </record>
@@ -23,16 +23,14 @@
 
         </header>
         <sheet>
-          <div class="oe_title">
-            <h1>
-              <field name="name"/>
-            </h1>
+          <div class="oe_title">            
           </div>
           <group name="compliancematrix_header">
             <group name="compliancematrix_details">
-              <field name="id"/>
-              <field name="description"/>
               <field name="requirement_id"/>
+              <field name="id"/>
+              <field name="name"/>              
+              <field name="description"/>              
               <field name="document_id"/>
             </group>
           </group>

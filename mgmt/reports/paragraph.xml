@@ -14,28 +14,47 @@
     <t t-call="web.html_container">
       <t t-set="title" t-value="'Paragraphs'"/>
       <t t-call="mgmt.custom_layout">
-        <t t-set="title" t-value="'Paragraphs'"/>
-        <t t-set="code" t-value="'RPT xy'"/>
+        <t t-set="title" t-value="'Paragraphs and Requirements'"/>
+        <t t-set="code" t-value="'RPT 1001323'"/>
         <t t-set="version" t-value="'1.00'"/>
         <div class="page">
 
           <style>
           h1 {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
-            margin-top: 20px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            margin-left: 10px;
           }
+          body {
+            font-size: 13px;
+          }
+          p {
+            padding: 3px;
+            margin-bottom: 0px;
+          } 
           .paragraph {
             background-color: lightgrey;
+            padding: 3px;
             margin-left: 10px;
           }
           .requirement {
             background-color: #d7fad2;
+            padding: 3px;
+          }
+          .id {
+           margin-right: 3px;
+           font-size: 8px;
+           text-align: right;
+          }
+          .no-break {
+            page-break-inside: avoid;
           }
           </style>
 
           <div t-foreach="docs" t-as="doc">
-            <div class="row">
+            <div class="row no-break">
               <div class="col">
                 <t t-if="doc.docustructure_id and doc.docustructure_id != prev_docustructure_id">
                   <h1 t-field="doc.docustructure_id"/>
@@ -43,25 +62,29 @@
                 </t>
               </div>
             </div>
-            <div class="row">
+            <div class="row no-break">
               <t t-if="doc.name != prev_name">
-                <div class="paragraph" style="width: 5%;">
+                <div class="paragraph" style="width: 6%;">
                   <p t-field="doc.name"/>
                 </div>
                 <t t-set="prev_name" t-value="doc.name"/>
               </t>
               <t t-else="">
-                <div class="paragraph" style="width: 5%;">
+                <div class="paragraph" style="width: 6%;">
                 </div>
               </t>
-              <div style="width: 50%;">
-                <p t-field="doc.description"/>
+              <div class="row no-break" style="width: 49%;">
+                <div class="row no-break">
+                  <p style="width:5%;" class="id" t-field="doc.id"/>
+                  <p style="width:92%" t-field="doc.description"/>
+                </div>
               </div>
-              <div style="width: 35%;">
+              <div style="width: 44%;">
                 <t t-set="requirements" t-value="doc.requirement_ids"/>
-                <div class="row" t-foreach="requirements" t-as="requirement_line">
+                <div class="row no-break" t-foreach="requirements" t-as="requirement_line">
                   <t t-if="requirement_line.description">
-                    <p class="requirement" t-field="requirement_line.description"/>
+                    <p style="width:3%;" class="id" t-field="requirement_line.id"/>
+                    <p style="width:94%" class="requirement" t-field="requirement_line.description"/>
                   </t>
                 </div>
               </div>

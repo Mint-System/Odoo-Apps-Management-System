@@ -2,20 +2,21 @@
 
   <record id="action_mgmt_paragraph" model=
     "ir.actions.act_window">
-    <field name="name">Paragraphs</field>
+    <field name="name">Paragraphs and Requirements</field>
     <field name="res_model">mgmt.paragraph</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_paragraph" name="Paragraphs" parent="menu_mgmt_compliance" action="action_mgmt_paragraph" />
+  <menuitem id="menu_mgmt_paragraph" name="Paragraphs and Requirements" sequence="2" parent="menu_mgmt_compliance" action="action_mgmt_paragraph" />
 
   <record id="view_tree_mgmt_paragraph" model="ir.ui.view">
     <field name="name">Paragraph Tree</field>
     <field name="model">mgmt.paragraph</field>
     <field name="arch" type="xml">
       <tree>        
-        <field name="display_name"/>
-        <field name="description"/>
+        <field name="display_name" string="Paragraph"/>
+        <field name="description" string="Text"/>
+        <field name="id"/>
         <field name="requirement_ids"/>
       </tree>
     </field>
@@ -24,7 +25,7 @@
   <!-- document tree -->
     <record id="view_paragraph_tree" model="ir.ui.view">
         <field name="name">mgmt.paragraph.search</field>
-        <field name="model">mgmt.paragraph</field>
+        <field name="model">mgmt.paragraph</field>     
         <field name="arch" type="xml">
             <search string="Paragraph">
                 <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
@@ -35,7 +36,7 @@
                     <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />                    
                 </group>
                 <searchpanel>
-                    <field name="docustructure_id" icon="fa-folder" string="EASA" enable_counters="1" />
+                    <field name="docustructure_id" icon="fa-folder" string="Paragraphs" enable_counters="1" />
                 </searchpanel>
             </search>
         </field>
@@ -69,7 +70,7 @@
             <group name="paragraph_details">
               <field name="id" readonly="True"/>
               <field name="docustructure_id"/> 
-              <field name="name"/>              
+              <field name="name" string="Name"/>              
               <field name="description"/>                          
             </group>
 

@@ -23,15 +23,12 @@
         </header>
         <sheet>
           <div class="oe_title">
-            <h1>
-              <field name="name"/>
-            </h1>
+            
           </div>
           <group name="compliancestatement_header">
             <group name="compliancestatement_details">
-              <field name="id"/>
-              <field name="id"/>
-              <field name="id"/>
+              <field name="name"/>
+              <field name="id"/>  
               <field name="description"/>
               <field name="requirement_id"/>
               <field name="document_id"/>

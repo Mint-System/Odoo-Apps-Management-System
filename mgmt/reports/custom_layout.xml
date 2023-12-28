@@ -34,11 +34,11 @@
                             <td style="padding: 3px; text-align: right">                        
                         Page: <span class="page"/>
 /                            <span class="topage"/>
-                        </td>
-                    </tr>
-                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
 
         <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
             <t t-out="0"/>

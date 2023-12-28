@@ -9,7 +9,7 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_requirement" name="Requirements" parent="menu_mgmt_compliance" action="action_mgmt_requirement" />
+  <menuitem id="menu_mgmt_requirement" name="Requirements" sequence="10" parent="menu_mgmt_compliance" action="action_mgmt_requirement" />
 
   <record id="action_mgmt_nonconformity" model=
     "ir.actions.act_window">
@@ -18,7 +18,7 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_nonconformity" name="Nonconformities" parent="menu_mgmt_compliance" action="action_mgmt_nonconformity" />
+  <menuitem id="menu_mgmt_nonconformity" name="Nonconformities" sequence="20" parent="menu_mgmt_compliance" action="action_mgmt_nonconformity" />
 
   <record id="action_mgmt_compliancematrix" model=
     "ir.actions.act_window">
@@ -27,6 +27,6 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_compliancematrix" name="Compliancematrix" parent="menu_mgmt_compliance" action="action_mgmt_compliancematrix" />
+  <menuitem id="menu_mgmt_compliancematrix" name="Compliancematrix" sequence="30" parent="menu_mgmt_compliance" action="action_mgmt_compliancematrix" />
 
 </odoo>
