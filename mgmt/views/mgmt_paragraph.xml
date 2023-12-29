@@ -40,21 +40,7 @@
                 </searchpanel>
             </search>
         </field>
-    </record>
-
-      <record id="view_tree_mgmt_audit" model="ir.ui.view">
-    <field name="name">Audit Tree</field>
-    <field name="model">mgmt.audit</field>
-    <field name="arch" type="xml">
-      <tree>
-        <field name="name"/>
-        <field name="reference"/>
-        <field name="type_id"/>
-        <field name="category_id"/>
-        <field name="auditor_id"/>
-      </tree>
-    </field>
-  </record>
+    </record>    
 
   <!-- document form -->
   <record id="view_form_mgmt_paragraph" model="ir.ui.view">

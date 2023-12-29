@@ -2,6 +2,7 @@ from odoo import fields, models
 class Management(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
     _name = "mgmt.audit"
+    _order = 'date_begin asc'
     _description = "Audit"    
     name = fields.Char("Title", required=True)  
     reference = fields.Char("Referenz")  

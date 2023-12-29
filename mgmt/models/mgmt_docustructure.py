@@ -9,7 +9,7 @@ class Management(models.Model):
     parent_id = fields.Many2one("mgmt.docustructure",
       string="Parent")
     document_id = fields.Many2one("mgmt.document",
-      string="Document", required=True)   
+      string="Document")   
     display_name = fields.Char(string="Display Name", compute="_compute_display_name", store=True)
 
     @api.depends("number", "name")

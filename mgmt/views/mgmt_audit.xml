@@ -33,11 +33,13 @@
     <field name="model">mgmt.audit</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="date_begin" string="Date" widget="date"/>
         <field name="name"/>
         <field name="reference"/>
         <field name="type_id"/>
         <field name="category_id"/>
         <field name="auditor_id"/>
+        <field name="id"/>
       </tree>
     </field>
   </record>
@@ -114,6 +116,22 @@
 
       </form>
 
+    </field>
+  </record>
+
+  <record id="view_mgmt_audit_filter" model="ir.ui.view">
+    <field name="name">mgmt.audit.filter</field>
+    <field name="model">mgmt.audit</field>
+    <field name="type">search</field>
+    <field name="arch" type="xml">
+      <search string="Audits">
+        <group>
+          <filter name="open" domain="[('state','=','open')]" string="Open" help="Open Audits" />
+          <filter name="prepared" domain="[('state','=','prepared')]" string="Prepared" help="Prepared Audits" />
+          <separator/>
+          <filter string="Date" name="date" date="date_begin"/>
+        </group>
+      </search>
     </field>
   </record>
 

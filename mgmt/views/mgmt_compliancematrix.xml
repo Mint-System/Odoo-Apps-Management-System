@@ -34,6 +34,13 @@
               <field name="document_id"/>
             </group>
           </group>
+
+          <notebook colspan="4">
+            <page string="Audits">
+              <p>Audit list:</p>
+              <field name="audit_ids"/>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>

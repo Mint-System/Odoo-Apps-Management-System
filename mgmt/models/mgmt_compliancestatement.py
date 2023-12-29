@@ -2,7 +2,7 @@ from odoo import fields, models
 class Management(models.Model):
     _name = "mgmt.compliancestatement"
     _description = "Compliancestatement"    
-    name = fields.Char("Title", required=True)
+    name = fields.Char("Title")
     description = fields.Html("Description")
     document_id = fields.Many2one("mgmt.document", 
       string="Document")
