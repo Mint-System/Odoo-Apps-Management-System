@@ -5,7 +5,7 @@
     'website': "https://www.mint_system.ch",
     'license': "AGPL-3",
     'category': 'Services/Management',
-    'version': "16.0.0.0.1",
+    'version': "16.0.0.0.2",
     'depends': ['base', 'mail'],  
     #'depends': ['base', 'mail', 'hr'],    
     'data': [
@@ -43,4 +43,7 @@
         'demo/report.paperformat.csv',
         'demo/res.lang.csv',
     ], 
+    "installable": True,
+    "application": True,
+    "images": ["images/screen.png"],
 }
