@@ -6,7 +6,8 @@
     'license': "AGPL-3",
     'category': 'Services/Management',
     'version': "16.0.0.0.1",
-    'depends': ['base', 'mail', 'hr'],    
+    'depends': ['base', 'mail'],  
+    #'depends': ['base', 'mail', 'hr'],    
     'data': [
         'views/mgmt.xml',
         'views/mgmt_audit.xml',
