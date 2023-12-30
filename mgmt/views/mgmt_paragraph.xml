@@ -2,12 +2,12 @@
 
   <record id="action_mgmt_paragraph" model=
     "ir.actions.act_window">
-    <field name="name">Paragraphs and Requirements</field>
+    <field name="name">Paragraphs</field>
     <field name="res_model">mgmt.paragraph</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_paragraph" name="Paragraphs and Requirements" sequence="2" parent="menu_mgmt_compliance" action="action_mgmt_paragraph" />
+  <menuitem id="menu_mgmt_paragraph" name="Paragraphs" sequence="2" parent="menu_mgmt_regulations" action="action_mgmt_paragraph" />
 
   <!-- document tree -->
   <record id="view_tree_mgmt_paragraph" model="ir.ui.view">
@@ -17,8 +17,7 @@
       <tree>
         <field name="display_name" string="Paragraph"/>
         <field name="description" string="Text"/>
-        <field name="id"/>
-        <field name="requirement_ids"/>
+        <field name="id"/>       
         <field name="document_id"/>
       </tree>
     </field>

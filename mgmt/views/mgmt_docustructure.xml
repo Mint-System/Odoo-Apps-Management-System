@@ -7,7 +7,7 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_docustructure" name="Docustructure" sequence="1" parent="menu_mgmt_compliance" action="action_mgmt_docustructure" />
+  <menuitem id="menu_mgmt_docustructure" name="Docustructure" sequence="1" parent="menu_mgmt_regulations" action="action_mgmt_docustructure" />
 
   <!-- document tree -->
   <record id="view_tree_mgmt_docustructure" model="ir.ui.view">

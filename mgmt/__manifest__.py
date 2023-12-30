@@ -10,6 +10,7 @@
     #'depends': ['base', 'mail', 'hr'],    
     'data': [
         'views/mgmt.xml',
+        'views/mgmt_regulations.xml',
         'views/mgmt_audit.xml',
         'views/mgmt_requirement.xml',
         'views/mgmt_compliance.xml',
