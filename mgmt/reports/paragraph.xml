@@ -64,27 +64,27 @@
             </div>
             <div class="row no-break">
               <t t-if="doc.name != prev_name">
-                <div class="paragraph" style="width: 6%;">
+                <div class="paragraph" style="width: 70px;">
                   <p t-field="doc.name"/>
                 </div>
                 <t t-set="prev_name" t-value="doc.name"/>
               </t>
               <t t-else="">
-                <div class="paragraph" style="width: 6%;">
+                <div class="paragraph" style="width: 70px;">
                 </div>
               </t>
-              <div class="row no-break" style="width: 49%;">
+              <div class="row no-break" style="width: 500px;">
                 <div class="row no-break">
-                  <p style="width:5%;" class="id" t-field="doc.id"/>
-                  <p style="width:92%" t-field="doc.description"/>
+                  <p style="width:50px;" class="id" t-field="doc.id"/>
+                  <p style="width:350px" t-field="doc.description"/>
                 </div>
               </div>
-              <div style="width: 44%;">
+              <div style="width: 500px;">
                 <t t-set="requirements" t-value="doc.requirement_ids"/>
                 <div class="row no-break" t-foreach="requirements" t-as="requirement_line">
                   <t t-if="requirement_line.description">
-                    <p style="width:3%;" class="id" t-field="requirement_line.id"/>
-                    <p style="width:94%" class="requirement" t-field="requirement_line.description"/>
+                    <p style="width:50px;" class="id" t-field="requirement_line.id"/>
+                    <p style="width:400px" class="requirement" t-field="requirement_line.description"/>
                   </t>
                 </div>
               </div>

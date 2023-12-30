@@ -20,6 +20,7 @@
         'views/mgmt_compliancestatement.xml',
         'views/mgmt_compliancestatement_requirement.xml',
         'views/mgmt_compliancematrix.xml',
+        #'views/mgmt_paragraph_mgmt_requirement_rel.xml',
         #'views/mgmt_operation.xml',
         'views/mgmt_docustructure.xml',              
         'security/mgmt_security.xml',

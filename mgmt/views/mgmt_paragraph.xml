@@ -9,38 +9,39 @@
 
   <menuitem id="menu_mgmt_paragraph" name="Paragraphs and Requirements" sequence="2" parent="menu_mgmt_compliance" action="action_mgmt_paragraph" />
 
+  <!-- document tree -->
   <record id="view_tree_mgmt_paragraph" model="ir.ui.view">
     <field name="name">Paragraph Tree</field>
     <field name="model">mgmt.paragraph</field>
     <field name="arch" type="xml">
-      <tree>        
+      <tree>
         <field name="display_name" string="Paragraph"/>
         <field name="description" string="Text"/>
         <field name="id"/>
         <field name="requirement_ids"/>
+        <field name="document_id"/>
       </tree>
     </field>
-  </record>  
-  
-  <!-- document tree -->
-    <record id="view_paragraph_tree" model="ir.ui.view">
-        <field name="name">mgmt.paragraph.search</field>
-        <field name="model">mgmt.paragraph</field>     
-        <field name="arch" type="xml">
-            <search string="Paragraph">
-                <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
-                <field name="parent_id" />
-                <field name="create_uid" />
-                <field name="name" string="Title" />
-                <group expand="0" string="Group By...">
-                    <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />                    
-                </group>
-                <searchpanel>
-                    <field name="docustructure_id" icon="fa-folder" string="Paragraphs" enable_counters="1" />
-                </searchpanel>
-            </search>
-        </field>
-    </record>    
+  </record>
+
+  <!-- search view -->
+  <record id="view_paragraph_tree" model="ir.ui.view">
+    <field name="name">mgmt.paragraph.search</field>
+    <field name="model">mgmt.paragraph</field>
+    <field name="arch" type="xml">
+      <search string="Paragraph">
+        <field name="display_name" string="Paragraph" filter_domain="[('display_name','ilike',self)]" />
+        <field name="description" string="Text" filter_domain="[('description','ilike',self)]" />
+        <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
+        <group expand="0" string="Group By...">
+          <filter name="group_by_category" string="Document" context="{'group_by':'document_id'}" />
+        </group>
+        <searchpanel>
+          <field name="docustructure_id" icon="fa-folder" string="Paragraphs" enable_counters="1" />
+        </searchpanel>
+      </search>
+    </field>
+  </record>
 
   <!-- document form -->
   <record id="view_form_mgmt_paragraph" model="ir.ui.view">
@@ -51,21 +52,21 @@
         <header>
 
         </header>
-        <sheet>          
+        <sheet>
           <group name="paragraph_header">
             <group name="paragraph_details">
               <field name="id" readonly="True"/>
-              <field name="docustructure_id"/> 
-              <field name="name" string="Name"/>              
-              <field name="description"/>                          
+              <field name="docustructure_id"/>
+              <field name="name" string="Name"/>
+              <field name="description"/>
             </group>
 
-            <group name="paragraph_metadata">           
+            <group name="paragraph_metadata">
               <div class="w-100" invisible="False">
                 <div class="o_row">
-               
+
                 </div>
-              </div>              
+              </div>
             </group>
 
           </group>

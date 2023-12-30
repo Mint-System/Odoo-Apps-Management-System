@@ -1,0 +1,23 @@
+<odoo>
+
+  <record id="action_mgmt_paragraph_mgmt_requirement_rel" model=
+    "ir.actions.act_window">
+    <field name="name">Relation between mgmt_requirement and mgmt_paragraphs</field>
+    <field name="res_model">mgmt.mgmt_paragraph_mgmt_requirement_rel</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_mgmt_paragraph_mgmt_requirement_rel" name="elation between mgmt_requirement and mgmt_paragraphs" sequence="100" parent="menu_mgmt_compliance" action="action_mgmt_paragraph_mgmt_requirement_rel" />
+
+  <record id="view_tree_mgmt_paragraph_mgmt_requirement_rel" model="ir.ui.view">
+    <field name="name">Name</field>
+    <field name="model">mgmt.mgmt_paragraph_mgmt_requirement_rel</field>
+    <field name="arch" type="xml">
+      <tree>        
+        <field name="name"/>
+        <field name="id"/>
+      </tree>
+    </field>
+  </record>  
+
+</odoo>

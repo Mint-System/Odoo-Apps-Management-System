@@ -9,65 +9,59 @@
 
   <menuitem id="menu_mgmt_docustructure" name="Docustructure" sequence="1" parent="menu_mgmt_compliance" action="action_mgmt_docustructure" />
 
+  <!-- document tree -->
   <record id="view_tree_mgmt_docustructure" model="ir.ui.view">
     <field name="name">Docustructure Tree</field>
     <field name="model">mgmt.docustructure</field>
     <field name="arch" type="xml">
-      <tree>   
-        <field name="display_name"/>
+      <tree>
+        <field name="display_name" string="Name"/>
+        <field name="document_id"/>
         <field name="id"/>
       </tree>
     </field>
-  </record>  
-  
-  <!-- document tree -->
-    <record id="view_docustructure_tree" model="ir.ui.view">
-        <field name="name">mgmt.docustructure.search</field>
-        <field name="model">mgmt.docustructure</field>
-        <field name="arch" type="xml">
-            <search string="Docustructure">
-                <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
-                <field name="parent_id" />
-                <field name="create_uid" />
-                <field name="name" string="Title" />
-                <group expand="0" string="Group By...">
-                    <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />                    
-                </group>
-                <searchpanel>
-                    <field name="parent_id" icon="fa-folder" string="Regulations" enable_counters="1" />
-                </searchpanel>
-            </search>
-        </field>
-    </record>   
+  </record>
 
+  <!-- search view -->
+  <record id="view_docustructure_tree" model="ir.ui.view">
+    <field name="name">mgmt.docustructure.search</field>
+    <field name="model">mgmt.docustructure</field>
+    <field name="arch" type="xml">
+      <search string="Docustructure">
+        <field name="display_name" string="Name" filter_domain="[('display_name','ilike',self)]" />
+        <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
+        <group expand="0" string="Group By...">
+          <filter name="group_by_category" string="Document" context="{'group_by':'document_id'}" />
+        </group>
+        <searchpanel>
+          <field name="parent_id" icon="fa-folder" string="Regulations" enable_counters="1" />
+        </searchpanel>
+      </search>
+    </field>
+  </record>
+
+  <!-- document form -->
   <record id="view_form_mgmt_docustructure" model="ir.ui.view">
     <field name="name">Docustructure Form</field>
     <field name="model">mgmt.docustructure</field>
     <field name="arch" type="xml">
       <form>
-        <header>
-
-        </header>
-        <sheet>          
+        <sheet>
           <group name="docustructure_header">
             <group name="docustructure_details">
               <field name="id"/>
               <field name="number"/>
               <field name="name"/>
               <field name="parent_id"/>
-              <field name="document_id"/>          
+              <field name="document_id"/>
             </group>
-
-            <group name="docustructure_metadata">           
+            <group name="docustructure_metadata">
               <div class="w-100" invisible="False">
                 <div class="o_row">
-               
                 </div>
-              </div>              
+              </div>
             </group>
-
-          </group>         
-
+          </group>
         </sheet>
 
         <div class="oe_chatter">
@@ -77,8 +71,6 @@
         </div>
 
       </form>
-
     </field>
   </record>
-
 </odoo>
