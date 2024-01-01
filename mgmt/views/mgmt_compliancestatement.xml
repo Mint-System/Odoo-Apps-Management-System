@@ -1,6 +1,31 @@
 <odoo>
 
+  <record id="action_mgmt_compliancestatement" model=
+    "ir.actions.act_window">
+    <field name="name">Compliancestatements</field>
+    <field name="res_model">mgmt.compliancestatement</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_mgmt_compliancestatement" name="Compliancestatements" sequence="1" parent="menu_mgmt_compliance" action="action_mgmt_compliancestatement" />
+
+  <!-- document tree -->
   <record id="view_tree_mgmt_compliancestatement" model="ir.ui.view">
+    <field name="name">Compliancestatement Tree</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="requirement_name"/>
+        <field name="requirement_description"/>       
+        <field string="Statement" name="description"/>
+        <field name="document_id"/>
+        <field name="audit_id"/>
+        <field name="id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_tree_mgmt_compliancestatement_audit" model="ir.ui.view">
     <field name="name">Compliancestatement Tree</field>
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
@@ -9,10 +34,13 @@
         <field name="requirement_description"/>
         <field string="Statement" name="description"/>
         <field name="document_id"/>
+        <field name="audit_id"/>
+        <field name="id"/>
       </tree>
     </field>
   </record>
 
+  <!-- document form -->
   <record id="view_form_mgmt_compliancestatement" model="ir.ui.view">
     <field name="name">Compliancestatement Form</field>
     <field name="model">mgmt.compliancestatement</field>
@@ -23,15 +51,17 @@
         </header>
         <sheet>
           <div class="oe_title">
-            
+
           </div>
           <group name="compliancestatement_header">
             <group name="compliancestatement_details">
-              <field name="name"/>
-              <field name="id"/>  
-              <field name="description"/>
+              <field name="id"/>
               <field name="requirement_id"/>
+              <field name="name"/>             
+              <field name="description"/>
+              <field name="requirement_description"/>
               <field name="document_id"/>
+              <field name="audit_id"/>
             </group>
           </group>
         </sheet>
@@ -43,6 +73,17 @@
     <field name="name">Comliancestatement Lines</field>
     <field name="res_model">mgmt.compliancestatement</field>
     <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- search view -->
+  <record id="view_compliancestatement_tree" model="ir.ui.view">
+    <field name="name">mgmt.compliancestatement.search</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <search string="Compliancestatement">
+        <field name="description" string="Description" filter_domain="[('description','ilike',self)]" />
+      </search>
+    </field>
   </record>
 
 </odoo>

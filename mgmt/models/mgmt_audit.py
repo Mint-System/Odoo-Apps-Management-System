@@ -19,10 +19,11 @@ class Management(models.Model):
       string="Author")  
 
     nonconformity_ids = fields.Many2many("mgmt.nonconformity", 
-      string="Nonconformity")    
+      string="Nonconformity")
 
-    compliancestatement_ids = fields.Many2many("mgmt.compliancestatement", 
-      string="Compliancestatement") 
+    compliancestatement_id = fields.One2many(
+        'mgmt.compliancestatement', 'audit_id',          
+        string="Compliance Statements")
        
     document_ids = fields.Many2many("mgmt.document", 
       string="Documents")

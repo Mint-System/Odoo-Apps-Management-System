@@ -9,4 +9,5 @@ class Management(models.Model):
     parent_id = fields.Many2one("mgmt.document", "Hierarchy")
     child_ids = fields.One2many("mgmt.document", "parent_id", "Children")   
     url = fields.Char(string='URL')
-    owner_id = fields.Integer("Owner ID")    
+    owner_id = fields.Integer("Owner ID")
+    code = fields.Char("Code")

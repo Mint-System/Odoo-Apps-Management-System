@@ -1,23 +1,6 @@
 <odoo>
 
-  <record id="view_tree_mgmt_compliancestatement" model="ir.ui.view">
-    <field name="name">Compliancestatement Tree</field>
-    <field name="model">mgmt.compliancestatement</field>
-    <field name="arch" type="xml">
-      <tree>
-        <field name="id"/>
-        <field name="requirement_description"/>
-        <field string="Statement Test" name="description"/>
-        <field string="Statement Test" name="description"/>
-        <field name="document_id"/>
-        <field name="audit_name"/>
-        <field name="audit_category_id" />
-      </tree>
-    </field>
-  </record>
-
-
-  <record id="action_mgmt_audit" model=
+ <record id="action_mgmt_audit" model=
     "ir.actions.act_window">
     <field name="name">Audits</field>
     <field name="res_model">mgmt.audit</field>
@@ -94,7 +77,7 @@
             </page>
             <page string="Compliancestatements" attrs="{'invisible': [('state', '=', 'open')]}">
               <p></p>
-              <field name="compliancestatement_ids" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_compliancestatement'}"/>
+              <field name="compliancestatement_id" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_compliancestatement_audit'}"/>
             </page>
             <page string="Nonconformities" name="nonconformity" attrs="{'invisible': [('state', '=', 'open')]}">
               <p>Nonconformities:</p>

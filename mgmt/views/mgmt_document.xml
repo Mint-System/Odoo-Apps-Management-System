@@ -15,7 +15,8 @@
         <field name="name">Document Tree</field>
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
-            <tree>                
+            <tree>     
+                <field name="code"/>           
                 <field name="name"/>
                 <field name="url" options="{'text': 'name'}" widget="url"/>
                 <field name="id"/>
@@ -34,7 +35,7 @@
                 <field name="create_uid" />
                 <field name="name" string="Title" />
                 <group expand="0" string="Group By...">
-                    <filter name="group_by_category" string="Category" context="{'group_by':'parent_id'}" />
+                    <filter name="group_by_category" string="Code" context="{'group_by':'code'}" />
                     <filter name="group_by_author" string="Author" context="{'group_by':'create_uid'}" />
                     <filter name="group_by_last_contributor" string="Last Contributor" />
                 </group>

@@ -1,14 +1,5 @@
 <odoo>
 
   <menuitem id="menu_mgmt_compliance" name="Compliance" sequence="10" parent="menu_mgmt" />
-
-  <record id="action_mgmt_compliancematrix" model=
-    "ir.actions.act_window">
-    <field name="name">Compliancematrix</field>
-    <field name="res_model">mgmt.compliancestatement</field>
-    <field name="view_mode">tree,form</field>
-  </record>
-
-  <menuitem id="menu_mgmt_compliancematrix" name="Compliancematrix" sequence="30" parent="menu_mgmt_compliance" action="action_mgmt_compliancematrix" />
-
+  
 </odoo>
