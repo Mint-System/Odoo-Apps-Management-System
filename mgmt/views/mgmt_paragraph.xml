@@ -16,9 +16,9 @@
     <field name="arch" type="xml">
       <tree>
         <field name="display_name" string="Paragraph"/>
-        <field name="description" string="Text"/>
-        <field name="id"/>       
+        <field name="description" string="Text"/>            
         <field name="document_id"/>
+        <field name="id"/>   
       </tree>
     </field>
   </record>
@@ -33,10 +33,11 @@
         <field name="description" string="Text" filter_domain="[('description','ilike',self)]" />
         <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
         <group expand="0" string="Group By...">
-          <filter name="group_by_category" string="Document" context="{'group_by':'document_id'}" />
+          <filter name="group_source" string="Source" context="{'group_by':'document_id'}" />
+          <filter name="group_docustructure" string="Docustructure" context="{'group_by':'docustructure_id','search_default_group_docustructure': 1}" />
         </group>
         <searchpanel>
-          <field name="docustructure_id" icon="fa-folder" string="Paragraphs" enable_counters="1" />
+          <field name="document_id" icon="fa-folder" string="Paragraphs" enable_counters="1" />
         </searchpanel>
       </search>
     </field>

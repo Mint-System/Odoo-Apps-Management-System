@@ -9,7 +9,7 @@ class Management(models.Model):
     parent_id = fields.Many2one("mgmt.paragraph", "parent_id")
     docustructure_id = fields.Many2one("mgmt.docustructure",
       string="Docustructure")
-    document_id = fields.Many2one('mgmt.document', string="Document", store=True, related="docustructure_id.document_id")
+    document_id = fields.Many2one('mgmt.document', string="Source", store=True, related="docustructure_id.document_id")
     requirement_ids = fields.Many2many("mgmt.requirement", 
       string="Requirement")
     display_name = fields.Char(string="Display Name", compute="_compute_display_name", store=True)  

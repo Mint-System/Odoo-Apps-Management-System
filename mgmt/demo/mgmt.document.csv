@@ -1,4 +1,5 @@
 id,name,description,parent_id,url
+__mint_system__.mgmt_document_0,Root,Master Structure,,
 __mint_system__.mgmt_document_1,EASA: Initial Airworthiness,Airworthiness and Environmental Certification (Regulation (EU) No 748/2012),,
 __mint_system__.mgmt_document_2,RL 237 Production Management System Handbook ,Description of the Production Management System,,
 __mint_system__.mgmt_document_3,RL 238 Safety Management System Handbook ,Description of the Safety Management System,,

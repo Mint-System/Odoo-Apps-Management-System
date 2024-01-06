@@ -1,0 +1,2 @@
+id,action_id,context,is_default,name,model_id,user_id
+__export__.ir_filters_2_ea27bc5e,Paragraphs,{'group_by': ['docustructure_id']},True,Docustructure,mgmt.paragraph,

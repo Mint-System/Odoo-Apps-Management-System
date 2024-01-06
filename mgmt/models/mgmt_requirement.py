@@ -1,4 +1,5 @@
-from odoo import fields, models
+from odoo import fields, models, api
+
 class Management(models.Model):
     _name = "mgmt.requirement"
     _description = "Requirement"    
@@ -12,3 +13,8 @@ class Management(models.Model):
     paragraph_name = fields.Char(
         string="Paragraph",
         related="paragraph_ids.name")
+
+    @api.onchange('description')
+    def _onchange_description(self):
+        if self.description and not self.name:
+            self.name = self.description[:40] + '...'

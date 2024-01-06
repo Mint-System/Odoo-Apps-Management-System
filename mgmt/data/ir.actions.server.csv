@@ -1,0 +1,3 @@
+id,name,state,model_id,sequence,usage,code
+__export__.ir_act_server_215_d121a5af,Sortierung berechnen,Execute Python Code,Compliancestatement,5,Server Action,"for record in records:  
+  record._compute_sort()"

@@ -1,2 +1,2 @@
-id,thousands_sep
-base.lang_en,'
+id,thousands_sep,date_format
+base.lang_en,',%d.%m.%Y
