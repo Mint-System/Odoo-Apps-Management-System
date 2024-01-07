@@ -32,7 +32,7 @@ class Management(models.Model):
     requirement_paragraph_document_id_id = fields.Many2one("mgmt.document",
         string="Paragraph Document ID",
         store=True,
-        related="requirement_paragraph_ids.document_id")        
+        related="requirement_paragraph_ids.document_id")
     sort = fields.Char(string="Sort", compute="_compute_sort", store=True)
 
     @api.depends("name", "description")

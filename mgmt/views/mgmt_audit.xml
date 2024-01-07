@@ -10,7 +10,8 @@
   <menuitem id="menu_mgmt_auditing" name="Auditing" sequence="90" parent="menu_mgmt" action="action_mgmt_audit" />
 
   <menuitem id="menu_mgmt_audit" name="Audits" parent="menu_mgmt_auditing" action="action_mgmt_audit" />
-
+  
+  <!-- document tree -->
   <record id="view_tree_mgmt_audit" model="ir.ui.view">
     <field name="name">Audit Tree</field>
     <field name="model">mgmt.audit</field>
@@ -22,7 +23,7 @@
         <field name="type_id"/>
         <field name="category_id"/>
         <field name="auditor_id"/>
-        <field name="id"/>
+        <field name="id" optional="True"/>
       </tree>
     </field>
   </record>
@@ -102,6 +103,7 @@
     </field>
   </record>
 
+  <!-- search view -->
   <record id="view_mgmt_audit_filter" model="ir.ui.view">
     <field name="name">mgmt.audit.filter</field>
     <field name="model">mgmt.audit</field>

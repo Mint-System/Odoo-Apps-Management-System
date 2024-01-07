@@ -19,3 +19,14 @@ class Management(models.Model):
         for record in self:
             paragraph_name = record.name if record.name else ""
             record.display_name = f"{record.docustructure_id.number} {paragraph_name}"
+
+    state = fields.Selection(
+      [("changed", "Changed"), ("approved", "Approved")], default="changed", required=True)
+
+    def button_approved(self):
+        self.message_post(body= ("Approved. (The formulated requirements fully reflect the requirements of the paragraph.)"))
+        return self.write({"state": "approved"})
+
+    def button_changed(self):
+        self.message_post(body= ("Changed. (The paragraph has changed.)"))
+        return self.write({"state": "changed"})

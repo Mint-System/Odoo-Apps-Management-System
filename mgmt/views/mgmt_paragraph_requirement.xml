@@ -1,0 +1,15 @@
+<odoo>
+
+  <record id="mgmt_paragraph_requirement" model="ir.ui.view">
+    <field name="name">Paragraph Tree</field>
+    <field name="model">mgmt.requirement</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="paragraph_display_name"/>        
+        <field name="name"/>
+        <field name="id" optional="True"/>
+      </tree>
+    </field>
+  </record>
+
+</odoo>

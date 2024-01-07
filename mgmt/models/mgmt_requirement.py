@@ -13,8 +13,19 @@ class Management(models.Model):
     paragraph_name = fields.Char(
         string="Paragraph",
         related="paragraph_ids.name")
+    paragraph_display_name = fields.Char(string="Paragraph",
+        compute="_compute_document_id",
+        store=True)
 
     @api.onchange('description')
     def _onchange_description(self):
         if self.description and not self.name:
             self.name = self.description[:40] + '...'
+
+    @api.depends("name", "description")
+    def _compute_document_id(self):
+        for record in self:
+            if record.paragraph_ids:      
+              record.paragraph_display_name = f"{record.paragraph_ids[0].display_name}"
+            else:
+              record.paragraph_display_name = f""

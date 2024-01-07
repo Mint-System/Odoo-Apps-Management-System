@@ -1,130 +1,30 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual</title>
-
-    <style>
-        img {
-            border: 2px solid rgb(206, 200, 200);
-            padding: 20px;
-        }
-
-        #toc {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            padding: 10px;
-        }
-
-        #toc a {
-            display: block;
-            margin-bottom: 5px;
-            text-decoration: none;
-            color: #333;
-            padding-left: 10px;
-        }
-
-        #toc a:hover {
-            background-color: #eee;
-        }
-
-        #toc a.h2 {
-            padding-left: 20px;
-        }
-
-        #toc a.h3 {
-            padding-left: 30px;
-        }
-
-        body {
-            margin-top: 20px;
-        }
-    </style>
-
-    <script>
-        // Table of contents
-        document.addEventListener('DOMContentLoaded', function () {
-            var toc = document.getElementById('toc');
-            var headings = document.querySelectorAll('h2, h3');
-
-            headings.forEach(function (heading) {
-                var link = document.createElement('a');
-                console.log(heading.nodeType);
-                console.log(heading.nodeType.toString().slice(1));
-                link.style.paddingLeft = '20px';
-                link.href = '#' + heading.id;
-                link.textContent = heading.textContent;
-
-                var listItem = document.createElement('div');
-                listItem.appendChild(link);
-
-                toc.appendChild(listItem);
-            });
-        });
-    </script>
-
+    <meta charset="utf-8" />
 </head>
-
-<body>
-
-    <div id="toc"></div>
-
-    <h1>Description</h1>
-
-    <p></p>
-
-    <h2 id="audit">Audit</h2>
-
-    <p>Audits can be planned and carried out.</p>
-
-    <h3 id="master-data">Master data</h3>
-
-    <p>Define who carries out which audit and when. What the content is, how the audit team is composed and who is
-        involved.</p>
-
-    <a id="master-data" href="assets/audit.png" target="_blank">
-        <img src="assets/audit_masterdata.png" alt="Audit master data" width="1000">
+<body><a href="http://www.gnu.org/licenses/gpl-3.0-standalone.html">
+        <img alt="License: GPL-3" src="https://img.shields.io/badge/licence-GPL--3-blue.svg" />
     </a>
-
-
-    <h3 id="preparation">Preparation</h3>
-
-    <p>The document list defines the scope.</p>
-
-    <a id="preparation" href="assets/audit.png" target="_blank">
-        <img src="assets/audit_preparation.png" alt="Audit preparation" width="1000">
-    </a>
-
-    <p>Close the preparation with the "Close Preparation" button.</p>
-
-    <p>The audit program created in this way can be sent out as an invitation.</p>
-
-
-    <a href="assets/audit_report_audit_program.png" target="_blank">
-        <img src="assets/audit_report_audit_program.png" alt="Audit program" width="600">
-    </a>
-
-    <h2 id="document-structure">Document structure</h2>
-
-    <p>Example of a document structure.</p>
-
-    <a id="documents" href="assets/requirement_docustructure.png" target="_blank">
-        <img src="assets/requirement_docustructure.png" alt="Requirement docustructure" width="1000">
-    </a>
-
-    <h2 id="paragraphs-and-requirements">Paragraphs and requirements</h2>
-
-    <p>Example of the relationship between paragraphs and requirements.</p>
-
-    <a id="documents" href="assets/paragraphs_and_requirements.png" target="_blank">
-        <img src="assets/paragraphs_and_requirements.png" alt="Paragraphs and requirements" width="1000">
-    </a>
-
+    <section id="prometheus-exporter">
+        <h1>Management (Requirements, Compliance, Audits)</h1>
+        <p>Various functionalities in the context of management</p>
+        <p>For a detailed documentation have a look at <a href="https://www.odoo-wiki.org/prometheus-exporter.html">https://www.odoo-wiki.org/prometheus-exporter.html</a></p>
+        <img height="100" width="100" alt="Icon" src="https://raw.githubusercontent.com/Mint-System/Wiki/master/assets/icon-box.png" />
+        <section id="configuration">
+            <h2>Configuration</h2>
+            <ul>
+                <li>No additional configurations needed</li>
+            </ul>
+            <section id="maintainer">
+                <h3>Maintainer</h3>
+            <a href="https://www.mint-system.ch">
+                    <img src="https://raw.githubusercontent.com/Mint-System/Wiki/master/assets/mint-system-logo.png" alt="" />
+                </a>
+                <p>This module is maintained by Mint System GmbH.</p>
+                <p>For support and more information, please visit <a href="https://www.mint-system.ch">our Website</a>.</p>
+            </section>
+        </section>
+    </section>
 </body>
-
 </html>

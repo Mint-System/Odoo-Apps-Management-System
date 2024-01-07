@@ -16,9 +16,10 @@
     <field name="arch" type="xml">
       <tree>
         <field name="display_name" string="Paragraph"/>
-        <field name="description" string="Text"/>            
-        <field name="document_id"/>
-        <field name="id"/>   
+        <field name="description" string="Text"/>
+        <field name="document_id" optional="True"/>
+        <field name="state" widget="badge" decoration-success = " state == 'approved'" decoration-warning = " state == 'changed'"/>
+        <field name="id" optional="True"/>
       </tree>
     </field>
   </record>
@@ -32,6 +33,10 @@
         <field name="display_name" string="Paragraph" filter_domain="[('display_name','ilike',self)]" />
         <field name="description" string="Text" filter_domain="[('description','ilike',self)]" />
         <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
+        <group>
+          <filter name="approved" domain="[('state','=','approved')]" string="Approved" help="Approved paragraphs" />
+          <filter name="changed" domain="[('state','=','changed')]" string="Changed" help="Changed paragraphs" />          
+        </group>
         <group expand="0" string="Group By...">
           <filter name="group_source" string="Source" context="{'group_by':'document_id'}" />
           <filter name="group_docustructure" string="Docustructure" context="{'group_by':'docustructure_id','search_default_group_docustructure': 1}" />
@@ -50,7 +55,9 @@
     <field name="arch" type="xml">
       <form>
         <header>
-
+          <button name="button_approved" string="Approve" states="changed" type="object" />
+          <button name="button_changed" string="Mark as changed" states="approved" type="object" />
+          <field name="state" widget="statusbar" select="1" readonly="1" />
         </header>
         <sheet>
           <group name="paragraph_header">
@@ -74,7 +81,7 @@
           <notebook colspan="4">
             <page string="Requirements">
               <p>Requirement list:</p>
-              <field name="requirement_ids"/>
+              <field name="requirement_ids" context="{'tree_view_ref': 'mgmt.mgmt_paragraph_requirement'}"/>
             </page>
           </notebook>
 
