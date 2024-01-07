@@ -79,12 +79,23 @@
                   <p style="width:350px" t-field="doc.description"/>
                 </div>
               </div>
-              <div style="width: 500px;">
+              <div style="width: 800px;">
                 <t t-set="requirements" t-value="doc.requirement_ids"/>
                 <div class="row no-break" t-foreach="requirements" t-as="requirement_line">
                   <t t-if="requirement_line.description">
-                    <p style="width:50px;" class="id" t-field="requirement_line.id"/>
-                    <p style="width:400px" class="requirement" t-field="requirement_line.description"/>
+                    <div class="row no-break" style="width:300px;">
+                      <p style="width:50px;" class="id" t-field="requirement_line.id"/>
+                      <p style="width:200px" class="requirement" t-field="requirement_line.description"/>
+                    </div>
+                    <div class="col no-break">
+                      <t t-set="statements" t-value="requirement_line.compliancestatement_ids"/>
+                      <div t-foreach="statements" t-as="statement_line" style="width:300px;">
+                        <div class="row no-break">
+                          <p style="width:50px;" class="id" t-field="statement_line.id"/>
+                          <p style="width:150px;" class="statement" t-field="statement_line.description"/>
+                        </div>
+                      </div>
+                    </div>
                   </t>
                 </div>
               </div>

@@ -19,8 +19,6 @@
         'views/mgmt_configuration.xml',
         'views/mgmt_nonconformity.xml',
         'views/mgmt_compliancestatement.xml',
-        'views/mgmt_compliancestatement_requirement.xml',
-        'views/mgmt_paragraph_requirement.xml',   
         'views/mgmt_docustructure.xml',              
         'security/mgmt_security.xml',
         'security/ir.model.access.csv', 

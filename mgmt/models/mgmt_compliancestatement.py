@@ -10,7 +10,11 @@ class Management(models.Model):
     requirement_id = fields.Many2one("mgmt.requirement", 
       string="Requirement")
     audit_id = fields.Many2one('mgmt.audit', 
-        string="Audit")       
+        string="Audit")
+    audit_date = fields.Datetime(
+        string="Datum",
+        store=True,
+        related="audit_id.date_begin")
     requirement_name = fields.Char(
         string="Requirement Name",
         related="requirement_id.name")

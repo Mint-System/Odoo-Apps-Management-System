@@ -9,6 +9,7 @@
 
   <menuitem id="menu_mgmt_requirement" name="Requirements" sequence="10" parent="menu_mgmt_regulations" action="action_mgmt_requirement" />
 
+  <!-- document tree -->
   <record id="view_tree_mgmt_requirement" model="ir.ui.view">
     <field name="name">Requirement Tree</field>
     <field name="model">mgmt.requirement</field>
@@ -21,6 +22,7 @@
     </field>
   </record>
 
+   <!-- document form -->
   <record id="view_form_mgmt_requirement" model="ir.ui.view">
     <field name="name">Requirement Form</field>
     <field name="model">mgmt.requirement</field>
@@ -49,6 +51,19 @@
           </notebook>
         </sheet>
       </form>
+    </field>
+  </record>
+
+  <!-- document form in paragraph-->
+  <record id="mgmt_paragraph_requirement" model="ir.ui.view">
+    <field name="name">Paragraph Tree</field>
+    <field name="model">mgmt.requirement</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="paragraph_display_name"/>        
+        <field name="name"/>
+        <field name="id" optional="True"/>
+      </tree>
     </field>
   </record>
 

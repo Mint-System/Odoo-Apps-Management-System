@@ -14,15 +14,16 @@
     <field name="name">Compliancestatement Tree</field>
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
-      <tree>    
+      <tree>
         <field name="requirement_paragraph_display_name"/>
         <field name="sort" optional="True"/>
         <field name="requirement_name"/>
         <field name="requirement_description"/>
         <field string="Statement" name="description"/>
         <field name="document_id"/>
-        <field name="requirement_paragraph_document_id_name"/>
+        <field name="requirement_paragraph_document_id_name" optional="True"/>
         <field name="audit_id"/>
+        <field name="audit_date" widget="date"/>
         <field name="id" optional="True"/>
       </tree>
     </field>
@@ -50,15 +51,13 @@
     <field name="arch" type="xml">
       <form>
         <header>
-
         </header>
         <sheet>
           <div class="oe_title">
-
           </div>
           <group name="compliancestatement_header">
             <group name="compliancestatement_details">
-              <field name="id"/>              
+              <field name="id"/>
               <field name="requirement_id"/>
               <field name="name"/>
               <field name="description"/>
@@ -67,14 +66,12 @@
               <field name="audit_id"/>
             </group>
           </group>
-
           <notebook colspan="4">
             <page string="Paragraph">
               <p>Paragraph list:</p>
               <field name="requirement_paragraph_ids"/>
-            </page>            
+            </page>
           </notebook>
-
         </sheet>
       </form>
     </field>
@@ -84,6 +81,20 @@
     <field name="name">Comliancestatement Lines</field>
     <field name="res_model">mgmt.compliancestatement</field>
     <field name="view_mode">tree,form</field>
+  </record>  
+
+  <!-- document form in requirement-->
+  <record id="mgmt_compliancestatement_requirement" model="ir.ui.view">
+    <field name="name">Compliancestatement Tree</field>
+    <field name="model">mgmt.compliancestatement</field>
+    <field name="arch" type="xml">
+      <tree>        
+        <field name="name"/>
+        <field name="description"/>
+        <field name="document_id"/>
+        <field name="id" optional="True"/>
+      </tree>
+    </field>
   </record>
 
   <!-- search view -->

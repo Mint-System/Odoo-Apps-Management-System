@@ -19,6 +19,7 @@
         <field name="description" string="Text"/>
         <field name="document_id" optional="True"/>
         <field name="state" widget="badge" decoration-success = " state == 'approved'" decoration-warning = " state == 'changed'"/>
+        <field name="audit_date" widget="date"/>
         <field name="id" optional="True"/>
       </tree>
     </field>
