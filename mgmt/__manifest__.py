@@ -5,7 +5,7 @@
     'website': "https://www.mint_system.ch",
     'license': "AGPL-3",
     'category': 'Services/Management',
-    'version': "16.0.0.0.3",
+    'version': "16.0.0.0.4",
     'depends': ['base', 'mail'],  
     #'depends': ['base', 'mail', 'hr'],    
     'data': [
