@@ -98,7 +98,7 @@
                     <div class="col-4 fw-bold">Document</div>
                   </div>
                   <div class="tbody">
-                    <t t-set="statements" t-value="o.compliancestatement_ids"/>
+                    <t t-set="statements" t-value="o.compliancestatement_id"/>
                     <div class="row" t-foreach="statements" t-as="statement_line">
                       <div class="col-4">
                         <span t-field="statement_line.requirement_id.description"/>
