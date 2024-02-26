@@ -1,0 +1,86 @@
+<odoo>
+
+    <record id="action_mgmt_assessment" model="ir.actions.act_window">
+        <field name="name">Assessments</field>
+        <field name="res_model">mgmt.assessment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mgmt_assessment" name="Assessments" sequence="40" parent="menu_mgmt_operation" action="action_mgmt_assessment" />
+
+    <record id="view_tree_mgmt_assessment" model="ir.ui.view">
+        <field name="name">Assessment Tree</field>
+        <field name="model">mgmt.assessment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="date_begin" string="Date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- assessment form -->
+    <record id="view_form_mgmt_assessment" model="ir.ui.view">
+        <field name="name">Assessment Form</field>
+        <field name="model">mgmt.assessment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!--
+                    <button name="button_prepared" string="Close Preparation" states="open" type="object" />
+                    <button name="button_close" string="Close" states="prepared" type="object" />
+                    <button name="button_open" string="Set back to open" states="prepared" type="object" />
+                    <button name="button_reset" string="Set back to prepared" states="closed" type="object" />
+                    <field name="state" widget="statusbar" select="1" readonly="1" />
+                    -->
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group name="assessment_header">
+                        <group name="assessment_details">
+                            <field name="id"/>
+
+                            <field name="author_id"/>
+                        </group>
+
+                        <group name="assessment_metadata">
+                            <label for="date_begin" string="Date" invisible="False"/>
+                            <div class="w-100" invisible="False">
+                                <div class="o_row">
+                                    <field name="date_begin" widget="daterange" options="{'related_end_date': 'date_end'}" attrs="{'required': [('date_end', '!=', False)]}"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
+                                    <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon" title="Arrow" attrs="{'invisible': [('date_begin', '=', False), ('date_end', '=', False)]}"/>
+                                    <field name="date_end" widget="daterange" options="{'related_start_date': 'date_begin'}" attrs="{'required': [('date_begin', '!=', False)]}"/>
+                                </div>
+                            </div>
+                            
+                        </group>
+
+                    </group>
+
+                    <notebook colspan="4">
+                        <page string="Preparation">
+                            <p>Hazard history list:</p>
+                            <field name="hazard_history_id" placeholder="Hazard history" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_hazard_history_assessment'}"/>
+                        </page>
+                    </notebook>                    
+
+                </sheet>
+     
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>              
+
+            </form>
+
+        </field>
+    </record>
+
+</odoo>

@@ -117,18 +117,22 @@
 
                 <div class="thead">
                   <div class="row" style="border-bottom: solid 1px; padding-top: 5px; padding-bottom: 5px">
-                    <div class="col-6 fw-bold">Title</div>
-                    <div class="col-6 fw-bold" style="padding-left: 5px">Desciption</div>
+                    <div class="col-4 fw-bold">Code</div>
+                    <div class="col-4 fw-bold">Title</div>
+                    <div class="col-4 fw-bold" style="padding-left: 5px">Description</div>
                   </div>
                 </div>
 
                 <div class="tbody">
-                  <t t-set="nonconformities" t-value="o.nonconformity_ids"/>
+                  <t t-set="nonconformities" t-value="o.nonconformity_id"/>
                   <div class="row" t-foreach="nonconformities" t-as="nonconformity_line">
-                    <div class="col-6">
+                    <div class="col-4">
+                      <span t-field="nonconformity_line.code"/>
+                    </div>
+                    <div class="col-4">
                       <span t-field="nonconformity_line.name"/>
                     </div>
-                    <div class="col-6" style="padding-left: 5px">
+                    <div class="col-4" style="padding-left: 5px">
                       <span t-field="nonconformity_line.description"/>
                     </div>
                   </div>

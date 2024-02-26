@@ -60,8 +60,9 @@
     <field name="model">mgmt.requirement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="paragraph_display_name"/>        
-        <field name="name"/>
+        <field name="paragraph_display_name" string="Paragraph"/>  
+        <field name="name"/>      
+        <field name="description"/>
         <field name="id" optional="True"/>
       </tree>
     </field>

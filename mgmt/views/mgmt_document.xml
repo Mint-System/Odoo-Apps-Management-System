@@ -1,9 +1,6 @@
 <odoo>
 
-    <menuitem id="menu_mgmt_document" name="Documents" sequence="60" parent="menu_mgmt" />
-
-    <record id="action_mgmt_document" model=
-    "ir.actions.act_window">
+    <record id="action_mgmt_document" model="ir.actions.act_window">
         <field name="name">QMS</field>
         <field name="res_model">mgmt.document</field>
         <field name="view_mode">tree,form</field>
@@ -18,13 +15,28 @@
             <tree>     
                 <field name="code"/>           
                 <field name="name"/>
+                <field name="description" optional="True"/>
                 <field name="url" options="{'text': 'name'}" widget="url"/>
-                <field name="id"/>
+                <field name="id" optional="True"/>
             </tree>
         </field>
     </record>
 
-    <!-- document tree -->
+    <!-- tree in audit -->
+    <record id="view_tree_mgmt_document_audit" model="ir.ui.view">
+        <field name="name">Document Tree</field>
+        <field name="model">mgmt.document</field>
+        <field name="arch" type="xml">
+            <tree>     
+                <field name="code"/>           
+                <field name="name"/>
+                <field name="description" optional="True"/>
+                <field name="url" options="{'text': 'name'}" widget="url" optional="True"/>
+                <field name="id" optional="True"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="view_document_tree" model="ir.ui.view">
         <field name="name">mgmt.document.search</field>
         <field name="model">mgmt.document</field>

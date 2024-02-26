@@ -16,10 +16,13 @@ class Management(models.Model):
     auditor_id = fields.Many2one("res.partner", 
       string="Auditor")
     author_id = fields.Many2one("res.partner", 
-      string="Author")  
-
-    nonconformity_ids = fields.Many2many("mgmt.nonconformity", 
+      string="Author")
+      
+    nonconformity_id = fields.One2many("mgmt.nonconformity", "audit_id", 
       string="Nonconformity")
+
+    hazard_id = fields.One2many("mgmt.hazard", "audit_id", 
+      string="Hazard")
 
     compliancestatement_id = fields.One2many(
         'mgmt.compliancestatement', 'audit_id',          

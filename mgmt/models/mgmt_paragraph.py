@@ -26,11 +26,11 @@ class Management(models.Model):
             record.display_name = f"{record.docustructure_id.number} {paragraph_name}"
 
     state = fields.Selection(
-      [("changed", "Changed"), ("approved", "Approved")], default="changed", required=True)
+      [("changed", "Changed"), ("incorporated", "Incorporated")], default="changed", required=True)
 
-    def button_approved(self):
-        self.message_post(body= ("Approved. (The formulated requirements fully reflect the requirements of the paragraph.)"))
-        return self.write({"state": "approved"})
+    def button_confirmed(self):
+        self.message_post(body= ("Confirmed. (The formulated requirements fully reflect the requirements of the paragraph.)"))
+        return self.write({"state": "incorporated"})
 
     def button_changed(self):
         self.message_post(body= ("Changed. (The paragraph has changed.)"))

@@ -14,6 +14,7 @@
     <field name="model">mgmt.nonconformity</field>
     <field name="arch" type="xml">
       <tree>
+        <field name="code"/>
         <field name="name"/>
         <field name="description"/>
       </tree>
@@ -36,7 +37,9 @@
           </div>
           <group name="nonconformity_header">
             <group name="nonconformity_details">
-              <field name="description"/>    
+              <field name="code"/> 
+              <field name="description"/>
+              <field name="audit_id"/>  
             </group>
           </group>
         </sheet>

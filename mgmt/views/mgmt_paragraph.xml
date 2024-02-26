@@ -18,7 +18,7 @@
         <field name="display_name" string="Paragraph"/>
         <field name="description" string="Text"/>
         <field name="document_id" optional="True"/>
-        <field name="state" widget="badge" decoration-success = " state == 'approved'" decoration-warning = " state == 'changed'"/>
+        <field name="state" widget="badge" decoration-success = " state == 'incorporated'" decoration-warning = " state == 'changed'"/>
         <field name="audit_date" widget="date"/>
         <field name="id" optional="True"/>
       </tree>
@@ -35,7 +35,7 @@
         <field name="description" string="Text" filter_domain="[('description','ilike',self)]" />
         <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
         <group>
-          <filter name="approved" domain="[('state','=','approved')]" string="Approved" help="Approved paragraphs" />
+          <filter name="incorporated" domain="[('state','=','incorporated')]" string="Incorporated" help="Incorporated paragraphs" />
           <filter name="changed" domain="[('state','=','changed')]" string="Changed" help="Changed paragraphs" />          
         </group>
         <group expand="0" string="Group By...">
@@ -56,8 +56,8 @@
     <field name="arch" type="xml">
       <form>
         <header>
-          <button name="button_approved" string="Approve" states="changed" type="object" />
-          <button name="button_changed" string="Mark as changed" states="approved" type="object" />
+          <button name="button_confirmed" string="Confirm" states="changed" type="object" />
+          <button name="button_changed" string="Mark as changed" states="incorporated" type="object" />
           <field name="state" widget="statusbar" select="1" readonly="1" />
         </header>
         <sheet>

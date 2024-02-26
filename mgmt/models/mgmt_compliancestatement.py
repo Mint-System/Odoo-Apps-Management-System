@@ -1,4 +1,5 @@
 from odoo import fields, models, api
+
 class Management(models.Model):
     _name = "mgmt.compliancestatement"
     _description = "Compliancestatement"   
@@ -10,7 +11,7 @@ class Management(models.Model):
     requirement_id = fields.Many2one("mgmt.requirement", 
       string="Requirement")
     audit_id = fields.Many2one('mgmt.audit', 
-        string="Audit")
+        string="Audit")    
     audit_date = fields.Datetime(
         string="Datum",
         store=True,

@@ -1,5 +1,0 @@
-<odoo>
-
-  <menuitem id="menu_mgmt_regulations" name="Regulations" sequence="1" parent="menu_mgmt" />
-
-</odoo>

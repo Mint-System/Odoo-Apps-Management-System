@@ -13,7 +13,7 @@ class Management(models.Model):
     paragraph_name = fields.Char(
         string="Paragraph",
         related="paragraph_ids.name")
-    paragraph_display_name = fields.Char(string="Paragraph",
+    paragraph_display_name = fields.Char(string="Paragraph (Display Name)",
         compute="_compute_document_id",
         store=True)
 
