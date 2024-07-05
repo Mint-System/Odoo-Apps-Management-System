@@ -35,3 +35,5 @@ access_mgmt_31,ManagementManager,mgmt.model_mgmt_hazard_history,base.group_user,
 access_mgmt_32,ManagementUser,mgmt.model_mgmt_hazard_history,base.group_user,1,1,1,1
 access_mgmt_33,ManagementManager,mgmt.model_mgmt_risk_group,base.group_user,1,1,1,1
 access_mgmt_34,ManagementUser,mgmt.model_mgmt_risk_group,base.group_user,1,1,1,1
+access_mgmt_35,ManagementManager,mgmt.model_mgmt_document_category,base.group_user,1,1,1,1
+access_mgmt_36,ManagementUser,mgmt.model_mgmt_document_category,base.group_user,1,1,1,1
