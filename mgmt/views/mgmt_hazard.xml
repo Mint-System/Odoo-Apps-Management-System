@@ -1,27 +1,17 @@
 <odoo>
 
-    <record id="action_mgmt_hazard" model=
-    "ir.actions.act_window">
-        <field name="name">Hazards</field>
-        <field name="res_model">mgmt.hazard</field>
-        <field name="view_mode">tree,form,kanban</field>
-        <field name="view_id" ref="view_tree_mgmt_hazard"/>
-    </record>
-
-    <menuitem id="menu_mgmt_hazard" name="Hazards" sequence="10" parent="menu_mgmt_risk" action="action_mgmt_hazard"/>
-
     <!-- hazard tree -->
     <record id="view_tree_mgmt_hazard" model="ir.ui.view">
         <field name="name">Hazard Tree</field>
         <field name="model">mgmt.hazard</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="description"/>
-                <field name="probability_id"/>
-                <field name="severity_id"/> 
-                <field name="audit_id"/>
-                <field name="id" optional="True"/>
+                <field name="name" />
+                <field name="description" />
+                <field name="probability_id" />
+                <field name="severity_id" />
+                <field name="audit_id" />
+                <field name="id" optional="True" />
             </tree>
         </field>
     </record>
@@ -32,10 +22,10 @@
         <field name="model">mgmt.hazard</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="description"/>
-                <field name="audit_id" optional="True"/>
-                <field name="id"/>
+                <field name="name" />
+                <field name="description" />
+                <field name="audit_id" optional="True" />
+                <field name="id" />
             </tree>
         </field>
     </record>
@@ -46,10 +36,10 @@
         <field name="model">mgmt.hazard</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="description"/>
-                <field name="probability_id"/>
-                <field name="severity_id"/>               
+                <field name="name" />
+                <field name="description" />
+                <field name="probability_id" />
+                <field name="severity_id" />
             </tree>
         </field>
     </record>
@@ -63,12 +53,12 @@
                 <sheet>
                     <group name="hazard_header">
                         <group name="hazard_details">
-                            <field name="name"/>
-                            <field name="description"/>
-                            <field name="probability_id"/>
-                            <field name="severity_id"/>
-                            <field name="risk_id"/>
-                            <field name="audit_id" string="Origin audit"/>
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="probability_id" />
+                            <field name="severity_id" />
+                            <field name="risk_id" />
+                            <field name="audit_id" string="Origin audit" />
                         </group>
                     </group>
                 </sheet>
@@ -81,52 +71,84 @@
         <field name="model">mgmt.hazard</field>
         <field name="arch" type="xml">
             <search string="Document">
-                <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
+                <field
+                    name="name"
+                    string="Content"
+                    filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]"
+                />
             </search>
         </field>
     </record>
 
-    <!-- Configuration -->
-    <menuitem id="menu_mgmt_configuration_hazard" name="Hazard" parent="menu_mgmt_configuration" />
+    <record id="action_mgmt_hazard" model="ir.actions.act_window">
+        <field name="name">Hazards</field>
+        <field name="res_model">mgmt.hazard</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_id" ref="view_tree_mgmt_hazard" />
+    </record>
 
-    <record id="action_mgmt_hazard_probability" model=
-    "ir.actions.act_window">
+    <menuitem
+        id="menu_mgmt_hazard"
+        name="Hazards"
+        sequence="10"
+        parent="menu_mgmt_risk"
+        action="action_mgmt_hazard"
+    />
+
+
+    <!-- Configuration -->
+    <menuitem
+        id="menu_mgmt_configuration_hazard"
+        name="Hazard"
+        parent="menu_mgmt_configuration"
+    />
+
+    <record id="action_mgmt_hazard_probability" model="ir.actions.act_window">
         <field name="name">Probability</field>
         <field name="res_model">mgmt.hazard.probability</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_mgmt_hazard_probability" name="Probabilities" parent="menu_mgmt_configuration_hazard" action="action_mgmt_hazard_probability"/>
+    <menuitem
+        id="menu_mgmt_hazard_probability"
+        name="Probabilities"
+        parent="menu_mgmt_configuration_hazard"
+        action="action_mgmt_hazard_probability"
+    />
 
     <record id="view_tree_mgmt_hazard_probability" model="ir.ui.view">
         <field name="name">Probability Tree</field>
         <field name="model">mgmt.hazard.probability</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="description"/>
-                <field name="value"/>
+                <field name="name" />
+                <field name="description" />
+                <field name="value" />
             </tree>
         </field>
     </record>
 
-    <record id="action_mgmt_hazard_severity" model=
-    "ir.actions.act_window">
+    <record id="action_mgmt_hazard_severity" model="ir.actions.act_window">
         <field name="name">Severity</field>
         <field name="res_model">mgmt.hazard.severity</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_mgmt_hazard_severity" name="Severity" parent="menu_mgmt_configuration_hazard" action="action_mgmt_hazard_severity" />
+    <menuitem
+        id="menu_mgmt_hazard_severity"
+        name="Severity"
+        parent="menu_mgmt_configuration_hazard"
+        action="action_mgmt_hazard_severity"
+    />
 
     <record id="view_tree_mgmt_hazard_severity" model="ir.ui.view">
         <field name="name">Hazard Tree</field>
         <field name="model">mgmt.hazard.severity</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="description"/>
-                <field name="value"/>
+                <field name="name" />
+                <field name="description" />
+                <field name="value" />
             </tree>
         </field>
     </record>

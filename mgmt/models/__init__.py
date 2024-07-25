@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from . import mgmt_audit
 from . import mgmt_audit_category
 from . import mgmt_audit_type

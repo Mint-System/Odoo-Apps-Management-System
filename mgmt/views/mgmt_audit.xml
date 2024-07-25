@@ -4,9 +4,14 @@
     <field name="name">Audits</field>
     <field name="res_model">mgmt.audit</field>
     <field name="view_mode">tree,form</field>
-  </record>  
+  </record>
 
-  <menuitem id="menu_mgmt_audit" name="Audits" parent="menu_mgmt_auditing" action="action_mgmt_audit" />
+  <menuitem
+        id="menu_mgmt_audit"
+        name="Audits"
+        parent="menu_mgmt_auditing"
+        action="action_mgmt_audit"
+    />
 
   <!-- document tree -->
   <record id="view_tree_mgmt_audit" model="ir.ui.view">
@@ -14,13 +19,13 @@
     <field name="model">mgmt.audit</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="date_begin" string="Date" widget="date"/>
-        <field name="name"/>
-        <field name="reference"/>
-        <field name="type_id"/>
-        <field name="category_id"/>
-        <field name="auditor_id"/>
-        <field name="id" optional="True"/>
+        <field name="date_begin" string="Date" widget="date" />
+        <field name="name" />
+        <field name="reference" />
+        <field name="type_id" />
+        <field name="category_id" />
+        <field name="auditor_id" />
+        <field name="id" optional="True" />
       </tree>
     </field>
   </record>
@@ -32,40 +37,74 @@
     <field name="arch" type="xml">
       <form>
         <header>
-          <button name="button_prepared" string="Close Preparation" states="open" type="object" />
+          <button
+                        name="button_prepared"
+                        string="Close Preparation"
+                        states="open"
+                        type="object"
+                    />
           <button name="button_close" string="Close" states="prepared" type="object" />
-          <button name="button_open" string="Set back to open" states="prepared" type="object" />
-          <button name="button_reset" string="Set back to prepared" states="closed" type="object" />
+          <button
+                        name="button_open"
+                        string="Set back to open"
+                        states="prepared"
+                        type="object"
+                    />
+          <button
+                        name="button_reset"
+                        string="Set back to prepared"
+                        states="closed"
+                        type="object"
+                    />
           <field name="state" widget="statusbar" select="1" readonly="1" />
         </header>
         <sheet>
           <div class="oe_title">
             <h1>
-              <field name="name"/>
+              <field name="name" />
             </h1>
           </div>
           <group name="audit_header">
             <group name="audit_details">
-              <field name="id"/>
-              <field name="reference"/>
-              <field name="type_id"/>
-              <field name="category_id"/>
-              <field name="author_id"/>
+              <field name="id" />
+              <field name="reference" />
+              <field name="type_id" />
+              <field name="category_id" />
+              <field name="author_id" />
             </group>
 
             <group name="audit_metadata">
-              <label for="date_begin" string="Date" invisible="False"/>
+              <label for="date_begin" string="Date" invisible="False" />
               <div class="w-100" invisible="False">
                 <div class="o_row">
-                  <field name="date_begin" widget="daterange" options="{'related_end_date': 'date_end'}" attrs="{'required': [('date_end', '!=', False)]}"/>
-                  <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
-                  <i class="fa fa-long-arrow-right mx-2 oe_read_only" aria-label="Arrow icon" title="Arrow" attrs="{'invisible': [('date_begin', '=', False), ('date_end', '=', False)]}"/>
-                  <field name="date_end" widget="daterange" options="{'related_start_date': 'date_begin'}" attrs="{'required': [('date_begin', '!=', False)]}"/>
+                  <field
+                                        name="date_begin"
+                                        widget="daterange"
+                                        options="{'related_end_date': 'date_end'}"
+                                        attrs="{'required': [('date_end', '!=', False)]}"
+                                    />
+                  <i
+                                        class="fa fa-long-arrow-right mx-2 oe_edit_only"
+                                        aria-label="Arrow icon"
+                                        title="Arrow"
+                                    />
+                  <i
+                                        class="fa fa-long-arrow-right mx-2 oe_read_only"
+                                        aria-label="Arrow icon"
+                                        title="Arrow"
+                                        attrs="{'invisible': [('date_begin', '=', False), ('date_end', '=', False)]}"
+                                    />
+                  <field
+                                        name="date_end"
+                                        widget="daterange"
+                                        options="{'related_start_date': 'date_begin'}"
+                                        attrs="{'required': [('date_begin', '!=', False)]}"
+                                    />
                 </div>
               </div>
-              <field name="auditor_id"/>
-              <field name="audit_team_member_ids" widget="many2many_tags"/>
-              <field name="participant_ids" widget="many2many_tags"/>
+              <field name="auditor_id" />
+              <field name="audit_team_member_ids" widget="many2many_tags" />
+              <field name="participant_ids" widget="many2many_tags" />
             </group>
 
           </group>
@@ -73,22 +112,52 @@
           <notebook colspan="4">
             <page string="Preparation">
               <p>Document list:</p>
-              <field name="document_ids" attrs="{'readonly':['|',('state','=','prepared'),('state','=','closed')]}" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_document_audit'}"/>
+              <field
+                                name="document_ids"
+                                attrs="{'readonly':['|',('state','=','prepared'),('state','=','closed')]}"
+                                context="{'tree_view_ref': 'mgmt.view_tree_mgmt_document_audit'}"
+                            />
             </page>
-            <page string="Compliancestatements" attrs="{'invisible': [('state', '=', 'open')]}">
-              <p></p>
-              <field name="compliancestatement_id" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_compliancestatement_audit'}"/>
+            <page
+                            string="Compliancestatements"
+                            attrs="{'invisible': [('state', '=', 'open')]}"
+                        >
+              <p />
+              <field
+                                name="compliancestatement_id"
+                                context="{'tree_view_ref': 'mgmt.view_tree_mgmt_compliancestatement_audit'}"
+                            />
             </page>
-            <page string="Nonconformities" name="nonconformity" attrs="{'invisible': [('state', '=', 'open')]}">
+            <page
+                            string="Nonconformities"
+                            name="nonconformity"
+                            attrs="{'invisible': [('state', '=', 'open')]}"
+                        >
               <p>Nonconformities:</p>
-              <field name="nonconformity_id" placeholder="Nonconformity" context="{'tree_view_ref': 'mgmt.mgmt_nonconformity'}"/>
+              <field
+                                name="nonconformity_id"
+                                placeholder="Nonconformity"
+                                context="{'tree_view_ref': 'mgmt.mgmt_nonconformity'}"
+                            />
             </page>
-            <page string="Hazards" name="hazards" attrs="{'invisible': [('state', '=', 'open')]}">
+            <page
+                            string="Hazards"
+                            name="hazards"
+                            attrs="{'invisible': [('state', '=', 'open')]}"
+                        >
               <p>Hazards:</p>
-              <field name="hazard_id" placeholder="Hazard" context="{'tree_view_ref': 'mgmt.view_tree_mgmt_hazard_audit'}"/>
+              <field
+                                name="hazard_id"
+                                placeholder="Hazard"
+                                context="{'tree_view_ref': 'mgmt.view_tree_mgmt_hazard_audit'}"
+                            />
             </page>
-            <page string="Comment" name="comment" attrs="{'invisible': [('state', '=', 'open')]}">
-              <field name="comment" placeholder="Comment"/>
+            <page
+                            string="Comment"
+                            name="comment"
+                            attrs="{'invisible': [('state', '=', 'open')]}"
+                        >
+              <field name="comment" placeholder="Comment" />
             </page>
 
           </notebook>
@@ -96,9 +165,9 @@
         </sheet>
 
         <div class="oe_chatter">
-          <field name="message_follower_ids" widget="mail_followers"/>
-          <field name="activity_ids" widget="mail_activity"/>
-          <field name="message_ids" widget="mail_thread"/>
+          <field name="message_follower_ids" widget="mail_followers" />
+          <field name="activity_ids" widget="mail_activity" />
+          <field name="message_ids" widget="mail_thread" />
         </div>
 
       </form>
@@ -114,10 +183,20 @@
     <field name="arch" type="xml">
       <search string="Audits">
         <group>
-          <filter name="open" domain="[('state','=','open')]" string="Open" help="Open Audits" />
-          <filter name="prepared" domain="[('state','=','prepared')]" string="Prepared" help="Prepared Audits" />
-          <separator/>
-          <filter string="Date" name="date" date="date_begin"/>
+          <filter
+                        name="open"
+                        domain="[('state','=','open')]"
+                        string="Open"
+                        help="Open Audits"
+                    />
+          <filter
+                        name="prepared"
+                        domain="[('state','=','prepared')]"
+                        string="Prepared"
+                        help="Prepared Audits"
+                    />
+          <separator />
+          <filter string="Date" name="date" date="date_begin" />
         </group>
       </search>
     </field>

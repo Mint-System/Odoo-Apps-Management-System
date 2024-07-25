@@ -5,18 +5,18 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="report_type">qweb-html</field>
     <field name="report_name">mgmt.compliancestatement_report</field>
-    <field name="binding_model_id" ref="model_mgmt_compliancestatement"/>
+    <field name="binding_model_id" ref="model_mgmt_compliancestatement" />
     <field name="binding_type">report</field>
   </record>
 
   <template id="compliancestatement_report">
 
     <t t-call="web.html_container">
-      <t t-set="title" t-value="'Compliancestatements'"/>
+      <t t-set="title" t-value="'Compliancestatements'" />
       <t t-call="mgmt.custom_layout">
-        <t t-set="title" t-value="'Compliancestatements'"/>
-        <t t-set="code" t-value="'RPT xy'"/>
-        <t t-set="version" t-value="'1.00'"/>
+        <t t-set="title" t-value="'Compliancestatements'" />
+        <t t-set="code" t-value="'RPT xy'" />
+        <t t-set="version" t-value="'1.00'" />
         <div class="page">
 
           <style>
@@ -33,7 +33,7 @@
           p {
             padding: 3px;
             margin-bottom: 0px;
-          } 
+          }
           .paragraph {
             background-color: lightgrey;
             padding: 3px;

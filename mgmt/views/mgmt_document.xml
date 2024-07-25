@@ -9,22 +9,22 @@
                 <sheet>
                     <div class="oe_title">
                         <h1>
-                            <field name="name"/>
+                            <field name="name" />
                         </h1>
                     </div>
                     <group name="document_header">
                         <group name="document_details">
-                            <field name="description"/>
-                            <field name="version"/>
-                            <field name="owner_id"/>
-                            <field name="category_id"/>
-                            <field name="url" widget="url"/>
+                            <field name="description" />
+                            <field name="version" />
+                            <field name="owner_id" />
+                            <field name="category_id" />
+                            <field name="url" widget="url" />
                         </group>
                     </group>
                 </sheet>
             </form>
         </field>
-    </record>    
+    </record>
 
     <record id="action_mgmt_document" model="ir.actions.act_window">
         <field name="name">QMS</field>
@@ -32,20 +32,25 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_mgmt_dms_document" name="QMS" parent="menu_mgmt_document" action="action_mgmt_document" />
+    <menuitem
+        id="menu_mgmt_dms_document"
+        name="QMS"
+        parent="menu_mgmt_document"
+        action="action_mgmt_document"
+    />
 
     <record id="view_tree_mgmt_document" model="ir.ui.view">
         <field name="name">Document Tree</field>
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="category_id" optional="True"/>
-                <field name="name"/>
-                <field name="description" optional="True"/>
-                <field name="version"/>
-                <field name="owner_id"/>
-                <field name="url" optional="True"/>
-                <field name="id" optional="True"/>
+                <field name="category_id" optional="True" />
+                <field name="name" />
+                <field name="description" optional="True" />
+                <field name="version" />
+                <field name="owner_id" />
+                <field name="url" optional="True" />
+                <field name="id" optional="True" />
             </tree>
         </field>
     </record>
@@ -57,10 +62,10 @@
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="category_id"/>
-                <field name="name"/>
-                <field name="description" optional="True"/>
-                <field name="id" optional="True"/>
+                <field name="category_id" />
+                <field name="name" />
+                <field name="description" optional="True" />
+                <field name="id" optional="True" />
             </tree>
         </field>
     </record>
@@ -70,40 +75,68 @@
         <field name="model">mgmt.document</field>
         <field name="arch" type="xml">
             <search string="Document">
-                <field name="name" string="Content" filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]" />
+                <field
+                    name="name"
+                    string="Content"
+                    filter_domain="['|', ('name','ilike',self), ('content','ilike',self)]"
+                />
                 <field name="parent_id" />
                 <field name="create_uid" />
                 <field name="name" string="Title" />
                 <group expand="0" string="Group By...">
-                    <filter name="group_by_category" string="Code" context="{'group_by':'code'}" />
-                    <filter name="group_by_author" string="Author" context="{'group_by':'create_uid'}" />
-                    <filter name="group_by_last_contributor" string="Last Contributor" />
+                    <filter
+                        name="group_by_category"
+                        string="Code"
+                        context="{'group_by':'code'}"
+                    />
+                    <filter
+                        name="group_by_author"
+                        string="Author"
+                        context="{'group_by':'create_uid'}"
+                    />
+                    <filter
+                        name="group_by_last_contributor"
+                        string="Last Contributor"
+                    />
                 </group>
                 <searchpanel>
-                    <field name="category_id" icon="fa-folder" string="Category" enable_counters="1" />
+                    <field
+                        name="category_id"
+                        icon="fa-folder"
+                        string="Category"
+                        enable_counters="1"
+                    />
                 </searchpanel>
             </search>
         </field>
     </record>
 
     <!-- Configuration -->
-    <menuitem id="menu_mgmt_configuration_document" name="Document" parent="menu_mgmt_configuration" />
+    <menuitem
+        id="menu_mgmt_configuration_document"
+        name="Document"
+        parent="menu_mgmt_configuration"
+    />
 
-    <record id="action_mgmt_document_category" model=
-    "ir.actions.act_window">
+    <record id="action_mgmt_document_category" model="ir.actions.act_window">
         <field name="name">Category</field>
         <field name="res_model">mgmt.document.category</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_mgmt_document_category" name="Category" parent="menu_mgmt_configuration_document" action="action_mgmt_document_category"/>
+    <menuitem
+        id="menu_mgmt_document_category"
+        name="Category"
+        parent="menu_mgmt_configuration_document"
+        action="action_mgmt_document_category"
+    />
 
     <record id="view_tree_mgmt_document_category" model="ir.ui.view">
         <field name="name">Category Tree</field>
         <field name="model">mgmt.document.category</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="name" />
 
             </tree>
         </field>

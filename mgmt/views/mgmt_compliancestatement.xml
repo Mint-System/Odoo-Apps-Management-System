@@ -1,13 +1,18 @@
 <odoo>
 
-  <record id="action_mgmt_compliancestatement" model=
-    "ir.actions.act_window">
+  <record id="action_mgmt_compliancestatement" model="ir.actions.act_window">
     <field name="name">Compliancestatements</field>
     <field name="res_model">mgmt.compliancestatement</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_compliancestatement" name="Compliancestatements" sequence="1" parent="menu_mgmt_compliance" action="action_mgmt_compliancestatement" />
+  <menuitem
+        id="menu_mgmt_compliancestatement"
+        name="Compliancestatements"
+        sequence="1"
+        parent="menu_mgmt_compliance"
+        action="action_mgmt_compliancestatement"
+    />
 
   <!-- document tree -->
   <record id="view_tree_mgmt_compliancestatement" model="ir.ui.view">
@@ -15,16 +20,16 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="requirement_paragraph_display_name"/>
-        <field name="sort" optional="True"/>
-        <field name="requirement_name" optional="True"/>
-        <field name="requirement_description" string="Requirement"/>
-        <field string="Statement" name="description"/>
-        <field name="document_id"/>
-        <field name="requirement_paragraph_document_id_name" optional="True"/>
-        <field name="audit_id"/>
-        <field name="audit_date" widget="date"/>
-        <field name="id" optional="True"/>
+        <field name="requirement_paragraph_display_name" />
+        <field name="sort" optional="True" />
+        <field name="requirement_name" optional="True" />
+        <field name="requirement_description" string="Requirement" />
+        <field string="Statement" name="description" />
+        <field name="document_id" />
+        <field name="requirement_paragraph_document_id_name" optional="True" />
+        <field name="audit_id" />
+        <field name="audit_date" widget="date" />
+        <field name="id" optional="True" />
       </tree>
     </field>
   </record>
@@ -35,11 +40,11 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="requirement_name"/>
-        <field name="requirement_description"/>
-        <field string="Statement" name="description"/>
-        <field name="document_id"/>        
-        <field name="id"/>
+        <field name="requirement_name" />
+        <field name="requirement_description" />
+        <field string="Statement" name="description" />
+        <field name="document_id" />
+        <field name="id" />
       </tree>
     </field>
   </record>
@@ -57,19 +62,19 @@
           </div>
           <group name="compliancestatement_header">
             <group name="compliancestatement_details">
-              <field name="id"/>
-              <field name="requirement_id"/>
-              <field name="name"/>
-              <field name="description"/>              
-              <field name="requirement_description"/>
-              <field name="document_id"/>
-              <field name="audit_id"/>
+              <field name="id" />
+              <field name="requirement_id" />
+              <field name="name" />
+              <field name="description" />
+              <field name="requirement_description" />
+              <field name="document_id" />
+              <field name="audit_id" />
             </group>
           </group>
           <notebook colspan="4">
             <page string="Paragraph">
               <p>Paragraph list:</p>
-              <field name="requirement_paragraph_ids"/>
+              <field name="requirement_paragraph_ids" />
             </page>
           </notebook>
         </sheet>
@@ -89,10 +94,10 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="name"/>
-        <field name="description"/>
-        <field name="document_id"/>
-        <field name="id" optional="True"/>
+        <field name="name" />
+        <field name="description" />
+        <field name="document_id" />
+        <field name="id" optional="True" />
       </tree>
     </field>
   </record>
@@ -103,11 +108,11 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="audit_id"/>
-        <field name="audit_date"/>
-        <field name="name"/>
-        <field name="description"/>
-        <field name="document_id"/>
+        <field name="audit_id" />
+        <field name="audit_date" />
+        <field name="name" />
+        <field name="description" />
+        <field name="document_id" />
       </tree>
     </field>
   </record>
@@ -118,14 +123,35 @@
     <field name="model">mgmt.compliancestatement</field>
     <field name="arch" type="xml">
       <search string="Compliancestatement">
-        <field name="description" string="Description" filter_domain="[('description','ilike',self)]" />
-        <field name="requirement_paragraph_document_id_name" string="Document" filter_domain="[('requirement_paragraph_document_id_name','ilike',self)]" />
-        <field name="requirement_paragraph_display_name" string="Paragraph" filter_domain="[('requirement_paragraph_display_name','ilike',self)]" />
+        <field
+                    name="description"
+                    string="Description"
+                    filter_domain="[('description','ilike',self)]"
+                />
+        <field
+                    name="requirement_paragraph_document_id_name"
+                    string="Document"
+                    filter_domain="[('requirement_paragraph_document_id_name','ilike',self)]"
+                />
+        <field
+                    name="requirement_paragraph_display_name"
+                    string="Paragraph"
+                    filter_domain="[('requirement_paragraph_display_name','ilike',self)]"
+                />
         <group expand="0" string="Group By...">
-          <filter name="group_by_source" string="Source" context="{'group_by':'requirement_paragraph_document_id_name'}" />
+          <filter
+                        name="group_by_source"
+                        string="Source"
+                        context="{'group_by':'requirement_paragraph_document_id_name'}"
+                    />
         </group>
         <searchpanel>
-          <field name="requirement_paragraph_document_id_id" icon="fa-folder" string="Source" enable_counters="1" />
+          <field
+                        name="requirement_paragraph_document_id_id"
+                        icon="fa-folder"
+                        string="Source"
+                        enable_counters="1"
+                    />
         </searchpanel>
       </search>
     </field>

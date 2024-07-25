@@ -1,13 +1,18 @@
 <odoo>
 
-  <record id="action_mgmt_docustructure" model=
-    "ir.actions.act_window">
+  <record id="action_mgmt_docustructure" model="ir.actions.act_window">
     <field name="name">Docustructure</field>
     <field name="res_model">mgmt.docustructure</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="menu_mgmt_docustructure" name="Docustructure" sequence="1" parent="menu_mgmt_regulations" action="action_mgmt_docustructure" />
+  <menuitem
+        id="menu_mgmt_docustructure"
+        name="Docustructure"
+        sequence="1"
+        parent="menu_mgmt_regulations"
+        action="action_mgmt_docustructure"
+    />
 
   <!-- document tree -->
   <record id="view_tree_mgmt_docustructure" model="ir.ui.view">
@@ -15,9 +20,9 @@
     <field name="model">mgmt.docustructure</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="display_name" string="Name"/>
-        <field name="document_id"/>
-        <field name="id"/>
+        <field name="display_name" string="Name" />
+        <field name="document_id" />
+        <field name="id" />
       </tree>
     </field>
   </record>
@@ -28,13 +33,30 @@
     <field name="model">mgmt.docustructure</field>
     <field name="arch" type="xml">
       <search string="Docustructure">
-        <field name="display_name" string="Name" filter_domain="[('display_name','ilike',self)]" />
-        <field name="document_id" string="Document" filter_domain="[('document_id','ilike',self)]" />
+        <field
+                    name="display_name"
+                    string="Name"
+                    filter_domain="[('display_name','ilike',self)]"
+                />
+        <field
+                    name="document_id"
+                    string="Document"
+                    filter_domain="[('document_id','ilike',self)]"
+                />
         <group expand="0" string="Group By...">
-          <filter name="group_by_category" string="Document" context="{'group_by':'document_id'}" />
+          <filter
+                        name="group_by_category"
+                        string="Document"
+                        context="{'group_by':'document_id'}"
+                    />
         </group>
         <searchpanel>
-          <field name="parent_id" icon="fa-folder" string="Regulations" enable_counters="1" />
+          <field
+                        name="parent_id"
+                        icon="fa-folder"
+                        string="Regulations"
+                        enable_counters="1"
+                    />
         </searchpanel>
       </search>
     </field>
@@ -49,11 +71,11 @@
         <sheet>
           <group name="docustructure_header">
             <group name="docustructure_details">
-              <field name="id"/>
-              <field name="number"/>
-              <field name="name"/>
-              <field name="parent_id"/>
-              <field name="document_id"/>
+              <field name="id" />
+              <field name="number" />
+              <field name="name" />
+              <field name="parent_id" />
+              <field name="document_id" />
             </group>
             <group name="docustructure_metadata">
               <div class="w-100" invisible="False">
@@ -65,9 +87,9 @@
         </sheet>
 
         <div class="oe_chatter">
-          <field name="message_follower_ids" widget="mail_followers"/>
-          <field name="activity_ids" widget="mail_activity"/>
-          <field name="message_ids" widget="mail_thread"/>
+          <field name="message_follower_ids" widget="mail_followers" />
+          <field name="activity_ids" widget="mail_activity" />
+          <field name="message_ids" widget="mail_thread" />
         </div>
 
       </form>
