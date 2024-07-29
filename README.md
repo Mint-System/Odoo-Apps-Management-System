@@ -1,4 +1,4 @@
-# Odoo Apps: Management
+# Odoo Apps: Management System
 
 Collection of management related modules.
 
@@ -7,7 +7,7 @@ Collection of management related modules.
 Clone module into Odoo addon directory.
 
 ```bash
-git clone git@github.com:mint-system/odoo-apps-management.git ./addons/management
+git clone git@github.com:mint-system/odoo-apps-management-system.git ./addons/management-system
 ```
 
 ## Available modules
