@@ -1,0 +1,23 @@
+<odoo>
+
+    <record id="demo_audit0" model="mgmt.audit">
+        <field name="name">Audit 0</field>
+    </record>
+
+    <record id="demo_audit_stage0" model="mgmt.audit.stage">
+        <field name="name">Audit Stage 0</field>
+    </record>
+
+    <record id="demo_statement0" model="mgmt.statement">
+        <field name="name">Statement 0</field>
+    </record>
+
+    <record id="demo_nonconformity0" model="mgmt.nonconformity">
+        <field name="name">Nonconformity 0</field>
+    </record>
+
+    <record id="demo_recommendation0" model="mgmt.recommendation">
+        <field name="name">Recommendation 0</field>
+    </record>
+
+</odoo>

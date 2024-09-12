@@ -3,5 +3,5 @@ access_mgmt_requirement_user,mgmt.requirement.user,mgmt_requirement.model_mgmt_r
 access_mgmt_requirement_manager,mgmt.requirement.manager,mgmt_requirement.model_mgmt_requirement,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
 access_mgmt_paragraph_user,mgmt.paragraph.user,mgmt_requirement.model_mgmt_paragraph,mgmtsystem.group_mgmtsystem_user,1,0,0,0
 access_mgmt_paragraph_manager,mgmt.paragraph.manager,mgmt_requirement.model_mgmt_paragraph,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
-access_mgmt_document_user,mgmt.severiity.user,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_user,1,0,0,0
-access_mgmt_document_manager,mgmt.severiity.manager,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_document_user,mgmt.document.user,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_document_manager,mgmt.document.manager,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
