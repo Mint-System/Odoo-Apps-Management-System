@@ -1,7 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mgmt_requirement_user,mgmt.requirement.user,mgmt_requirement.model_mgmt_requirement,mgmtsystem.group_mgmtsystem_user,1,0,0,0
-access_mgmt_requirement_manager,mgmt.requirement.manager,mgmt_requirement.model_mgmt_requirement,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
-access_mgmt_paragraph_user,mgmt.paragraph.user,mgmt_requirement.model_mgmt_paragraph,mgmtsystem.group_mgmtsystem_user,1,0,0,0
-access_mgmt_paragraph_manager,mgmt.paragraph.manager,mgmt_requirement.model_mgmt_paragraph,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
-access_mgmt_document_user,mgmt.severiity.user,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_user,1,0,0,0
-access_mgmt_document_manager,mgmt.severiity.manager,mgmt_requirement.model_mgmt_document,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_risk_user,mgmt.risk.user,mgmt_risk.model_mgmt_risk,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_risk_manager,mgmt.risk.manager,mgmt_risk.model_mgmt_risk,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_hazard_user,mgmt.hazard.user,mgmt_risk.model_mgmt_hazard,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_hazard_manager,mgmt.hazard.manager,mgmt_risk.model_mgmt_hazard,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_severity_user,mgmt.severiity.user,mgmt_risk.model_mgmt_severity,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_severity_manager,mgmt.severity.manager,mgmt_risk.model_mgmt_severity,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_probability_user,mgmt.probability.user,mgmt_risk.model_mgmt_probability,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_probability_manager,mgmt.probability.manager,mgmt_risk.model_mgmt_probability,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_risk_combination_user,mgmt.risk.combination.user,mgmt_risk.model_mgmt_risk_combination,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_risk_combination_manager,mgmt.risk.combination.manager,mgmt_risk.model_mgmt_risk_combination,mgmtsystem.group_mgmtsystem_manager,1,1,1,1

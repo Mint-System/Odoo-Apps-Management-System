@@ -1,5 +1,5 @@
 {
-    "name": "Mgmt Asset",
+    "name": "Mgmt Risk",
     "summary": """
         Manage risks for ISO27001.
     """,
@@ -8,7 +8,7 @@
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmtsystem"],
+    "depends": ["mgmtsystem", "hr"],
     "data": [
         "security/ir.model.access.csv",
         "views/risk_views.xml",
