@@ -1,0 +1,15 @@
+<odoo>
+
+    <record id="demo_requirement0" model="mgmt.requirement">
+        <field name="name">Requirement 0</field>
+    </record>
+
+    <record id="demo_paragraph0" model="mgmt.paragraph">
+        <field name="name">Paragraph 0</field>
+    </record>
+
+    <record id="demo_document0" model="mgmt.document">
+        <field name="name">Document 0</field>
+    </record>
+
+</odoo>

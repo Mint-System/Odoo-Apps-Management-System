@@ -1,0 +1,11 @@
+<odoo>
+
+    <record id="mgmt_risk.demo_risk0" model="mgmt.risk">
+        <field name="name">Risk 0</field>
+    </record>
+
+    <record id="mgmt_risk.demo_hazard0" model="mgmt.hazard">
+        <field name="name">Hazard 0</field>
+    </record>
+
+</odoo>

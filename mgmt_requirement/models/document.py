@@ -5,8 +5,8 @@ from odoo import fields, models
 _logger = logging.getLogger(__name__)
 
 
-class MgmtRisk(models.Model):
-    _name = "mgmt.risk"
-    _description = "Mgmt Risk"
+class MgmtDocument(models.Model):
+    _name = "mgmt.document"
+    _description = "Mgmt Document"
 
     name = fields.Char()

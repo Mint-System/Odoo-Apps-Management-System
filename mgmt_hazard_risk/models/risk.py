@@ -6,7 +6,4 @@ _logger = logging.getLogger(__name__)
 
 
 class MgmtRisk(models.Model):
-    _name = "mgmt.risk"
-    _description = "Mgmt Risk"
-
-    name = fields.Char()
+    _inherit = "mgmt.risk"
