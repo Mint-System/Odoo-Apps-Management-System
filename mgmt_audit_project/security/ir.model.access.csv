@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mgmt_audit_user,mgmt.audit.user,mgmt_audit.model_mgmt_audit,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_audit_manager,mgmt.audit.manager,mgmt_audit.model_mgmt_audit,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_audit_stage_user,mgmt.audit_stage.user,mgmt_audit.model_mgmt_audit_stage,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_audit_stage_manager,mgmt.audit_stage.manager,mgmt_audit.model_mgmt_audit_stage,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_statement_user,mgmt.statement.user,mgmt_audit.model_mgmt_statement,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_statement_manager,mgmt.statement.manager,mgmt_audit.model_mgmt_statement,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_nonconformity_user,mgmt.nonconformity.user,mgmt_audit.model_mgmt_nonconformity,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_nonconformity_manager,mgmt.nonconformity.manager,mgmt_audit.model_mgmt_nonconformity,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_recommendation_user,mgmt.recommendation.user,mgmt_audit.model_mgmt_recommendation,mgmtsystem.group_mgmtsystem_user,1,0,0,0
+access_mgmt_recommendation_manager,mgmt.recommendation.manager,mgmt_audit.model_mgmt_recommendation,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
