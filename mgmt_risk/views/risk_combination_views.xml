@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <record id="asset_form_view" model="ir.ui.view">
-        <field name="name">mgmt_asset.asset_form_view</field>
-        <field name="model">mgmt.asset</field>
+    <record id="risk_combination_form_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_combination_form_view</field>
+        <field name="model">mgmt.risk.combination</field>
         <field name="arch" type="xml">
             <form>
                 <header>
@@ -30,9 +30,9 @@
         </field>
     </record>
 
-    <record id="asset_view_tree" model="ir.ui.view">
-        <field name="name">mgmt_asset.asset_tree_view</field>
-        <field name="model">mgmt.asset</field>
+    <record id="risk_combination_view_tree" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_combination_tree_view</field>
+        <field name="model">mgmt.risk.combination</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />

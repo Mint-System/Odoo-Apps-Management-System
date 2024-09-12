@@ -1,0 +1,19 @@
+<odoo>
+
+    <record id="demo_risk0" model="mgmt.risk">
+        <field name="name">Risk 0</field>
+    </record>
+
+    <record id="demo_hazard0" model="mgmt.hazard">
+        <field name="name">Hazard 0</field>
+    </record>
+
+    <record id="demo_severity0" model="mgmt.severity">
+        <field name="name">Severity 0</field>
+    </record>
+
+    <record id="demo_probability0" model="mgmt.probability">
+        <field name="name">Probaility 0</field>
+    </record>
+
+</odoo>
