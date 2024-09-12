@@ -1,22 +1,15 @@
 {
-    "name": "Mgmt Asset",
+    "name": "Mgmt Asset Risk",
     "summary": """
-        Manage risks for ISO27001.
+        Connect risk and asset management.
     """,
     "author": "Mint System GmbH, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/management-system",
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmtsystem"],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/risk_views.xml",
-        "views/hazard_views.xml",
-        "views/severity_views.xml",
-        "views/probability_views.xml",
-        "views/risk_combination_views.xml",
-    ],
+    "depends": ["mgmt_asset", "mgmt_risk"],
+    "data": ["views/asset_views.xml"],
     "demo": ["demo/demo.xml"],
     "installable": True,
     "application": False,

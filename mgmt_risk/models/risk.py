@@ -11,6 +11,7 @@ class MgmtRisk(models.Model):
 
     name = fields.Char()
 
+
 class MgmtRiskCombination(models.Model):
     _name = "mgmt.risk.combination"
     _description = "Mgmt Risk Combination"

@@ -1,0 +1,7 @@
+<odoo>
+
+    <record id="mgmt_asset.demo_asset0" model="mgmt.asset">
+        <field name="name">Asset 0</field>
+    </record>
+
+</odoo>

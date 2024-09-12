@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="asset_form_view" model="ir.ui.view">
+        <field name="name">mgmt_asset_risk.asset_form_view</field>
+        <field name="model">mgmt.asset</field>
+        <field name="inherit_id" ref="mgmt_asset.asset_form_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="name" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
