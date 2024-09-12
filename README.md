@@ -14,4 +14,4 @@ git clone git@github.com:mint-system/odoo-apps-management-system.git ./addons/ma
 
 | Module | Summary |
 | --- | --- |
-| [mgmt](mgmt) |         Various functionalities in the context of management |
+| [mgmt_asset](mgmt_asset) |         Manage risk management assets. |

@@ -1,5 +1,0 @@
-id,name,description,value
-__mint_system__.mgmt_hazard_probability_1,Low,Less than once in 10 years,1
-__mint_system__.mgmt_hazard_probability_2,Maybe,Between once a year and once in 10 years,2
-__mint_system__.mgmt_hazard_probability_3,Probably,Between once a month and once a year,3
-__mint_system__.mgmt_hazard_probability_4,Very likely,More than once a month,4

@@ -1,5 +1,0 @@
-id,name,description,value
-__mint_system__.mgmt_hazard_severity_1,Simple,First aid is not needed,1
-__mint_system__.mgmt_hazard_severity_2,Medium,Medical treatment,2
-__mint_system__.mgmt_hazard_severity_3,Heavy,Injury,3
-__mint_system__.mgmt_hazard_severity_4,Critical,Death,4
