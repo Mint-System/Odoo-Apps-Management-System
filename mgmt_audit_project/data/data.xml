@@ -1,7 +1,7 @@
 <odoo>
 
     <record id="mgmt_project" model="project.project">
-        <field name="name">Mgmt Project</field>
+        <field name="name">Management System</field>
     </record>
 
 </odoo>

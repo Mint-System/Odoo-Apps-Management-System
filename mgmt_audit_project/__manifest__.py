@@ -10,6 +10,7 @@
     "license": "AGPL-3",
     "depends": ["mgmt_audit", "project"],
     "data": [
+        "data/data.xml",
         "views/nonconformity_views.xml",
         "views/recommendation_views.xml",
         "views/project_task_views.xml",
