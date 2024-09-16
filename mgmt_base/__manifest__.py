@@ -1,7 +1,7 @@
 {
-    "name": "Mgmt Audit",
+    "name": "Mgmt Base",
     "summary": """
-        Audit your company.
+        Base for the management modules.
     """,
     "author": "Mint System GmbH, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/management-system",
@@ -10,9 +10,9 @@
     "license": "AGPL-3",
     "depends": ["mgmtsystem"],
     "data": [
+        "security/ir.model.access.csv",
         "views/menu.xml",
    ],
-    "demo": ["demo/demo.xml"],
     "installable": True,
     "application": False,
     "auto_install": False,
