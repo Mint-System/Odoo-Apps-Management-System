@@ -2,6 +2,7 @@
 
     <record id="demo_asset0" model="mgmt.asset">
         <field name="name">Asset 0</field>
+        <field name="res_id">1</field>
     </record>
 
 </odoo>

@@ -46,6 +46,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_inventory_assets" name="Assets" parent="menu_management_inventory" action="action_mgmt_asset_view" sequence="10"/>
+    <menuitem id="menu_inventory_assets" name="Assets" parent="mgmt_base.menu_management_inventory" action="action_mgmt_asset_view" sequence="10"/>
 
 </odoo>

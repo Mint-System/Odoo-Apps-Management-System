@@ -46,6 +46,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_audit_audits" name="Audits" parent="menu_management_audit" action="action_mgmt_audit_view" sequence="10"/>
+    <menuitem id="menu_audit_audits" name="Audits" parent="mgmt_base.menu_management_audit" action="action_mgmt_audit_view" sequence="10"/>
 
 </odoo>

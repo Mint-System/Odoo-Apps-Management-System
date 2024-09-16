@@ -1,19 +1,34 @@
 <odoo>
 
+    <!-- Create a demo user for risk_owner_id (assuming a user is needed) -->
+    <record id="base_demo_user" model="res.users">
+        <field name="name">Risk Owner User</field>
+        <field name="login">risk_owner_user</field>
+        <field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]"/>
+    </record>
+
+    <!-- Create Severity and Probability records first -->
+    <record id="demo_severity0" model="mgmt.severity">
+        <field name="name">Severity 0</field>
+        <field name="value">5</field>  <!-- Assuming there's a value field for severity -->
+    </record>
+
+    <record id="demo_probability0" model="mgmt.probability">
+        <field name="name">Probability 0</field>
+        <field name="value">3</field>  <!-- Assuming there's a value field for probability -->
+    </record>
+
+    <!-- Now create the risk records and reference the created records -->
     <record id="demo_risk0" model="mgmt.risk">
         <field name="name">Risk 0</field>
+        <field name="risk_owner_id" ref="base_demo_user"/> <!-- Provide a value for risk_owner_id -->
+        <field name="severity_id" ref="demo_severity0"/>  <!-- Correct reference -->
+        <field name="probability_id" ref="demo_probability0"/>  <!-- Correct reference -->
+        <field name="stage">identify</field>
     </record>
 
     <record id="demo_hazard0" model="mgmt.hazard">
         <field name="name">Hazard 0</field>
-    </record>
-
-    <record id="demo_severity0" model="mgmt.severity">
-        <field name="name">Severity 0</field>
-    </record>
-
-    <record id="demo_probability0" model="mgmt.probability">
-        <field name="name">Probaility 0</field>
     </record>
 
 </odoo>

@@ -46,6 +46,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_evaluation_recommendations" name="Recommendations" parent="menu_management_evaluation" action="action_mgmt_recommendation_view" sequence="30"/>
+    <menuitem id="menu_evaluation_recommendations" name="Recommendations" parent="mgmt_base.menu_management_evaluation" action="action_mgmt_recommendation_view" sequence="30"/>
 
 </odoo>

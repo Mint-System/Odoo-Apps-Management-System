@@ -6,6 +6,7 @@
 
     <record id="demo_paragraph0" model="mgmt.paragraph">
         <field name="name">Paragraph 0</field>
+        <field name="reference">Some reference value</field>
     </record>
 
     <record id="demo_document0" model="mgmt.document">
