@@ -3,4 +3,4 @@ from . import hazard
 from . import severity
 from . import probability
 from . import risk_combination
-from . import res_config_settings
+from . import res_company
