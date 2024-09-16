@@ -46,6 +46,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_inventory_paragraphs" name="Paragraphs" parent="menu_management_inventory" action="action_mgmt_paragraph_view" sequence="40"/>
+    <menuitem id="menu_inventory_paragraphs" name="Paragraphs" parent="mgmt_base.menu_management_inventory" action="action_mgmt_paragraph_view" sequence="40"/>
 
 </odoo>

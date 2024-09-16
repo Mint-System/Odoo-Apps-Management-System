@@ -10,4 +10,4 @@ class MgmtProbability(models.Model):
     _description = "Mgmt Probability"
 
     name = fields.Char(required=True)
-    value = field.Integer(required=True)
+    value = fields.Integer(required=True)

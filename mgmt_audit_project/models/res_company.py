@@ -9,7 +9,7 @@ class ResCompany(models.Model):
 
     mgmt_audit_project_id = fields.Many2one('project.project')
 
-class ResConfigSettings(models.TransientModel):
+class ResConfigSettings(models.Model):
     _inherit = "res.config.settings"
 
     mgmt_audit_project_id = fields.Many2one(

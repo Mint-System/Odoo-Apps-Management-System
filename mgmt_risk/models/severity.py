@@ -10,4 +10,4 @@ class MgmtSeverity(models.Model):
     _description = "Mgmt Severity"
 
     name = fields.Char(required=True)
-    value = field.Integer(required=True)
+    value = fields.Integer(required=True)

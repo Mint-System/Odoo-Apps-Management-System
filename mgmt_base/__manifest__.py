@@ -10,7 +10,6 @@
     "license": "AGPL-3",
     "depends": ["mgmtsystem"],
     "data": [
-        "security/ir.model.access.csv",
         "views/menu.xml",
    ],
     "installable": True,

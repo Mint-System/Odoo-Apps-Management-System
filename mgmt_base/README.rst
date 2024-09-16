@@ -6,9 +6,9 @@
 Mgmt Audit
 ==========
 
-Audit your company.
+Base for the management modules.
 
-For a detailed documentation have a look at https://www.odoo-wiki.org/mgmt-audit.html
+For a detailed documentation have a look at https://www.odoo-wiki.org/mgmt-base.html
 
 Configuration
 ~~~~~~~~~~~~~

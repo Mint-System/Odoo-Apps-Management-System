@@ -1,6 +1,6 @@
 import logging
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -11,9 +11,9 @@ class MgmtRisk(models.Model):
 
     name = fields.Char(required=True)
     description = fields.Text()
-    risk_owner_id = fields.Many2one('res.users', required=True)
+    risk_owner_id = fields.Many2one('res.users')
     asset_ids = fields.Many2many('mgmt.asset', required=True)
-    severity_id = fields.Many2one('mgmt.severity', required=True)
+    severity_id = fields.Many2one('mgmt.severity')
     hazard_ids = fields.Many2many('mgmt.hazard', required=True)
     revision_risk_ids = fields.One2many('mgmt.risk', 'head_risk_id')
     head_risk_id = fields.Many2one('mgmt.risk')

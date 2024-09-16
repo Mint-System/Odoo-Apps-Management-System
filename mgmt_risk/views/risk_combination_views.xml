@@ -17,6 +17,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_risk_combination" name="Risk Combination" parent="menu_configuration_risk" action="action_mgmt_risk_combination_view" sequence="30"/>
+    <menuitem id="menu_risk_combination" name="Risk Combination" parent="mgmt_base.menu_configuration_risk" action="action_mgmt_risk_combination_view" sequence="30"/>
 
 </odoo>

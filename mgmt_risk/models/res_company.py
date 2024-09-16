@@ -5,8 +5,8 @@ from odoo import fields, models
 _logger = logging.getLogger(__name__)
 
 
-class ResConfigSettings(models.TransientModel):
-    _inherit = "res.config.settings"
+class ResCompany(models.Model):
+    _inherit = "res.company"
 
     mgmt_risk_formula = fields.Selection(
         [
