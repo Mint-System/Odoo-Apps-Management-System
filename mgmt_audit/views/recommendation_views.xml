@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_recommendation_view" model="ir.actions.act_window">
+      <field name="name">Recommendations</field>
+      <field name="res_model">mgmt.recommendation</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

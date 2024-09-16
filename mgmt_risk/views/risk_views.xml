@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_risk_view" model="ir.actions.act_window">
+      <field name="name">Risks</field>
+      <field name="res_model">mgmt.risk</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

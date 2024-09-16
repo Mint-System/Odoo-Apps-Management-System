@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_nonconformity_view" model="ir.actions.act_window">
+      <field name="name">Nonconformities</field>
+      <field name="res_model">mgmt.nonconformity</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_paragraph_view" model="ir.actions.act_window">
+      <field name="name">Paragraphs</field>
+      <field name="res_model">mgmt.paragraph</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

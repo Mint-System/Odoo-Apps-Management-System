@@ -11,4 +11,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_risk_combination_view" model="ir.actions.act_window">
+      <field name="name">Risk Combination</field>
+      <field name="res_model">mgmt.risk.combination</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

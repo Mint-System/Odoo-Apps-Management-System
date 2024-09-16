@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_audit_view" model="ir.actions.act_window">
+      <field name="name">Audits</field>
+      <field name="res_model">mgmt.audit</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

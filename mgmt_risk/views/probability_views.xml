@@ -11,4 +11,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_probability_view" model="ir.actions.act_window">
+      <field name="name">Probability</field>
+      <field name="res_model">mgmt.probability</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>

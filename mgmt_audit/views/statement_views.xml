@@ -40,4 +40,10 @@
         </field>
     </record>
 
+    <record id="action_mgmt_statement_view" model="ir.actions.act_window">
+      <field name="name">Statements</field>
+      <field name="res_model">mgmt.statement</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
 </odoo>
