@@ -46,4 +46,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem id="menu_audit_statements" name="Statements" parent="menu_management_audit" action="action_mgmt_statement_view" sequence="30"/>
+
 </odoo>

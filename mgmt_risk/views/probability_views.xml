@@ -17,4 +17,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem id="menu_risk_probability" name="Probability" parent="menu_configuration_risk" action="action_mgmt_probability_view" sequence="20"/>
+
 </odoo>

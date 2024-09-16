@@ -17,4 +17,6 @@
       <field name="view_mode">tree,form</field>
     </record>
 
+    <menuitem id="menu_risk_severity" name="Severity" parent="menu_configuration_risk" action="action_mgmt_severity_view" sequence="10"/>
+
 </odoo>
