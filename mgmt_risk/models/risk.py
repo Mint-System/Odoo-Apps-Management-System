@@ -9,9 +9,8 @@ class MgmtRisk(models.Model):
     _name = "mgmt.risk"
     _description = "Mgmt Risk"
 
-    name = fields.Char()
+    name = fields.Char(required=True)
     description = fields.Text()
-
     risk_owner_id = fields.Many2one('res.users', required=True)
     asset_ids = fields.Many2many('mgmt.asset', required=True)
     severity_id = fields.Many2one('mgmt.severity', required=True)
@@ -23,6 +22,17 @@ class MgmtRisk(models.Model):
     color = fields.Integer(compute='_compute_color', store=True)
     stage = fields.Selection([
         ('identify', 'Identify'),
-        ('evaluate_threat', 'Evaluate Threat'),
-        ('monitor', 'Monitor')
+        ('evaluate', 'Evaluate'),
+        ('mitigate', 'Mitigate')
     ], required=True)
+
+
+    @api.depends('severity_id', 'probability_id')
+    def _compute_risk_score(self):
+        for record in self:
+            severity = record.severity_id.value if record.severity_id else 0
+            probability = record.probability_id.value if record.probability_id else 0
+            if severity + probability > 0:
+                record.risk_score = (severity * probability) / (severity + probability)
+            else:
+                record.risk_score = 0

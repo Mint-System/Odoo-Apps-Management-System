@@ -14,4 +14,3 @@ class MgmtNonconformity(models.Model):
         ('major', 'Major'),
         ('minor', 'Minor'),
     ], required=True)
-    task_ids = fields.One2many('project.task')
