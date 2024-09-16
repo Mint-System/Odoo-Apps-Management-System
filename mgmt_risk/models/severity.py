@@ -9,4 +9,5 @@ class MgmtSeverity(models.Model):
     _name = "mgmt.severity"
     _description = "Mgmt Severity"
 
-    name = fields.Char()
+    name = fields.Char(required=True)
+    value = field.Integer(required=True)

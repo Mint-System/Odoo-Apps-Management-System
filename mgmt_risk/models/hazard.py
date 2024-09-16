@@ -9,4 +9,6 @@ class MgmtHazard(models.Model):
     _name = "mgmt.hazard"
     _description = "Mgmt Hazard"
 
-    name = fields.Char()
+    name = fields.Char(required=True)
+    severity_id = fields.Many2one('mgmt.severity')
+    probability_id = fields.Many2one('mgmt.probability')

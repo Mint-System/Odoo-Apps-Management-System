@@ -9,4 +9,4 @@ class MgmtDocument(models.Model):
     _name = "mgmt.document"
     _description = "Mgmt Document"
 
-    name = fields.Char()
+    name = fields.Char(required=True)
