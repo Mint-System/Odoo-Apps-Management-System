@@ -26,7 +26,6 @@ class MgmtRisk(models.Model):
         ('mitigate', 'Mitigate')
     ], required=True)
 
-
     @api.depends('severity_id', 'probability_id')
     def _compute_risk_score(self):
         for record in self:
@@ -35,12 +34,9 @@ class MgmtRisk(models.Model):
 
             formula = self.env.company.mgmt_risk_formula
 
-            if severity > 0 and probability > 0:
-                if formula == 'multiply':
-                    record.risk_score = severity * probability
-                elif formula == 'sum':
-                    record.risk_score = severity + probability
-                else:
-                    record.risk_score = 0
+            if formula == 'multiply':
+                record.risk_score = severity * probability
+            elif formula == 'sum':
+                record.risk_score = severity + probability
             else:
                 record.risk_score = 0
