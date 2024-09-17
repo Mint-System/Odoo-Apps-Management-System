@@ -10,7 +10,7 @@ class ResCompany(models.Model):
 
     mgmt_risk_formula = fields.Selection(
         [
-            ("multiply", "Severity * Probability"),
+            ("multiply", "Severity x Probability"),
             ("sum", "Severity + Probability")
         ]
     )

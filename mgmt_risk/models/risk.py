@@ -9,6 +9,7 @@ class MgmtRisk(models.Model):
     _name = "mgmt.risk"
     _description = "Mgmt Risk"
 
+    company_id = fields.Many2one('res.company', string='Company', required=True, default=lambda self: self.env.company)
     name = fields.Char(required=True)
     description = fields.Text()
     risk_owner_id = fields.Many2one('res.users', required=True)
@@ -27,12 +28,21 @@ class MgmtRisk(models.Model):
     ], required=True)
 
 
-    @api.depends('severity_id', 'probability_id')
+    @api.depends('severity_id', 'probability_id', 'company_id')
     def _compute_risk_score(self):
         for record in self:
             severity = record.severity_id.value if record.severity_id else 0
             probability = record.probability_id.value if record.probability_id else 0
-            if severity + probability > 0:
-                record.risk_score = (severity * probability) / (severity + probability)
+
+            company = record.company_id or self.env.company
+            formula = company.mgmt_risk_formula
+
+            if severity > 0 and probability > 0:
+                if formula == 'multiply':
+                    record.risk_score = severity * probability
+                elif formula == 'sum':
+                    record.risk_score = severity + probability
+                else:
+                    record.risk_score = 0
             else:
                 record.risk_score = 0
