@@ -15,7 +15,7 @@ class MgmtAudit(models.Model):
         ('internal', 'Internal'),
         ('external', 'External'),
     ])
-    plannend_date = fields.Date()
+    planned_date = fields.Date()
     stage_id = fields.Many2one('mgmt.audit.stage')
     responsible_id = fields.Many2one('hr.employee')
     statement_ids = fields.Many2many('mgmt.statement')

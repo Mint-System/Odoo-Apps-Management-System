@@ -1,22 +1,20 @@
 <odoo>
-
-    <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
-        <field name="name">Power Redundancy</field>
-        <field name="system_id" ref="demo_system_isms" />
+    <record id="demo_document_internal_guideline" model="mgmt.document">
+        <field name="name">Internal Guideline</field>
     </record>
 
     <record id="demo_paragraph_data_center" model="mgmt.paragraph">
         <field name="name">Data Center</field>
         <field name="reference">Data Center Guidelines</field>
-        <field name="document_id" ref="demo_document_internal_guideline" />
+        <field name="document_id" eval="[(6, 0, [ref('demo_document_internal_guideline')])]"/>
     </record>
 
-    <record id="demo_document_internal_guideline" model="mgmt.document">
-        <field name="name">Internal Guideline</field>
-    </record>
-
-    <record id="demo_system_isms" model="mgmt.system">
+    <record id="demo_system_isms" model="mgmtsystem.system">
         <field name="name">ISMS</field>
     </record>
 
+    <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
+        <field name="name">Power Redundancy</field>
+        <field name="system_id" ref="demo_system_isms" />
+    </record>
 </odoo>

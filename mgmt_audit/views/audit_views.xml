@@ -27,7 +27,7 @@
                                 <group>
                                     <field name="name" />
                                     <field name="type" />
-                                    <field name="plannend_date" />
+                                    <field name="planned_date" />
                                     <field name="stage_id" />
                                     <field name="responsible_id" />
                                     <field name="auditor_ids" widget="many2many_tags" />
@@ -53,7 +53,7 @@
             <tree>
                 <field name="name" />
                 <field name="type" />
-                <field name="plannend_date" />
+                <field name="planned_date" />
                 <field name="stage_id" />
                 <field name="responsible_id" />
             </tree>
@@ -67,7 +67,7 @@
             <kanban class="o_kanban_small_column">
                 <field name="name" />
                 <field name="type" />
-                <field name="plannend_date" />
+                <field name="planned_date" />
                 <field name="stage_id" />
                 <field name="responsible_id" />
 
@@ -77,7 +77,7 @@
                             <div class="o_kanban_details">
                                 <strong><field name="name" /></strong>
                                 <div>Type: <field name="type" /></div>
-                                <div>Planned: <field name="plannend_date" /></div>
+                                <div>Planned: <field name="planned_date" /></div>
                                 <div>Stage: <field name="stage_id" /></div>
                                 <div>Responsible: <field name="responsible_id" /></div>
                             </div>

@@ -1,5 +1,10 @@
 <odoo>
 
+    <record id="company_risk_formula" model="res.company">
+        <field name="name">Company</field>
+        <field name="mgmt_risk_formula">multiply</field>
+    </record>
+
     <record id="demo_severity1" model="mgmt.severity">
         <field name="name">Severity 1</field>
         <field name="value">1</field>
@@ -65,17 +70,11 @@
 
     <record id="demo_risk_server_outage_revision" model="mgmt.risk">
         <field name="name">Server Outage (New Revision)</field>
+        <field name="risk_owner_id" ref="base.user_admin"/>
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability1" />
         <field name="head_risk_id" ref="demo_risk_server_outage" />
-    </record>
-
-    <record id="demo_risk_formula" model="res.company">
-        <field name="mgmt_risk_formula">multiply</field>
-    </record>
-
-    <record id="demo_hazard_power_outage" model="mgmt.hazard">
-        <field name="name">Power Outage</field>
+        <field name="stage">evaluate</field>
     </record>
 
 </odoo>
