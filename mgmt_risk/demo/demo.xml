@@ -1,34 +1,137 @@
 <odoo>
 
-    <!-- Create a demo user for risk_owner_id (assuming a user is needed) -->
-    <record id="base_demo_user" model="res.users">
-        <field name="name">Risk Owner User</field>
-        <field name="login">risk_owner_user</field>
-        <field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]"/>
+    <record id="demo_inventory_server" model="maintenance.equipment">
+        <field name="name">Odoo-Server</field>
+        <field name="categ_id" ref="demo_inventory_category_servers"/>
     </record>
 
-    <!-- Create Severity and Probability records first -->
-    <record id="demo_severity0" model="mgmt.severity">
-        <field name="name">Severity 0</field>
-        <field name="value">5</field>  <!-- Assuming there's a value field for severity -->
+    <record id="demo_inventory_category_servers" model="maintenance.equipment.category">
+        <field name="name">Servers</field>
     </record>
 
-    <record id="demo_probability0" model="mgmt.probability">
-        <field name="name">Probability 0</field>
-        <field name="value">3</field>  <!-- Assuming there's a value field for probability -->
+    <record id="demo_severity5" model="mgmt.severity">
+        <field name="name">Severity 5</field>
+        <field name="value">5</field>
     </record>
 
-    <!-- Now create the risk records and reference the created records -->
-    <record id="demo_risk0" model="mgmt.risk">
-        <field name="name">Risk 0</field>
-        <field name="risk_owner_id" ref="base_demo_user"/> <!-- Provide a value for risk_owner_id -->
-        <field name="severity_id" ref="demo_severity0"/>  <!-- Correct reference -->
-        <field name="probability_id" ref="demo_probability0"/>  <!-- Correct reference -->
-        <field name="stage">identify</field>
+    <record id="demo_probability3" model="mgmt.probability">
+        <field name="name">Probability 3</field>
+        <field name="value">3</field>
     </record>
 
-    <record id="demo_hazard0" model="mgmt.hazard">
-        <field name="name">Hazard 0</field>
+    <record id="demo_probability1" model="mgmt.probability">
+        <field name="name">Probability 1</field>
+        <field name="value">1</field>
+    </record>
+
+    <record id="demo_risk_server_outage" model="mgmt.risk">
+        <field name="name">Server Outage</field>
+        <field name="risk_owner_id" ref="base.user_admin"/>
+        <field name="severity_id" ref="demo_severity5"/>
+        <field name="probability_id" ref="demo_probability3"/>
+        <field name="asset_ids" eval="[(6, 0, [ref('demo_inventory_category_servers')])]"/>
+        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]"/>
+        <field name="stage">identified</field>
+    </record>
+
+    <record id="demo_hazard_power_outage" model="mgmt.hazard">
+        <field name="name">Power Outage</field>
+    </record>
+
+    <record id="demo_risk_formula" model="res.company">
+        <field name="mgmt_risk_formula">multiply</field>
+    </record>
+
+    <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
+        <field name="name">Power Redundancy</field>
+        <field name="system_id" ref="demo_system_isms"/>
+    </record>
+
+    <record id="demo_paragraph_data_center" model="mgmt.paragraph">
+        <field name="name">Data Center</field>
+        <field name="reference">Data Center Guidelines</field>
+        <field name="document_id" ref="demo_document_internal_guideline"/>
+    </record>
+
+    <record id="demo_document_internal_guideline" model="mgmt.document">
+        <field name="name">Internal Guideline</field>
+    </record>
+
+    <record id="demo_system_isms" model="mgmt.system">
+        <field name="name">ISMS</field>
+    </record>
+
+    <record id="demo_audit_2023" model="mgmt.audit">
+        <field name="name">Yearly Internal Audit 2023</field>
+        <field name="type">internal</field>
+        <field name="plan_end_date">2023-01-01</field>
+        <field name="stage_id" ref="demo_audit_stage_done"/>
+        <field name="responsible_id" ref="base_demo_user"/>
+    </record>
+
+    <record id="demo_audit_stage_draft" model="mgmt.audit.stage">
+        <field name="name">Draft</field>
+        <field name="code">Draft</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="demo_audit_stage_ready" model="mgmt.audit.stage">
+        <field name="name">Ready</field>
+        <field name="code">ready</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="demo_audit_stage_in_progress" model="mgmt.audit.stage">
+        <field name="name">In progress</field>
+        <field name="code">in_progress</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="demo_audit_stage_done" model="mgmt.audit.stage">
+        <field name="name">Done</field>
+        <field name="code">done</field>
+        <field name="sequence">4</field>
+    </record>
+
+    <record id="demo_statement_power_supply_missing" model="mgmt.statement">
+        <field name="name">Redundant power supply missing</field>
+        <field name="audit_id" ref="demo_audit_2023"/>
+        <field name="requirement_id" ref="demo_requirement_power_redundancy"/>
+        <field name="risk_id" ref="demo_risk_server_outage"/>
+        <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply"/>
+    </record>
+
+    <record id="demo_nonconformity_no_power_supply" model="mgmt.nonconformity">
+        <field name="name">No Redundant Power Supply</field>
+        <field name="task_ids" eval="[(6, 0, [ref('demo_task_install_power_supply')])]"/>
+    </record>
+
+    <record id="demo_task_install_power_supply" model="project.task">
+        <field name="name">Install Power Supply</field>
+        <field name="state">done</field>
+    </record>
+
+    <record id="demo_risk_server_outage_revision" model="mgmt.risk">
+        <field name="name">Server Outage (New Revision)</field>
+        <field name="severity_id" ref="demo_severity5"/>
+        <field name="probability_id" ref="demo_probability1"/>
+        <field name="head_risk_id" ref="demo_risk_server_outage"/>
+    </record>
+
+    <record id="demo_audit_2024" model="mgmt.audit">
+        <field name="name">Yearly Internal Audit 2024</field>
+        <field name="type">internal</field>
+        <field name="plan_end_date">2024-01-01</field>
+        <field name="stage_id" ref="demo_audit_stage_done"/>
+        <field name="responsible_id" ref="base_demo_user"/>
+    </record>
+
+    <record id="demo_statement_power_supply_installed" model="mgmt.statement">
+        <field name="name">Redundant power supply installed</field>
+        <field name="audit_id" ref="demo_audit_2024"/>
+        <field name="requirement_id" ref="demo_requirement_power_redundancy"/>
+        <field name="risk_id" ref="demo_risk_server_outage_revision"/>
+        <field name="attachment_id" eval="[(0, 0, {'name': 'External Guideline', 'url': 'https://example.com'})]"/>
     </record>
 
 </odoo>
