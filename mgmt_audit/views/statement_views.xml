@@ -21,6 +21,12 @@
                             <group>
                                 <group>
                                     <field name="name" />
+                                    <field name="risk_id" />
+                                    <field name="audit_id" />
+                                    <field name="requirement_id" />
+                                    <field name="nonconformity_id" />
+                                    <field name="recommendation_id" />
+                                    <field name="attachment_id" />
                                 </group>
                             </group>
                         </page>
@@ -36,14 +42,45 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="risk_id" />
+                <field name="audit_id" />
+                <field name="requirement_id" optional="hide" />
+                <field name="nonconformity_id" optional="hide" />
+                <field name="recommendation_id" optional="hide" />
+                <field name="attachment_id" optional="hide" />
+
             </tree>
+        </field>
+    </record>
+
+    <record id="statement_kanban_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.statement_kanban_view</field>
+        <field name="model">mgmt.statement</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column">
+                <field name="name" />
+                <field name="risk_id" />
+                <field name="audit_id" />
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_details">
+                                <strong><field name="name" /></strong>
+                                <div>Risk: <field name="risk_id" /></div>
+                                <div>Audit: <field name="audit_id" /></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 
     <record id="action_mgmt_statement_view" model="ir.actions.act_window">
       <field name="name">Statements</field>
       <field name="res_model">mgmt.statement</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <menuitem id="menu_audit_statements" name="Statements" parent="mgmt_base.menu_management_audit" action="action_mgmt_statement_view" sequence="30"/>

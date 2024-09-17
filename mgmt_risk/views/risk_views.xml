@@ -21,6 +21,14 @@
                             <group>
                                 <group>
                                     <field name="name" />
+                                    <field name="description" />
+                                    <field name="risk_owner_id" />
+                                    <field name="asset_ids" widget="many2many_tags" />
+                                    <field name="severity_id" />
+                                    <field name="hazard_ids" widget="many2many_tags" />
+                                    <field name="probability_id" />
+                                    <field name="risk_score" />
+                                    <field name="stage" />
                                 </group>
                             </group>
                         </page>
@@ -36,14 +44,49 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="risk_owner_id" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+                <field name="risk_score" />
+                <field name="stage" />
             </tree>
+        </field>
+    </record>
+
+    <record id="risk_kanban_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_kanban_view</field>
+        <field name="model">mgmt.risk</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column">
+                <field name="name" />
+                <field name="risk_owner_id" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+                <field name="risk_score" />
+                <field name="stage" />
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_details">
+                                <strong><field name="name" /></strong>
+                                <div>Owner: <field name="risk_owner_id" /></div>
+                                <div>Severity: <field name="severity_id" /></div>
+                                <div>Probability: <field name="probability_id" /></div>
+                                <div>Score: <field name="risk_score" /></div>
+                                <div>Stage: <field name="stage" /></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 
     <record id="action_mgmt_risk_view" model="ir.actions.act_window">
       <field name="name">Risks</field>
       <field name="res_model">mgmt.risk</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <menuitem id="menu_evaluation_risks" name="Risks" parent="mgmt_base.menu_management_evaluation" action="action_mgmt_risk_view" sequence="10"/>

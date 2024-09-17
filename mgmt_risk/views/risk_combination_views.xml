@@ -7,7 +7,58 @@
         <field name="arch" type="xml">
             <tree editable="top">
                 <field name="name" />
+                <field name="severity_id" />
+                <field name="probability_id" />
             </tree>
+        </field>
+    </record>
+
+    <record id="risk_combination_view_form" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_combination_form_view</field>
+        <field name="model">mgmt.risk.combination</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="severity_id" />
+                            <field name="probability_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="risk_combination_view_kanban" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_combination_kanban_view</field>
+        <field name="model">mgmt.risk.combination</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column">
+                <field name="name" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_details">
+                                <strong><field name="name" /></strong>
+                                <div>Severity: <field name="severity_id" /></div>
+                                <div>Probability: <field name="probability_id" /></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 

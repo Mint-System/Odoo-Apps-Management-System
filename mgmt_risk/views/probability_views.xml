@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <tree editable="top">
                 <field name="name" />
+                <field name="value" />
             </tree>
         </field>
     </record>
@@ -14,7 +15,7 @@
     <record id="action_mgmt_probability_view" model="ir.actions.act_window">
       <field name="name">Probability</field>
       <field name="res_model">mgmt.probability</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree</field>
     </record>
 
     <menuitem id="menu_risk_probability" name="Probability" parent="mgmt_base.menu_configuration_risk" action="action_mgmt_probability_view" sequence="20"/>

@@ -40,10 +40,32 @@
         </field>
     </record>
 
+    <record id="hazard_view_kanban" model="ir.ui.view">
+        <field name="name">mgmt_risk.hazard_kanban_view</field>
+        <field name="model">mgmt.hazard</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column">
+                <field name="name" />
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_details">
+                                <strong>
+                                    <field name="name" />
+                                </strong>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
     <record id="action_mgmt_hazard_view" model="ir.actions.act_window">
       <field name="name">Hazards</field>
       <field name="res_model">mgmt.hazard</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
     </record>
 
     <menuitem id="menu_inventory_hazards" name="Hazards" parent="mgmt_base.menu_management_inventory" action="action_mgmt_hazard_view" sequence="20"/>
