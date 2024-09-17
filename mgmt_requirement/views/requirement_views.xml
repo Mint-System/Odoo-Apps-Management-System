@@ -23,7 +23,10 @@
                                     <field name="name" />
                                     <field name="description" />
                                     <field name="system_id" />
-                                    <field name="paragraph_ids" widget="many2many_tags" />
+                                    <field
+                                        name="paragraph_ids"
+                                        widget="many2many_tags"
+                                    />
                                 </group>
                             </group>
                         </page>
@@ -82,8 +85,20 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_audit_requirements" name="Requirements" parent="mgmt_base.menu_management_audit" action="action_mgmt_requirement_view" sequence="20"/>
+    <menuitem
+        id="menu_audit_requirements"
+        name="Requirements"
+        parent="mgmt_base.menu_management_audit"
+        action="action_mgmt_requirement_view"
+        sequence="20"
+    />
 
-    <menuitem id="menu_reporting_requirement_report" name="Requirement Report" parent="mgmt_base.menu_management_reporting" action="action_mgmt_requirement_report_view" sequence="10"/>
+    <menuitem
+        id="menu_reporting_requirement_report"
+        name="Requirement Report"
+        parent="mgmt_base.menu_management_reporting"
+        action="action_mgmt_requirement_report_view"
+        sequence="10"
+    />
 
 </odoo>

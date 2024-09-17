@@ -4,10 +4,10 @@
         <field name="name">Servers</field>
     </record>
 
-    <record id="demo_inventory_server" model="maintenance.equipment">
-        <field name="name">Odoo-Server</field>
-        <field name="category_id" ref="demo_inventory_category_servers"/>
-        <field name="equipment_assign_to">employee</field>
-    </record>
+    <!-- <record id="demo_inventory_server" model="maintenance.equipment"> -->
+    <!--     <field name="name">Odoo-Server</field> -->
+    <!--     <field name="category_id" ref="demo_inventory_category_servers"/> -->
+    <!--     <field name="equipment_assign_to">employee</field> -->
+    <!-- </record> -->
 
 </odoo>

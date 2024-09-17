@@ -70,6 +70,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_evaluation_nonconformities" name="Non-Conformities" parent="mgmt_base.menu_management_evaluation" action="action_mgmt_nonconformity_view" sequence="20"/>
+    <menuitem
+        id="menu_evaluation_nonconformities"
+        name="Non-Conformities"
+        parent="mgmt_base.menu_management_evaluation"
+        action="action_mgmt_nonconformity_view"
+        sequence="20"
+    />
 
 </odoo>

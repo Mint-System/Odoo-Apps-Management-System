@@ -18,6 +18,12 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_audit_tasks" name="Tasks" parent="mgmt_base.menu_management_audit" action="action_project_task_view" sequence="40"/>
+    <menuitem
+        id="menu_audit_tasks"
+        name="Tasks"
+        parent="mgmt_base.menu_management_audit"
+        action="action_project_task_view"
+        sequence="40"
+    />
 
 </odoo>

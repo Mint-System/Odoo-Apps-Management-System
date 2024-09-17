@@ -52,19 +52,22 @@
 
     <record id="demo_risk_server_outage" model="mgmt.risk">
         <field name="name">Server Outage</field>
-        <field name="risk_owner_id" ref="base.user_admin"/>
-        <field name="severity_id" ref="demo_severity5"/>
-        <field name="probability_id" ref="demo_probability3"/>
-        <field name="asset_ids" eval="[(6, 0, [ref('demo_inventory_category_servers')])]"/>
-        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]"/>
+        <field name="risk_owner_id" ref="base.user_admin" />
+        <field name="severity_id" ref="demo_severity5" />
+        <field name="probability_id" ref="demo_probability3" />
+        <field
+            name="asset_ids"
+            eval="[(6, 0, [ref('mgmt_asset.demo_inventory_category_servers')])]"
+        />
+        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]" />
         <field name="stage">identified</field>
     </record>
 
     <record id="demo_risk_server_outage_revision" model="mgmt.risk">
         <field name="name">Server Outage (New Revision)</field>
-        <field name="severity_id" ref="demo_severity5"/>
-        <field name="probability_id" ref="demo_probability1"/>
-        <field name="head_risk_id" ref="demo_risk_server_outage"/>
+        <field name="severity_id" ref="demo_severity5" />
+        <field name="probability_id" ref="demo_probability1" />
+        <field name="head_risk_id" ref="demo_risk_server_outage" />
     </record>
 
     <record id="demo_risk_formula" model="res.company">

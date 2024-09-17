@@ -7,7 +7,11 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="stage_id" widget="statusbar" statusbar_visible="draft,in_progress,done" />
+                    <field
+                        name="stage_id"
+                        widget="statusbar"
+                        statusbar_visible="draft,in_progress,done"
+                    />
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -90,6 +94,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_audit_audits" name="Audits" parent="mgmt_base.menu_management_audit" action="action_mgmt_audit_view" sequence="10"/>
+    <menuitem
+        id="menu_audit_audits"
+        name="Audits"
+        parent="mgmt_base.menu_management_audit"
+        action="action_mgmt_audit_view"
+        sequence="10"
+    />
 
 </odoo>

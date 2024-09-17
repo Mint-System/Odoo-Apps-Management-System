@@ -89,6 +89,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_evaluation_risks" name="Risks" parent="mgmt_base.menu_management_evaluation" action="action_mgmt_risk_view" sequence="10"/>
+    <menuitem
+        id="menu_evaluation_risks"
+        name="Risks"
+        parent="mgmt_base.menu_management_evaluation"
+        action="action_mgmt_risk_view"
+        sequence="10"
+    />
 
 </odoo>

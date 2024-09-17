@@ -68,6 +68,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_inventory_documents" name="Documents" parent="mgmt_base.menu_management_inventory" action="action_mgmt_document_view" sequence="30"/>
+    <menuitem
+        id="menu_inventory_documents"
+        name="Documents"
+        parent="mgmt_base.menu_management_inventory"
+        action="action_mgmt_document_view"
+        sequence="30"
+    />
 
 </odoo>

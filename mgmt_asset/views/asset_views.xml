@@ -64,7 +64,7 @@
                                     <field name="model_name" />
                                 </div>
                                 <div>
-                                    <t t-esc="record.res_id.raw_value"/>
+                                    <t t-esc="record.res_id.raw_value" />
                                 </div>
                             </div>
                         </div>
@@ -80,6 +80,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_inventory_assets" name="Assets" parent="mgmt_base.menu_management_inventory" action="action_mgmt_asset_view" sequence="10"/>
+    <menuitem
+        id="menu_inventory_assets"
+        name="Assets"
+        parent="mgmt_base.menu_management_inventory"
+        action="action_mgmt_asset_view"
+        sequence="10"
+    />
 
 </odoo>

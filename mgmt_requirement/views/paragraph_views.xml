@@ -61,7 +61,10 @@
                             <div class="o_kanban_details">
                                 <strong><field name="name" /></strong>
                                 <div>Reference: <field name="reference" /></div>
-                                <div>Documents: <field name="document_id" widget="many2many_tags" /></div>
+                                <div>Documents: <field
+                                        name="document_id"
+                                        widget="many2many_tags"
+                                    /></div>
                             </div>
                         </div>
                     </t>
@@ -76,6 +79,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_inventory_paragraphs" name="Paragraphs" parent="mgmt_base.menu_management_inventory" action="action_mgmt_paragraph_view" sequence="40"/>
+    <menuitem
+        id="menu_inventory_paragraphs"
+        name="Paragraphs"
+        parent="mgmt_base.menu_management_inventory"
+        action="action_mgmt_paragraph_view"
+        sequence="40"
+    />
 
 </odoo>

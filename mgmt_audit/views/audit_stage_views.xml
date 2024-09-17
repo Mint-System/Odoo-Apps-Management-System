@@ -61,10 +61,12 @@
                                     <field name="name" />
                                 </strong>
                                 <div>
-                                    <span><t t-esc="record.code.raw_value"/></span>
+                                    <span><t t-esc="record.code.raw_value" /></span>
                                 </div>
                                 <div>
-                                    <span>Sequence: <t t-esc="record.sequence.raw_value"/></span>
+                                    <span>Sequence: <t
+                                            t-esc="record.sequence.raw_value"
+                                        /></span>
                                 </div>
                             </div>
                         </div>
@@ -80,6 +82,12 @@
       <field name="view_mode">kanban,tree,form</field>
     </record>
 
-    <menuitem id="menu_audit_stages" name="Audit Stages" parent="mgmt_base.menu_configuration_audit" action="action_mgmt_audit_stage_view" sequence="10"/>
+    <menuitem
+        id="menu_audit_stages"
+        name="Audit Stages"
+        parent="mgmt_base.menu_configuration_audit"
+        action="action_mgmt_audit_stage_view"
+        sequence="10"
+    />
 
 </odoo>
