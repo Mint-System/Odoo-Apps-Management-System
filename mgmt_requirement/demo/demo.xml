@@ -1,16 +1,22 @@
 <odoo>
 
-    <record id="demo_requirement0" model="mgmt.requirement">
-        <field name="name">Requirement 0</field>
+    <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
+        <field name="name">Power Redundancy</field>
+        <field name="system_id" ref="demo_system_isms"/>
     </record>
 
-    <record id="demo_paragraph0" model="mgmt.paragraph">
-        <field name="name">Paragraph 0</field>
-        <field name="reference">Some reference value</field>
+    <record id="demo_paragraph_data_center" model="mgmt.paragraph">
+        <field name="name">Data Center</field>
+        <field name="reference">Data Center Guidelines</field>
+        <field name="document_id" ref="demo_document_internal_guideline"/>
     </record>
 
-    <record id="demo_document0" model="mgmt.document">
-        <field name="name">Document 0</field>
+    <record id="demo_document_internal_guideline" model="mgmt.document">
+        <field name="name">Internal Guideline</field>
+    </record>
+
+    <record id="demo_system_isms" model="mgmt.system">
+        <field name="name">ISMS</field>
     </record>
 
 </odoo>

@@ -1,23 +1,59 @@
 <odoo>
 
-    <record id="demo_audit0" model="mgmt.audit">
-        <field name="name">Audit 0</field>
+    <record id="demo_audit_2023" model="mgmt.audit">
+        <field name="name">Yearly Internal Audit 2023</field>
+        <field name="type">internal</field>
+        <field name="plan_end_date">2023-01-01</field>
+        <field name="stage_id" ref="demo_audit_stage_done"/>
+        <field name="responsible_id" ref="base_demo_user"/>
     </record>
 
-    <record id="demo_audit_stage0" model="mgmt.audit.stage">
-        <field name="name">Audit Stage 0</field>
+    <record id="demo_audit_2024" model="mgmt.audit">
+        <field name="name">Yearly Internal Audit 2024</field>
+        <field name="type">internal</field>
+        <field name="plan_end_date">2024-01-01</field>
+        <field name="stage_id" ref="demo_audit_stage_done"/>
+        <field name="responsible_id" ref="base_demo_user"/>
     </record>
 
-    <record id="demo_statement0" model="mgmt.statement">
-        <field name="name">Statement 0</field>
+    <record id="demo_audit_stage_draft" model="mgmt.audit.stage">
+        <field name="name">Draft</field>
+        <field name="code">Draft</field>
+        <field name="sequence">1</field>
     </record>
 
-    <record id="demo_nonconformity0" model="mgmt.nonconformity">
-        <field name="name">Nonconformity 0</field>
+    <record id="demo_audit_stage_ready" model="mgmt.audit.stage">
+        <field name="name">Ready</field>
+        <field name="code">ready</field>
+        <field name="sequence">2</field>
     </record>
 
-    <record id="demo_recommendation0" model="mgmt.recommendation">
-        <field name="name">Recommendation 0</field>
+    <record id="demo_audit_stage_in_progress" model="mgmt.audit.stage">
+        <field name="name">In progress</field>
+        <field name="code">in_progress</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="demo_audit_stage_done" model="mgmt.audit.stage">
+        <field name="name">Done</field>
+        <field name="code">done</field>
+        <field name="sequence">4</field>
+    </record>
+
+    <record id="demo_statement_power_supply_missing" model="mgmt.statement">
+        <field name="name">Redundant power supply missing</field>
+        <field name="audit_id" ref="demo_audit_2023"/>
+        <field name="requirement_id" ref="demo_requirement_power_redundancy"/>
+        <field name="risk_id" ref="demo_risk_server_outage"/>
+        <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply"/>
+    </record>
+
+    <record id="demo_statement_power_supply_installed" model="mgmt.statement">
+        <field name="name">Redundant power supply installed</field>
+        <field name="audit_id" ref="demo_audit_2024"/>
+        <field name="requirement_id" ref="demo_requirement_power_redundancy"/>
+        <field name="risk_id" ref="demo_risk_server_outage_revision"/>
+        <field name="attachment_id" eval="[(0, 0, {'name': 'External Guideline', 'url': 'https://example.com'})]"/>
     </record>
 
 </odoo>

@@ -1,8 +1,13 @@
 <odoo>
 
-    <record id="demo_asset0" model="mgmt.asset">
-        <field name="name">Asset 0</field>
-        <field name="res_id">1</field>
+    <record id="demo_inventory_category_servers" model="maintenance.equipment.category">
+        <field name="name">Servers</field>
+    </record>
+
+    <record id="demo_inventory_server" model="maintenance.equipment">
+        <field name="name">Odoo-Server</field>
+        <field name="category_id" ref="demo_inventory_category_servers"/>
+        <field name="equipment_assign_to">employee</field>
     </record>
 
 </odoo>
