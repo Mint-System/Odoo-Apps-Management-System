@@ -44,42 +44,10 @@
         </field>
     </record>
 
-    <record id="audit_stage_kanban_view" model="ir.ui.view">
-        <field name="name">mgmt_audit.audit_stage_kanban_view</field>
-        <field name="model">mgmt.audit.stage</field>
-        <field name="arch" type="xml">
-            <kanban class="o_kanban_small_column">
-                <field name="name" />
-                <field name="code" />
-                <field name="sequence" />
-
-                <templates>
-                    <t t-name="kanban-box">
-                        <div t-attf-class="oe_kanban_global_click">
-                            <div class="o_kanban_details">
-                                <strong>
-                                    <field name="name" />
-                                </strong>
-                                <div>
-                                    <span><t t-esc="record.code.raw_value" /></span>
-                                </div>
-                                <div>
-                                    <span>Sequence: <t
-                                            t-esc="record.sequence.raw_value"
-                                        /></span>
-                                </div>
-                            </div>
-                        </div>
-                    </t>
-                </templates>
-            </kanban>
-        </field>
-    </record>
-
     <record id="action_mgmt_audit_stage_view" model="ir.actions.act_window">
       <field name="name">Audit Stages</field>
       <field name="res_model">mgmt.audit.stage</field>
-      <field name="view_mode">kanban,tree,form</field>
+      <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem
