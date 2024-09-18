@@ -9,4 +9,9 @@
         <field name="category_id" ref="demo_inventory_category_servers" />
     </record>
 
+    <record id="demo_asset_server" model="mgmt.asset">
+        <field name="name">Servers</field>
+        <field name="res_id">17</field>
+    </record>
+
 </odoo>

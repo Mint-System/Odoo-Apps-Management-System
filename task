@@ -15,7 +15,7 @@ function help() {
     # Define column widths
     cmd_width=10
     opt_width=6
-    desc_width=32
+    desc_width=40
 
     # Print table header
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "Command" "Option" "Description"

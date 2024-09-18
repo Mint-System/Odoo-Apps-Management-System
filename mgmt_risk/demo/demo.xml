@@ -1,5 +1,9 @@
 <odoo>
 
+    <record id="demo_hazard_power_outage" model="mgmt.hazard">
+        <field name="name">Power Outage</field>
+    </record>
+
     <record id="company_risk_formula" model="res.company">
         <field name="name">Company</field>
         <field name="mgmt_risk_formula">multiply</field>
@@ -60,10 +64,7 @@
         <field name="risk_owner_id" ref="base.user_admin" />
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability3" />
-        <field
-            name="hazard_ids"
-            eval="[(6, 0, [ref('mgmt_hazard_risk.demo_hazard_power_outage')])]"
-        />
+        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]" />
         <field name="stage">identify</field>
     </record>
 

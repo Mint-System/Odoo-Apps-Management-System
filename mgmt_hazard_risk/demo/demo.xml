@@ -1,7 +1,3 @@
 <odoo>
 
-    <record id="demo_hazard_power_outage" model="mgmt.hazard">
-        <field name="name">Power Outage</field>
-    </record>
-
 </odoo>
