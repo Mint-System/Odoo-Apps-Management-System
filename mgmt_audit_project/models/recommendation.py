@@ -10,4 +10,4 @@ class MgmtRecommendation(models.Model):
     _description = "Mgmt Recommendation"
 
     name = fields.Char(required=True)
-    task_ids = fields.One2many('project.task', 'recommendation_id')
+    task_ids = fields.One2many("project.task", "recommendation_id")

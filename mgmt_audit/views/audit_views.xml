@@ -30,14 +30,14 @@
                                     <field name="planned_date" />
                                     <field name="stage_id" />
                                     <field name="responsible_id" />
-                                    <field name="auditor_ids" widget="many2many_tags" />
+                                    <field name="auditor_ids" />
                                 </group>
                             </group>
                         </page>
-                        <page string="Requirements">
+                        <page string="Requirements" name="requirements">
                             <field name="requirement_ids" widget="many2many_tags" />
                         </page>
-                        <page string="Statements">
+                        <page string="Statements" name="statements">
                             <field name="statement_ids" widget="many2many_tags" />
                         </page>
                     </notebook>

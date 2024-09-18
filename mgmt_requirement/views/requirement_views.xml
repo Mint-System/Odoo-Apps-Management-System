@@ -23,10 +23,7 @@
                                     <field name="name" />
                                     <field name="description" />
                                     <field name="system_id" />
-                                    <field
-                                        name="paragraph_ids"
-                                        widget="many2many_tags"
-                                    />
+                                    <field name="paragraph_ids" />
                                 </group>
                             </group>
                         </page>

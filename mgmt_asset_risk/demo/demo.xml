@@ -1,7 +1,10 @@
 <odoo>
 
-    <!-- <record id="mgmt_asset.demo_" model="mgmt.asset"> -->
-    <!--     <field name="name">Asset 0</field> -->
-    <!-- </record> -->
+    <record id="mgmt_asset.demo_risk_server_outage" model="mgmt.risk">
+        <field
+            name="asset_ids"
+            eval="[(6, 0, [ref('mgmt_asset.demo_inventory_category_servers')])]"
+        />
+    </record>
 
 </odoo>

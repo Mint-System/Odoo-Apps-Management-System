@@ -10,9 +10,9 @@ class MgmtStatement(models.Model):
     _description = "Mgmt Statement"
 
     name = fields.Char(required=True)
-    risk_id = fields.Many2one('mgmt.risk')
-    audit_id = fields.Many2one('mgmt.audit')
-    attachment_id = fields.Many2one('ir.attachment')
-    requirement_id = fields.Many2one('mgmt.requirement')
-    nonconformity_id = fields.Many2one('mgmt.nonconformity')
-    recommendation_id = fields.Many2one('mgmt.recommendation')
+    risk_id = fields.Many2one("mgmt.risk")
+    audit_id = fields.Many2one("mgmt.audit")
+    attachment_id = fields.Many2one("ir.attachment")
+    requirement_id = fields.Many2one("mgmt.requirement")
+    nonconformity_id = fields.Many2one("mgmt.nonconformity")
+    recommendation_id = fields.Many2one("mgmt.recommendation")

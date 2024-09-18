@@ -43,9 +43,15 @@
     <record id="demo_statement_power_supply_missing" model="mgmt.statement">
         <field name="name">Redundant power supply missing</field>
         <field name="audit_id" ref="demo_audit_2023" />
-        <field name="requirement_id" ref="mgmt_requirement.demo_requirement_power_redundancy" />
+        <field
+            name="requirement_id"
+            ref="mgmt_requirement.demo_requirement_power_redundancy"
+        />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage" />
-        <field name="nonconformity_id" ref="mgmt_audit_project.demo_nonconformity_no_power_supply" />
+        <field
+            name="nonconformity_id"
+            ref="mgmt_audit_project.demo_nonconformity_no_power_supply"
+        />
     </record>
 
     <record id="demo_attachment_external_guideline" model="ir.attachment">
@@ -56,9 +62,12 @@
     <record id="demo_statement_power_supply_installed" model="mgmt.statement">
         <field name="name">Redundant power supply installed</field>
         <field name="audit_id" ref="demo_audit_2024" />
-        <field name="requirement_id" ref="mgmt_requirement.demo_requirement_power_redundancy" />
+        <field
+            name="requirement_id"
+            ref="mgmt_requirement.demo_requirement_power_redundancy"
+        />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage_revision" />
-        <field name="attachment_id" ref="demo_attachment_external_guideline"/>
+        <field name="attachment_id" ref="demo_attachment_external_guideline" />
     </record>
 
 </odoo>

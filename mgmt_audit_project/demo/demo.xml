@@ -7,7 +7,7 @@
 
   <record id="demo_task_install_power_supply" model="project.task">
     <field name="name">Install power supply</field>
-    <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply"/>
+    <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply" />
   </record>
 
 </odoo>

@@ -9,4 +9,4 @@ class MgmtNonconformity(models.Model):
     _inherit = "mgmt.nonconformity"
 
     name = fields.Char(required=True)
-    task_ids = fields.One2many('project.task', 'nonconformity_id')
+    task_ids = fields.One2many("project.task", "nonconformity_id")

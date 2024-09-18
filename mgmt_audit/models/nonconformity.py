@@ -10,7 +10,10 @@ class MgmtNonconformity(models.Model):
     _description = "Mgmt Nonconformity"
 
     name = fields.Char(required=True)
-    type = fields.Selection([
-        ('major', 'Major'),
-        ('minor', 'Minor'),
-    ], required=True)
+    type = fields.Selection(
+        [
+            ("major", "Major"),
+            ("minor", "Minor"),
+        ],
+        required=True,
+    )

@@ -23,9 +23,8 @@
                                     <field name="name" />
                                     <field name="description" />
                                     <field name="risk_owner_id" />
-                                    <field name="asset_ids" widget="many2many_tags" />
+                                    <field name="hazard_ids" />
                                     <field name="severity_id" />
-                                    <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="probability_id" />
                                     <field name="risk_score" />
                                     <field name="stage" />

@@ -23,7 +23,7 @@
                                     <field name="name" />
                                     <field name="reference" />
                                     <field name="description" />
-                                    <field name="document_id" widget="many2many_tags" />
+                                    <field name="document_id" />
                                 </group>
                             </group>
                         </page>

@@ -6,7 +6,10 @@
     <record id="demo_paragraph_data_center" model="mgmt.paragraph">
         <field name="name">Data Center</field>
         <field name="reference">Data Center Guidelines</field>
-        <field name="document_id" eval="[(6, 0, [ref('demo_document_internal_guideline')])]"/>
+        <field
+            name="document_id"
+            eval="[(6, 0, [ref('demo_document_internal_guideline')])]"
+        />
     </record>
 
     <record id="demo_system_isms" model="mgmtsystem.system">

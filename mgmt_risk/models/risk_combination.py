@@ -10,5 +10,5 @@ class MgmtRiskCombination(models.Model):
     _description = "Mgmt Risk Combination"
 
     name = fields.Char(required=True)
-    severity_id = fields.Many2one('mgmt.severity')
-    probability_id = fields.Many2one('mgmt.probability', required=True)
+    severity_id = fields.Many2one("mgmt.severity")
+    probability_id = fields.Many2one("mgmt.probability", required=True)

@@ -60,17 +60,16 @@
         <field name="risk_owner_id" ref="base.user_admin" />
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability3" />
-        <!-- <field -->
-        <!--     name="asset_ids" -->
-        <!--     eval="[(6, 0, [ref('mgmt_asset.demo_inventory_category_servers')])]" -->
-        <!-- /> -->
-        <field name="hazard_ids" eval="[(6, 0, [ref('mgmt_hazard_risk.demo_hazard_power_outage')])]" />
+        <field
+            name="hazard_ids"
+            eval="[(6, 0, [ref('mgmt_hazard_risk.demo_hazard_power_outage')])]"
+        />
         <field name="stage">identify</field>
     </record>
 
     <record id="demo_risk_server_outage_revision" model="mgmt.risk">
         <field name="name">Server Outage (New Revision)</field>
-        <field name="risk_owner_id" ref="base.user_admin"/>
+        <field name="risk_owner_id" ref="base.user_admin" />
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability1" />
         <field name="head_risk_id" ref="demo_risk_server_outage" />

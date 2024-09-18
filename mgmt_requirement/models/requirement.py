@@ -11,5 +11,5 @@ class MgmtRequirement(models.Model):
 
     name = fields.Char(required=True)
     description = fields.Text()
-    system_id = fields.Many2one('mgmtsystem.system')
-    paragraph_ids = fields.Many2many('mgmt.paragraph')
+    system_id = fields.Many2one("mgmtsystem.system")
+    paragraph_ids = fields.Many2many("mgmt.paragraph")

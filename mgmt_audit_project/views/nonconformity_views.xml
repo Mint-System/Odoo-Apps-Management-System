@@ -6,8 +6,8 @@
         <field name="model">mgmt.nonconformity</field>
         <field name="inherit_id" ref="mgmt_audit.nonconformity_form_view" />
         <field name="arch" type="xml">
-            <field name="name" position="after">
-                <field name="name" />
+            <field name="type" position="after">
+                <field name="task_ids" />
             </field>
         </field>
     </record>
