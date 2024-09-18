@@ -64,7 +64,7 @@
         <!--     name="asset_ids" -->
         <!--     eval="[(6, 0, [ref('mgmt_asset.demo_inventory_category_servers')])]" -->
         <!-- /> -->
-        <!-- <field name="hazard_ids" eval="[(6, 0, [ref('mgmt_hazard_risk.demo_hazard_power_outage')])]" /> -->
+        <field name="hazard_ids" eval="[(6, 0, [ref('mgmt_hazard_risk.demo_hazard_power_outage')])]" />
         <field name="stage">identify</field>
     </record>
 
