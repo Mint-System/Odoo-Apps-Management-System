@@ -1,34 +1,10 @@
 <odoo>
 
-    <record id="demo_audit_stage_draft" model="mgmt.audit.stage">
-        <field name="name">Draft</field>
-        <field name="code">Draft</field>
-        <field name="sequence">1</field>
-    </record>
-
-    <record id="demo_audit_stage_ready" model="mgmt.audit.stage">
-        <field name="name">Ready</field>
-        <field name="code">ready</field>
-        <field name="sequence">2</field>
-    </record>
-
-    <record id="demo_audit_stage_in_progress" model="mgmt.audit.stage">
-        <field name="name">In Progress</field>
-        <field name="code">in_progress</field>
-        <field name="sequence">3</field>
-    </record>
-
-    <record id="demo_audit_stage_done" model="mgmt.audit.stage">
-        <field name="name">Done</field>
-        <field name="code">done</field>
-        <field name="sequence">4</field>
-    </record>
-
     <record id="demo_audit_2023" model="mgmt.audit">
         <field name="name">Yearly Internal Audit 2023</field>
         <field name="type">internal</field>
         <field name="planned_date">2023-01-01</field>
-        <field name="stage_id" ref="demo_audit_stage_done" />
+        <field name="stage_id" ref="audit_stage_done" />
         <field name="responsible_id" ref="base.user_admin" />
     </record>
 
@@ -36,7 +12,7 @@
         <field name="name">Yearly Internal Audit 2024</field>
         <field name="type">internal</field>
         <field name="planned_date">2024-01-01</field>
-        <field name="stage_id" ref="demo_audit_stage_done" />
+        <field name="stage_id" ref="audit_stage_done" />
         <field name="responsible_id" ref="base.user_admin" />
     </record>
 

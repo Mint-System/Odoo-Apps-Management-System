@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="audit_stage_draft" model="mgmt.audit.stage">
+        <field name="name">Draft</field>
+        <field name="code">Draft</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="audit_stage_ready" model="mgmt.audit.stage">
+        <field name="name">Ready</field>
+        <field name="code">ready</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="audit_stage_in_progress" model="mgmt.audit.stage">
+        <field name="name">In Progress</field>
+        <field name="code">in_progress</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="audit_stage_done" model="mgmt.audit.stage">
+        <field name="name">Done</field>
+        <field name="code">done</field>
+        <field name="sequence">4</field>
+    </record>
+
+</odoo>

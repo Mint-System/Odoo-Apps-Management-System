@@ -21,8 +21,12 @@ class MgmtRisk(models.Model):
     color = fields.Integer(compute="_compute_color", store=True)
     stage = fields.Selection(
         [("identify", "Identify"), ("evaluate", "Evaluate"), ("mitigate", "Mitigate")],
-        required=True,
+        required=True, group_expand="_read_group_stage_ids",
     )
+
+    @api.model
+    def _read_group_stage_ids(self, stages, domain, order):
+        return self.env["mgmt.risk.stage"].search([])
 
     @api.depends("severity_id", "probability_id")
     def _compute_risk_score(self):

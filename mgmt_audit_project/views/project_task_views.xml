@@ -16,7 +16,9 @@
         <field name="name">Tasks</field>
         <field name="res_model">project.task</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">['|', ('nonconformity_id', '!=', False), ('recommendation_id', '!=', False)]</field>
+        <field
+            name="domain"
+        >['|', ('nonconformity_id', '!=', False), ('recommendation_id', '!=', False)]</field>
     </record>
 
     <menuitem

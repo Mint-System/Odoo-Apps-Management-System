@@ -19,9 +19,9 @@ class MgmtSeverity(models.Model):
 
         for probability in probabilities:
             self.env['mgmt.risk.combination'].create({
+                'name': f"{probability.name} - {severity.name}",
                 'probability_id': probability.id,
                 'severity_id': severity.id,
-                'name': f"{probability.name} - {severity.name}"  # Set name
             })
         return severity
 
