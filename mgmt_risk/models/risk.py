@@ -19,14 +19,16 @@ class MgmtRisk(models.Model):
     probability_id = fields.Many2one("mgmt.probability", required=True)
     risk_score = fields.Float(compute="_compute_risk_score", store=True)
     color = fields.Integer(compute="_compute_color", store=True)
-    stage = fields.Selection(
-        [("identify", "Identify"), ("evaluate", "Evaluate"), ("mitigate", "Mitigate")],
-        required=True, default=lambda self: self.env.ref('mgmt_risk.stage_identify').id, group_expand="_read_group_stage_ids",
+    stage = fields.Many2one(
+        "mgmt.risk.stage",
+        required=True,
+        default=lambda self: self.env.ref("mgmt_risk.stage_evaluate").id,
+        group_expand="_read_group_stage_ids",
     )
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
-        return self.env["mgmt.risk"].search([])
+        return self.env["mgmt.risk.stage"].search([])
 
     @api.depends("severity_id", "probability_id")
     def _compute_risk_score(self):

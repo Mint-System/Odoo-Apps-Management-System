@@ -11,6 +11,7 @@
     "depends": ["mgmt_base", "hr"],
     "data": [
         "security/ir.model.access.csv",
+        "data/data.xml",
         "views/risk_views.xml",
         "views/hazard_views.xml",
         "views/severity_views.xml",
