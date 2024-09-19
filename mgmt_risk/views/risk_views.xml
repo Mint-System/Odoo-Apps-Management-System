@@ -7,6 +7,12 @@
         <field name="arch" type="xml">
                 <form>
                 <header>
+                  <field
+                    name="stage"
+                    widget="statusbar"
+                    options="{'clickable': '1'}"
+                    statusbar_visible="identify,evaluate,mitigate"
+                    />
                 </header>
                 <sheet>
                         <div class="oe_button_box" name="button_box">
@@ -27,7 +33,6 @@
                                         <field name="severity_id" />
                                         <field name="probability_id" />
                                         <field name="risk_score" />
-                                        <field name="stage" />
                                 </group>
                                 </group>
                         </page>
@@ -56,13 +61,12 @@
         <field name="name">mgmt_risk.risk_kanban_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-                <kanban class="o_kanban_small_column" default_group_by="stage">
+                <kanban class="o_kanban_small_column" default_group_by="stage" quick_create="False">
                 <field name="name" />
                 <field name="risk_owner_id" />
                 <field name="severity_id" />
                 <field name="probability_id" />
                 <field name="risk_score" />
-                <field name="stage" />
 
                 <templates>
                         <t t-name="kanban-box">
@@ -75,7 +79,6 @@
                                 <div>Severity: <field name="severity_id" /></div>
                                 <div>Probability: <field name="probability_id" /></div>
                                 <div>Score: <field name="risk_score" /></div>
-                                <div>Stage: <field name="stage" /></div>
                                 </div>
                         </div>
                         </t>
