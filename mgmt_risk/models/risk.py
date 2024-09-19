@@ -21,7 +21,7 @@ class MgmtRisk(models.Model):
     color = fields.Integer(compute="_compute_color", store=True)
     stage = fields.Selection(
         [("identify", "Identify"), ("evaluate", "Evaluate"), ("mitigate", "Mitigate")],
-        required=True, group_expand="_read_group_stage_ids",
+        required=True, default=lambda self: self.env.ref('mgmt_risk.stage_identify').id, group_expand="_read_group_stage_ids",
     )
 
     @api.model
