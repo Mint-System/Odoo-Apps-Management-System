@@ -11,7 +11,8 @@
 
     <record id="demo_asset_server" model="mgmt.asset">
         <field name="name">Servers</field>
-        <field name="res_id">17</field>
+        <field name="model_name">maintenance.equipment</field>
+        <field name="res_id" eval="ref('mgmt_asset.demo_inventory_server')" />
     </record>
 
 </odoo>
