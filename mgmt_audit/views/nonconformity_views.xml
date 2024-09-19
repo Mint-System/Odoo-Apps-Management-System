@@ -20,7 +20,6 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="name" />
                                     <field name="type" />
                                 </group>
                             </group>
@@ -30,6 +29,7 @@
             </form>
         </field>
     </record>
+                        ofield name="user_id"/>
 
     <record id="nonconformity_view_tree" model="ir.ui.view">
         <field name="name">mgmt_audit.nonconformity_tree_view</field>

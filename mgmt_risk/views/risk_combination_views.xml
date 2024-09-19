@@ -28,7 +28,6 @@
                     </div>
                     <group>
                         <group>
-                            <field name="name" />
                             <field name="severity_id" />
                             <field name="probability_id" />
                         </group>
