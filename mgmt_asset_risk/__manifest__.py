@@ -9,7 +9,7 @@
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["mgmt_asset", "mgmt_risk"],
-    "data": ["views/asset_views.xml"],
+    "data": ["views/risk_views.xml"],
     "demo": ["demo/demo.xml"],
     "installable": True,
     "application": False,

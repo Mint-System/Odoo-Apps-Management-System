@@ -20,7 +20,9 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="name" />
+                                    <field name="description" />
+                                    <field name="system_id" />
+                                    <field name="paragraph_ids" />
                                 </group>
                             </group>
                         </page>
@@ -36,8 +38,39 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="description" />
+                <field name="system_id" />
+                <field name="paragraph_ids" />
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_requirement_view" model="ir.actions.act_window">
+      <field name="name">Requirements</field>
+      <field name="res_model">mgmt.requirement</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_mgmt_requirement_report_view" model="ir.actions.act_window">
+      <field name="name">Requirement Report</field>
+      <field name="res_model">mgmt.requirement</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_audit_requirements"
+        name="Requirements"
+        parent="mgmt_base.menu_management_audit"
+        action="action_mgmt_requirement_view"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_reporting_requirement_report"
+        name="Requirement Report"
+        parent="mgmt_base.menu_management_reporting"
+        action="action_mgmt_requirement_report_view"
+        sequence="10"
+    />
 
 </odoo>

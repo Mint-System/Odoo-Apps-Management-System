@@ -7,8 +7,23 @@
         <field name="arch" type="xml">
             <tree editable="top">
                 <field name="name" />
+                <field name="value" />
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_severity_view" model="ir.actions.act_window">
+      <field name="name">Severity</field>
+      <field name="res_model">mgmt.severity</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_risk_severity"
+        name="Severity"
+        parent="mgmt_base.menu_configuration_risk"
+        action="action_mgmt_severity_view"
+        sequence="20"
+    />
 
 </odoo>

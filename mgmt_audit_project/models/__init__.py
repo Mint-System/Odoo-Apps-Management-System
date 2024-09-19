@@ -1,4 +1,4 @@
+from . import project_task
 from . import nonconformity
 from . import recommendation
-from . import project_task
-from . import res_config_settings
+from . import res_company

@@ -5,28 +5,40 @@
         <field name="name">mgmt_risk.risk_form_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-            <form>
+                <form>
                 <header>
+                  <field
+                        name="stage"
+                        widget="statusbar"
+                        options="{'clickable': '1'}"
+                        statusbar_visible="identify,evaluate,mitigate"
+                    />
                 </header>
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                    </div>
-                    <div class="oe_title">
-                        <h1>
-                            <field name="name" />
-                        </h1>
-                    </div>
-                    <notebook>
+                        <div class="oe_button_box" name="button_box">
+                        </div>
+                        <div class="oe_title">
+                                <field name="name" />
+                        </div>
+                        <notebook>
                         <page string="General Information" name="general_info">
-                            <group>
                                 <group>
-                                    <field name="name" />
+                                <group>
+                                        <field name="description" />
+                                        <field name="risk_owner_id" />
+                                        <field
+                                        name="hazard_ids"
+                                        widget="many2many_tags"
+                                    />
+                                        <field name="severity_id" />
+                                        <field name="probability_id" />
+                                        <field name="risk_score" />
                                 </group>
-                            </group>
+                                </group>
                         </page>
-                    </notebook>
+                        </notebook>
                 </sheet>
-            </form>
+                </form>
         </field>
     </record>
 
@@ -36,8 +48,61 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="risk_owner_id" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+                <field name="risk_score" />
+                <field name="stage" />
             </tree>
         </field>
     </record>
+
+    <record id="risk_kanban_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_kanban_view</field>
+        <field name="model">mgmt.risk</field>
+        <field name="arch" type="xml">
+                <kanban
+                class="o_kanban_small_column"
+                default_group_by="stage"
+                quick_create="False"
+            >
+                <field name="name" />
+                <field name="risk_owner_id" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+                <field name="risk_score" />
+
+                <templates>
+                        <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                                <div t-attf-class="o_kanban_title">
+                                <strong><field name="name" /></strong>
+                                </div>
+                                <div class="o_kanban_details">
+                                <div>Owner: <field name="risk_owner_id" /></div>
+                                <div>Severity: <field name="severity_id" /></div>
+                                <div>Probability: <field name="probability_id" /></div>
+                                <div>Score: <field name="risk_score" /></div>
+                                </div>
+                        </div>
+                        </t>
+                </templates>
+                </kanban>
+        </field>
+    </record>
+
+    <record id="action_mgmt_risk_view" model="ir.actions.act_window">
+      <field name="name">Risks</field>
+      <field name="res_model">mgmt.risk</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_evaluation_risks"
+        name="Risks"
+        parent="mgmt_base.menu_management_evaluation"
+        action="action_mgmt_risk_view"
+        sequence="10"
+    />
 
 </odoo>

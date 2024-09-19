@@ -20,7 +20,8 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="name" />
+                                    <field name="code" />
+                                    <field name="sequence" />
                                 </group>
                             </group>
                         </page>
@@ -36,8 +37,24 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="code" />
+                <field name="sequence" />
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_audit_stage_view" model="ir.actions.act_window">
+      <field name="name">Audit Stages</field>
+      <field name="res_model">mgmt.audit.stage</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_audit_stages"
+        name="Audit Stages"
+        parent="mgmt_base.menu_configuration_audit"
+        action="action_mgmt_audit_stage_view"
+        sequence="10"
+    />
 
 </odoo>

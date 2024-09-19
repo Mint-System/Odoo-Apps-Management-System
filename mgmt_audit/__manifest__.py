@@ -11,6 +11,7 @@
     "depends": ["mgmt_requirement", "mgmt_risk"],
     "data": [
         "security/ir.model.access.csv",
+        "data/data.xml",
         "views/audit_views.xml",
         "views/audit_stage_views.xml",
         "views/statement_views.xml",

@@ -8,7 +8,7 @@
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmtsystem"],
+    "depends": ["mgmt_base"],
     "data": [
         "security/ir.model.access.csv",
         "views/requirement_views.xml",

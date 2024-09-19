@@ -8,10 +8,12 @@
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmtsystem", "hr"],
+    "depends": ["mgmt_base", "hr"],
     "data": [
         "security/ir.model.access.csv",
+        "data/data.xml",
         "views/risk_views.xml",
+        "views/risk_stage_views.xml",
         "views/hazard_views.xml",
         "views/severity_views.xml",
         "views/probability_views.xml",

@@ -1,15 +1,13 @@
 <odoo>
 
-    <record id="mgmt_audit.demo_nonconformity0" model="mgmt.nonconformity">
-        <field name="name">Nonconformity 0</field>
-    </record>
+  <record id="demo_nonconformity_no_power_supply" model="mgmt.nonconformity">
+    <field name="name">No Redundant Power Supply</field>
+    <field name="type">major</field>
+  </record>
 
-    <record id="mgmt_audit.demo_recommendation0" model="mgmt.recommendation">
-        <field name="name">Recommendation 0</field>
-    </record>
-
-   <record id="demo_task0" model="project.task">
-        <field name="name">Task 0</field>
-    </record>
+  <record id="demo_task_install_power_supply" model="project.task">
+    <field name="name">Install power supply</field>
+    <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply" />
+  </record>
 
 </odoo>

@@ -9,4 +9,7 @@ class MgmtParagraph(models.Model):
     _name = "mgmt.paragraph"
     _description = "Mgmt Paragraph"
 
-    name = fields.Char()
+    name = fields.Char(required=True)
+    description = fields.Text()
+    reference = fields.Char(required=True)
+    document_id = fields.Many2many("mgmt.document")

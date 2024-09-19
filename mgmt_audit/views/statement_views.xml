@@ -20,7 +20,12 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="name" />
+                                    <field name="risk_id" />
+                                    <field name="audit_id" />
+                                    <field name="requirement_id" />
+                                    <field name="nonconformity_id" />
+                                    <field name="recommendation_id" />
+                                    <field name="attachment_id" />
                                 </group>
                             </group>
                         </page>
@@ -36,8 +41,29 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="risk_id" />
+                <field name="audit_id" />
+                <field name="requirement_id" optional="hide" />
+                <field name="nonconformity_id" optional="hide" />
+                <field name="recommendation_id" optional="hide" />
+                <field name="attachment_id" optional="hide" />
+
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_statement_view" model="ir.actions.act_window">
+      <field name="name">Statements</field>
+      <field name="res_model">mgmt.statement</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_audit_statements"
+        name="Statements"
+        parent="mgmt_base.menu_management_audit"
+        action="action_mgmt_statement_view"
+        sequence="30"
+    />
 
 </odoo>

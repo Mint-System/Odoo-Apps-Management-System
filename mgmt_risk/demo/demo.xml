@@ -1,19 +1,80 @@
 <odoo>
 
-    <record id="demo_risk0" model="mgmt.risk">
-        <field name="name">Risk 0</field>
+    <record id="demo_hazard_power_outage" model="mgmt.hazard">
+        <field name="name">Power Outage</field>
     </record>
 
-    <record id="demo_hazard0" model="mgmt.hazard">
-        <field name="name">Hazard 0</field>
+    <record id="company_risk_formula" model="res.company">
+        <field name="name">Company</field>
+        <field name="mgmt_risk_formula">multiply</field>
     </record>
 
-    <record id="demo_severity0" model="mgmt.severity">
-        <field name="name">Severity 0</field>
+    <record id="demo_severity1" model="mgmt.severity">
+        <field name="name">Severity 1</field>
+        <field name="value">1</field>
     </record>
 
-    <record id="demo_probability0" model="mgmt.probability">
-        <field name="name">Probaility 0</field>
+    <record id="demo_severity2" model="mgmt.severity">
+        <field name="name">Severity 2</field>
+        <field name="value">2</field>
+    </record>
+
+    <record id="demo_severity3" model="mgmt.severity">
+        <field name="name">Severity 3</field>
+        <field name="value">3</field>
+    </record>
+
+    <record id="demo_severity4" model="mgmt.severity">
+        <field name="name">Severity 4</field>
+        <field name="value">4</field>
+    </record>
+
+    <record id="demo_severity5" model="mgmt.severity">
+        <field name="name">Severity 5</field>
+        <field name="value">5</field>
+    </record>
+
+    <record id="demo_probability1" model="mgmt.probability">
+        <field name="name">Probability 1</field>
+        <field name="value">1</field>
+    </record>
+
+    <record id="demo_probability2" model="mgmt.probability">
+        <field name="name">Probability 2</field>
+        <field name="value">2</field>
+    </record>
+
+    <record id="demo_probability3" model="mgmt.probability">
+        <field name="name">Probability 3</field>
+        <field name="value">3</field>
+    </record>
+
+    <record id="demo_probability4" model="mgmt.probability">
+        <field name="name">Probability 4</field>
+        <field name="value">4</field>
+    </record>
+
+    <record id="demo_probability5" model="mgmt.probability">
+        <field name="name">Probability 5</field>
+        <field name="value">5</field>
+    </record>
+
+    <record id="demo_risk_server_outage" model="mgmt.risk">
+        <field name="name">Server Outage</field>
+        <field name="risk_owner_id" ref="base.user_admin" />
+        <field name="severity_id" ref="demo_severity5" />
+        <field name="probability_id" ref="demo_probability3" />
+        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]" />
+        <field name="stage" ref="stage_identify" />
+    </record>
+
+    <record id="demo_risk_server_outage_revision" model="mgmt.risk">
+        <field name="name">Server Outage (New Revision)</field>
+        <field name="risk_owner_id" ref="base.user_admin" />
+        <field name="severity_id" ref="demo_severity5" />
+        <field name="probability_id" ref="demo_probability1" />
+        <field name="head_risk_id" ref="demo_risk_server_outage" />
+        <field name="stage" ref="stage_evaluate" />
     </record>
 
 </odoo>

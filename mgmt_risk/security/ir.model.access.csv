@@ -9,3 +9,5 @@ access_mgmt_probability_user,mgmt.probability.user,mgmt_risk.model_mgmt_probabil
 access_mgmt_probability_manager,mgmt.probability.manager,mgmt_risk.model_mgmt_probability,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
 access_mgmt_risk_combination_user,mgmt.risk.combination.user,mgmt_risk.model_mgmt_risk_combination,mgmtsystem.group_mgmtsystem_user,1,0,0,0
 access_mgmt_risk_combination_manager,mgmt.risk.combination.manager,mgmt_risk.model_mgmt_risk_combination,mgmtsystem.group_mgmtsystem_manager,1,1,1,1
+access_mgmt_risk_stage_user,mgmt_risk.stage.user,mgmt_risk.model_mgmt_risk_stage,base.group_user,1,0,0,0
+access_mgmt_risk_stage_manager,mgmt_risk.stage.manager,mgmt_risk.model_mgmt_risk_stage,base.group_system,1,1,1,1

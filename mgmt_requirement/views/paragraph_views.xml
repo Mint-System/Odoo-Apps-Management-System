@@ -20,7 +20,9 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="name" />
+                                    <field name="reference" />
+                                    <field name="description" />
+                                    <field name="document_id" />
                                 </group>
                             </group>
                         </page>
@@ -36,8 +38,25 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
+                <field name="reference" />
+                <field name="description" />
+                <field name="document_id" />
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_paragraph_view" model="ir.actions.act_window">
+      <field name="name">Paragraphs</field>
+      <field name="res_model">mgmt.paragraph</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_inventory_paragraphs"
+        name="Paragraphs"
+        parent="mgmt_base.menu_management_inventory"
+        action="action_mgmt_paragraph_view"
+        sequence="40"
+    />
 
 </odoo>

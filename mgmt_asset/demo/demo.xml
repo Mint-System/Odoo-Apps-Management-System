@@ -1,7 +1,18 @@
 <odoo>
 
-    <record id="demo_asset0" model="mgmt.asset">
-        <field name="name">Asset 0</field>
+    <record id="demo_inventory_category_servers" model="maintenance.equipment.category">
+        <field name="name">Servers</field>
+    </record>
+
+    <record id="demo_inventory_server" model="maintenance.equipment">
+        <field name="name">Odoo-Server</field>
+        <field name="category_id" ref="demo_inventory_category_servers" />
+    </record>
+
+    <record id="demo_asset_server" model="mgmt.asset">
+        <field name="name">Servers</field>
+        <field name="model_name">maintenance.equipment</field>
+        <field name="res_id" eval="ref('mgmt_asset.demo_inventory_server')" />
     </record>
 
 </odoo>

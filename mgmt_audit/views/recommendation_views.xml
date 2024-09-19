@@ -16,15 +16,15 @@
                             <field name="name" />
                         </h1>
                     </div>
-                    <notebook>
-                        <page string="General Information" name="general_info">
-                            <group>
-                                <group>
-                                    <field name="name" />
-                                </group>
-                            </group>
-                        </page>
-                    </notebook>
+                    <!-- <notebook> -->
+                    <!--     <page string="general information" name="general_info"> -->
+                    <!--         <group> -->
+                    <!--             <group> -->
+                    <!--                 <field name="name" /> -->
+                    <!--             </group> -->
+                    <!--         </group> -->
+                    <!--     </page> -->
+                    <!-- </notebook> -->
                 </sheet>
             </form>
         </field>
@@ -39,5 +39,19 @@
             </tree>
         </field>
     </record>
+
+    <record id="action_mgmt_recommendation_view" model="ir.actions.act_window">
+      <field name="name">Recommendations</field>
+      <field name="res_model">mgmt.recommendation</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_evaluation_recommendations"
+        name="Recommendations"
+        parent="mgmt_base.menu_management_evaluation"
+        action="action_mgmt_recommendation_view"
+        sequence="30"
+    />
 
 </odoo>
