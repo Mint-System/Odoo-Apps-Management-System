@@ -8,10 +8,10 @@
                 <form>
                 <header>
                   <field
-                    name="stage"
-                    widget="statusbar"
-                    options="{'clickable': '1'}"
-                    statusbar_visible="identify,evaluate,mitigate"
+                        name="stage"
+                        widget="statusbar"
+                        options="{'clickable': '1'}"
+                        statusbar_visible="identify,evaluate,mitigate"
                     />
                 </header>
                 <sheet>
@@ -61,7 +61,11 @@
         <field name="name">mgmt_risk.risk_kanban_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-                <kanban class="o_kanban_small_column" default_group_by="stage" quick_create="False">
+                <kanban
+                class="o_kanban_small_column"
+                default_group_by="stage"
+                quick_create="False"
+            >
                 <field name="name" />
                 <field name="risk_owner_id" />
                 <field name="severity_id" />
