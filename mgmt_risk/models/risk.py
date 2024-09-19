@@ -26,7 +26,7 @@ class MgmtRisk(models.Model):
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
-        return self.env["mgmt.risk.stage"].search([])
+        return self.env["mgmt.risk"].search([])
 
     @api.depends("severity_id", "probability_id")
     def _compute_risk_score(self):
