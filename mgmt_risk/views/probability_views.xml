@@ -23,7 +23,7 @@
         name="Probability"
         parent="mgmt_base.menu_configuration_risk"
         action="action_mgmt_probability_view"
-        sequence="20"
+        sequence="30"
     />
 
 </odoo>

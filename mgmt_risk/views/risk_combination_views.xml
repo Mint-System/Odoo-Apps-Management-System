@@ -48,7 +48,7 @@
         name="Risk Combination"
         parent="mgmt_base.menu_configuration_risk"
         action="action_mgmt_risk_combination_view"
-        sequence="30"
+        sequence="40"
     />
 
 </odoo>

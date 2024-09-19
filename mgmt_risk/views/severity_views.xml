@@ -23,7 +23,7 @@
         name="Severity"
         parent="mgmt_base.menu_configuration_risk"
         action="action_mgmt_severity_view"
-        sequence="10"
+        sequence="20"
     />
 
 </odoo>
