@@ -20,6 +20,9 @@
     <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
         <field name="name">Power Redundancy</field>
         <field
+            name="description"
+        >Alternative power source the data center is in place.</field>
+        <field
             name="paragraph_ids"
             eval="[(6, 0, [ref('demo_paragraph_data_center')])]"
         />

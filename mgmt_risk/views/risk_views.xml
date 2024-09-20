@@ -18,7 +18,7 @@
                 <div class="oe_button_box" name="button_box">
                 </div>
                 <div class="oe_title">
-                        <field name="name" />
+                    <h1><field name="name" /></h1>
                 </div>
                 <notebook>
                     <page string="General Information" name="general_info">
@@ -34,20 +34,16 @@
                         </group>
                     </page>
                     <page string="Revisions" name="revisions">
-                        <group>
-                            <group>
-                                <field name="revision_risk_ids">
-                                    <tree>
-                                        <field name="name" />
-                                        <field name="risk_owner_id" />
-                                        <field name="severity_id" />
-                                        <field name="probability_id" />
-                                        <field name="risk_score" />
-                                        <field name="stage" />
-                                    </tree>
-                                </field>
-                            </group>
-                        </group>
+                        <field name="revision_risk_ids" nolabel="1">
+                            <tree>
+                                <field name="name" />
+                                <field name="risk_owner_id" />
+                                <field name="severity_id" />
+                                <field name="probability_id" />
+                                <field name="risk_score" />
+                                <field name="stage" />
+                            </tree>
+                        </field>
                     </page>
                 </notebook>
             </sheet>
