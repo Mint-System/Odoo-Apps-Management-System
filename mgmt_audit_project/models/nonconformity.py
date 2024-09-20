@@ -16,6 +16,6 @@ class MgmtNonconformity(models.Model):
         project = self.env.ref("mgmt_audit_project.mgmt_project", raise_if_not_found=False)
         if project:
             return project.id
-        return self.env['project.project'].search([], limit=1).id
+        return False
 
     project_id = fields.Many2one('project.project', required=True, default=_get_default_project_id, ondelete='cascade')
