@@ -4,6 +4,7 @@ from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
+
 class MgmtAsset(models.Model):
     _name = "mgmt.asset"
     _description = "Mgmt Asset"
@@ -23,17 +24,13 @@ class MgmtAsset(models.Model):
     model_id = fields.Many2one("ir.model", compute="_compute_model_id", store=True)
     res_id = fields.Integer(required=True)
 
-    name_ids = fields.Selection(
-        selection='_compute_name_ids',
-        string='Select Record',
-        store=True,
-    )
-
     @api.depends("model_name")
     def _compute_model_id(self):
         for record in self:
             if record.model_name:
-                model = self.env["ir.model"].search([("model", "=", record.model_name)], limit=1)
+                model = self.env["ir.model"].search(
+                    [("model", "=", record.model_name)], limit=1
+                )
                 record.model_id = model.id if model else False
             else:
                 record.model_id = False
@@ -46,12 +43,3 @@ class MgmtAsset(models.Model):
                 record.name = linked_record.display_name if linked_record else "Unknown"
             else:
                 record.name = "Unknown"
-
-    @api.depends('model_name')
-    def _compute_name_ids(self):
-        for record in self:
-            if record.model_name:
-                records = self.env[record.model_name].search([])
-                record.name_ids = [(rec.id, rec.display_name) for rec in records]
-            else:
-                record.name_ids = []

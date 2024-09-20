@@ -13,9 +13,16 @@ class MgmtNonconformity(models.Model):
 
     @api.model
     def _get_default_project_id(self):
-        project = self.env.ref("mgmt_audit_project.mgmt_project", raise_if_not_found=False)
+        project = self.env.ref(
+            "mgmt_audit_project.mgmt_project", raise_if_not_found=False
+        )
         if project:
             return project.id
         return False
 
-    project_id = fields.Many2one('project.project', required=True, default=_get_default_project_id, ondelete='cascade')
+    project_id = fields.Many2one(
+        "project.project",
+        required=True,
+        default=_get_default_project_id,
+        ondelete="cascade",
+    )

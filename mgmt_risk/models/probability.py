@@ -14,18 +14,22 @@ class MgmtProbability(models.Model):
 
     @api.model
     def create(self, vals):
-        probability = super(MgmtProbability, self).create(vals)
-        severities = self.env['mgmt.severity'].search([])
+        probability = super().create(vals)
+        severities = self.env["mgmt.severity"].search([])
 
         for severity in severities:
-            self.env['mgmt.risk.combination'].create({
-                'name': f"{probability.name} - {severity.name}",
-                'probability_id': probability.id,
-                'severity_id': severity.id,
-            })
+            self.env["mgmt.risk.combination"].create(
+                {
+                    "name": f"{probability.name} - {severity.name}",
+                    "probability_id": probability.id,
+                    "severity_id": severity.id,
+                }
+            )
         return probability
 
     def unlink(self):
-        combinations = self.env['mgmt.risk.combination'].search([('probability_id', 'in', self.ids)])
+        combinations = self.env["mgmt.risk.combination"].search(
+            [("probability_id", "in", self.ids)]
+        )
         combinations.unlink()
-        return super(MgmtProbability, self).unlink()
+        return super().unlink()

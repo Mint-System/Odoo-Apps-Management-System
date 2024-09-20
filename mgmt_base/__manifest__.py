@@ -11,6 +11,7 @@
     "depends": ["mgmtsystem"],
     "data": [
         "views/menu.xml",
+        "views/res_config_settings.xml",
     ],
     "installable": True,
     "application": False,
