@@ -9,7 +9,9 @@ class ResCompany(models.Model):
     _inherit = "res.company"
 
     mgmt_risk_formula = fields.Selection(
-        [("multiply", "Severity x Probability"), ("sum", "Severity + Probability")]
+        [("multiply", "Severity x Probability"), ("sum", "Severity + Probability")],
+        default="multiply",
+        required=True,
     )
 
 

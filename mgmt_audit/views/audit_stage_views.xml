@@ -36,9 +36,9 @@
         <field name="model">mgmt.audit.stage</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
-                <field name="sequence" />
             </tree>
         </field>
     </record>

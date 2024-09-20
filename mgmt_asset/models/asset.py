@@ -4,6 +4,7 @@ from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
+
 class MgmtAsset(models.Model):
     _name = "mgmt.asset"
     _description = "Mgmt Asset"
@@ -27,7 +28,9 @@ class MgmtAsset(models.Model):
     def _compute_model_id(self):
         for record in self:
             if record.model_name:
-                model = self.env["ir.model"].search([("model", "=", record.model_name)], limit=1)
+                model = self.env["ir.model"].search(
+                    [("model", "=", record.model_name)], limit=1
+                )
                 record.model_id = model.id if model else False
             else:
                 record.model_id = False

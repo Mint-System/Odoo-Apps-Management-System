@@ -5,7 +5,8 @@
 
     <record id="demo_paragraph_data_center" model="mgmt.paragraph">
         <field name="name">Data Center</field>
-        <field name="reference">Data Center Guidelines</field>
+        <field name="reference">A1</field>
+        <field name="description">Guidelines about managing a data center.</field>
         <field
             name="document_id"
             eval="[(6, 0, [ref('demo_document_internal_guideline')])]"
@@ -18,6 +19,13 @@
 
     <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
         <field name="name">Power Redundancy</field>
+        <field
+            name="description"
+        >Alternative power source the data center is in place.</field>
+        <field
+            name="paragraph_ids"
+            eval="[(6, 0, [ref('demo_paragraph_data_center')])]"
+        />
         <field name="system_id" ref="demo_system_isms" />
     </record>
 </odoo>

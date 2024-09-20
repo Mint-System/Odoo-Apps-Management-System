@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_mgmtsystem_configuration" model="ir.ui.view">
+        <field name="name">mgmt_base.view_mgmtsystem_configuration</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mgmtsystem.view_mgmtsystem_configuration" />
+        <field name="priority" eval="99" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@data-key='mgmtsystem']" position="replace">
+                <div
+                    class="app_settings_block"
+                    data-string="Management System"
+                    string="Management System"
+                    data-key="mgmtsystem"
+                    groups="mgmtsystem.group_mgmtsystem_user_manager"
+                >
+
+                    <h2>Management Systems</h2>
+                    <div
+                        class="row mt16 o_settings_container"
+                        id="mgmtsystem_systems_setting"
+                    />
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -29,29 +29,29 @@
                                     <field name="type" />
                                     <field name="planned_date" />
                                     <field name="responsible_id" />
-                                    <field name="auditor_ids" />
+                                    <field name="auditor_ids" widget="many2many_tags" />
                                 </group>
                             </group>
                         </page>
                         <page string="Requirements" name="requirements">
-                          <field name="requirement_ids" editable="bottom">
-                            <tree>
-                                <field name="name" />
-                                <field name="system_id" />
-                                <field name="description" />
-                            </tree>
-                          </field>
+                            <field name="requirement_ids" editable="bottom">
+                                <tree>
+                                    <field name="name" />
+                                    <field name="system_id" />
+                                    <field name="description" />
+                                </tree>
+                            </field>
                         </page>
                         <page string="Statements" name="statements">
-                          <field name="statement_ids">
-                            <tree editable="bottom">
-                              <field name="name" />
-                              <field name="audit_id" />
-                              <field name="requirement_id" />
-                              <field name="risk_id" />
-                              <field name="nonconformity_id" />
-                            </tree>
-                          </field>
+                            <field name="statement_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name" />
+                                    <field name="audit_id" />
+                                    <field name="requirement_id" />
+                                    <field name="risk_id" />
+                                    <field name="nonconformity_id" />
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

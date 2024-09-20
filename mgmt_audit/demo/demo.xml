@@ -16,6 +16,11 @@
         <field name="responsible_id" ref="base.user_admin" />
     </record>
 
+    <record id="demo_nonconformity_no_power_supply" model="mgmt.nonconformity">
+      <field name="name">No Redundant Power Supply</field>
+      <field name="type">major</field>
+    </record>
+
     <record id="demo_statement_power_supply_missing" model="mgmt.statement">
         <field name="name">Redundant power supply missing</field>
         <field name="audit_id" ref="demo_audit_2023" />
@@ -24,10 +29,7 @@
             ref="mgmt_requirement.demo_requirement_power_redundancy"
         />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage" />
-        <field
-            name="nonconformity_id"
-            ref="mgmt_audit_project.demo_nonconformity_no_power_supply"
-        />
+        <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply" />
     </record>
 
     <record id="demo_attachment_external_guideline" model="ir.attachment">
