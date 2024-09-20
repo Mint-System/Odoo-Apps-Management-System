@@ -52,5 +52,6 @@ class MgmtAsset(models.Model):
         for record in self:
             if record.model_name:
                 records = self.env[record.model_name].search([])
-                return [(rec.id, rec.display_name) for rec in records]
-            return []
+                record.name_ids = [(rec.id, rec.display_name) for rec in records]
+            else:
+                record.name_ids = []
