@@ -12,4 +12,4 @@ class MgmtParagraph(models.Model):
     name = fields.Char(required=True)
     description = fields.Text()
     reference = fields.Char(required=True)
-    document_id = fields.Many2many("mgmt.document")
+    document_id = fields.Many2one("mgmt.document")

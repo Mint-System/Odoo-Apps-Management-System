@@ -4,59 +4,8 @@
         <field name="name">Power Outage</field>
     </record>
 
-    <record id="company_risk_formula" model="res.company">
-        <field name="name">Company</field>
+    <record id="base.main_company" model="res.company">
         <field name="mgmt_risk_formula">multiply</field>
-    </record>
-
-    <record id="demo_severity1" model="mgmt.severity">
-        <field name="name">Very Low</field>
-        <field name="value">1</field>
-    </record>
-
-    <record id="demo_severity2" model="mgmt.severity">
-        <field name="name">Low</field>
-        <field name="value">2</field>
-    </record>
-
-    <record id="demo_severity3" model="mgmt.severity">
-        <field name="name">Medium</field>
-        <field name="value">3</field>
-    </record>
-
-    <record id="demo_severity4" model="mgmt.severity">
-        <field name="name">High</field>
-        <field name="value">4</field>
-    </record>
-
-    <record id="demo_severity5" model="mgmt.severity">
-        <field name="name">Very High</field>
-        <field name="value">5</field>
-    </record>
-
-    <record id="demo_probability1" model="mgmt.probability">
-        <field name="name">Very Low</field>
-        <field name="value">1</field>
-    </record>
-
-    <record id="demo_probability2" model="mgmt.probability">
-        <field name="name">Low</field>
-        <field name="value">2</field>
-    </record>
-
-    <record id="demo_probability3" model="mgmt.probability">
-        <field name="name">Medium</field>
-        <field name="value">3</field>
-    </record>
-
-    <record id="demo_probability4" model="mgmt.probability">
-        <field name="name">High</field>
-        <field name="value">4</field>
-    </record>
-
-    <record id="demo_probability5" model="mgmt.probability">
-        <field name="name">Very High</field>
-        <field name="value">5</field>
     </record>
 
     <record id="demo_risk_server_outage" model="mgmt.risk">

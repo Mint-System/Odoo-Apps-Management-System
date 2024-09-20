@@ -13,3 +13,4 @@ class MgmtRiskCombination(models.Model):
     name = fields.Char(required=True)
     severity_id = fields.Many2one("mgmt.severity", readonly=True, required=True)
     probability_id = fields.Many2one("mgmt.probability", readonly=True, required=True)
+    color = fields.Integer(string="Color Index")

@@ -23,10 +23,17 @@
                                     <field name="description" />
                                     <field name="system_id" />
                                 </group>
-                                <group>
-                                    <field name="paragraph_ids" />
-                                </group>
                             </group>
+                        </page>
+                        <page string="Paragraphs" name="paragraphs">
+                            <field name="paragraph_ids" nolable="1">
+                                <tree>
+                                    <field name="name" />
+                                    <field name="reference" />
+                                    <field name="description" />
+                                    <field name="document_id" />
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

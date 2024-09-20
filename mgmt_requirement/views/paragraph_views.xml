@@ -22,8 +22,6 @@
                                 <group>
                                     <field name="reference" />
                                     <field name="description" />
-                                </group>
-                                <group>
                                     <field name="document_id" />
                                 </group>
                             </group>
