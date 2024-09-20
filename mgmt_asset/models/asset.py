@@ -23,6 +23,12 @@ class MgmtAsset(models.Model):
     model_id = fields.Many2one("ir.model", compute="_compute_model_id", store=True)
     res_id = fields.Integer(required=True)
 
+    name_ids = fields.Selection(
+        selection='_compute_name_ids',
+        string='Select Record',
+        store=True,
+    )
+
     @api.depends("model_name")
     def _compute_model_id(self):
         for record in self:
@@ -40,3 +46,11 @@ class MgmtAsset(models.Model):
                 record.name = linked_record.display_name if linked_record else "Unknown"
             else:
                 record.name = "Unknown"
+
+    @api.depends('model_name')
+    def _compute_name_ids(self):
+        for record in self:
+            if record.model_name:
+                records = self.env[record.model_name].search([])
+                return [(rec.id, rec.display_name) for rec in records]
+            return []
