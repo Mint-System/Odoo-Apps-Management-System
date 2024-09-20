@@ -2,7 +2,7 @@
 
     <record id="audit_stage_draft" model="mgmt.audit.stage">
         <field name="name">Draft</field>
-        <field name="code">Draft</field>
+        <field name="code">draft</field>
         <field name="sequence">1</field>
     </record>
 

@@ -22,6 +22,8 @@
                                 <group>
                                     <field name="description" />
                                     <field name="system_id" />
+                                </group>
+                                <group>
                                     <field name="paragraph_ids" />
                                 </group>
                             </group>
