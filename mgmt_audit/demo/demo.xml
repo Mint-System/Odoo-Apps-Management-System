@@ -29,10 +29,7 @@
             ref="mgmt_requirement.demo_requirement_power_redundancy"
         />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage" />
-        <field
-            name="nonconformity_id"
-            ref="demo_nonconformity_no_power_supply"
-        />
+        <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply" />
     </record>
 
     <record id="demo_attachment_external_guideline" model="ir.attachment">

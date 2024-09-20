@@ -7,7 +7,6 @@
         <field name="inherit_id" ref="mgmt_audit.recommendation_form_view" />
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="name" />
             </field>
         </field>
     </record>
