@@ -7,10 +7,7 @@
         <field name="name">Data Center</field>
         <field name="reference">A1</field>
         <field name="description">Guidelines about managing a data center.</field>
-        <field
-            name="document_id"
-            eval="[(6, 0, [ref('demo_document_internal_guideline')])]"
-        />
+        <field name="document_id" ref="demo_document_internal_guideline"/>
     </record>
 
     <record id="demo_system_isms" model="mgmtsystem.system">

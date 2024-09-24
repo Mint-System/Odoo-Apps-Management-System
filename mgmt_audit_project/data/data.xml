@@ -4,4 +4,9 @@
         <field name="name">Management System</field>
     </record>
 
+    <record id="default_mgmt_audit_project_id" model="res.company">
+        <field name="name">Your Company</field>
+        <field name="mgmt_audit_project_id" ref="mgmt_audit_project.mgmt_project" />
+    </record>
+
 </odoo>
