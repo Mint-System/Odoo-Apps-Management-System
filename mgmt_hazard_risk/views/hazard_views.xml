@@ -6,6 +6,14 @@
         <field name="model">mgmt.hazard</field>
         <field name="inherit_id" ref="mgmt_risk.hazard_form_view" />
         <field name="arch" type="xml">
+            <header>
+                <button
+                    name="action_create_revision"
+                    string="Create Revision"
+                    type="object"
+                    class="oe_highlight"
+                />
+            </header>
             <field name="name" position="after">
             </field>
         </field>
