@@ -31,3 +31,18 @@ class MgmtAudit(models.Model):
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
         return self.env["mgmt.audit.stage"].search([])
+
+    def action_create_revision(self):
+            for audit in self:
+                new_audit = audit.copy({
+                    'name': f"{audit.name} (Revision)",
+                    'stage_id': self.env.ref('mgmt_audit.audit_stage_draft').id,
+                })
+            return {
+                'type': 'ir.actions.act_window',
+                'name': 'New Audit Revision',
+                'view_mode': 'form',
+                'res_model': 'mgmt.audit',
+                'res_id': new_audit.id,
+                'target': 'current',
+            }

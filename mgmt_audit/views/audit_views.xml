@@ -7,6 +7,12 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button
+                        name="action_create_revision"
+                        string="Create Revision"
+                        type="object"
+                        class="oe_highlight"
+                    />
                     <field
                         name="stage_id"
                         widget="statusbar"
