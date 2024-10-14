@@ -10,7 +10,7 @@
         <field name="document_id" ref="demo_document_internal_guideline" />
     </record>
 
-    <record id="demo_system_isms" model="mgmtsystem.system">
+    <record id="demo_system_isms" model="mgmt.system">
         <field name="name">ISMS</field>
     </record>
 

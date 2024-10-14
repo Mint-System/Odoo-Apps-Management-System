@@ -54,6 +54,16 @@
         sequence="10"
     />
 
+
+    <menuitem
+        id="menu_mgmt_configuration_system"
+        name="Systems"
+        parent="menu_mgmt_configuration"
+        groups="group_mgmt_manager"
+        sequence="20"
+        action="system_action"
+    />
+
     <menuitem
         id="menu_configuration_audit"
         name="Audit"
