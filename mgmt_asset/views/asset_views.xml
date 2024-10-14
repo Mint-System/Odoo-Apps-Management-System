@@ -50,7 +50,7 @@
     <menuitem
         id="menu_inventory_assets"
         name="Assets"
-        parent="mgmt_base.menu_management_inventory"
+        parent="mgmt_base.menu_mgmt_inventory"
         action="action_mgmt_asset_view"
         sequence="10"
     />

@@ -1,61 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-        <!-- Audit Menu -->
-        <menuitem
-        id="menu_management_audit"
-        name="Audit"
-        parent="mgmtsystem.menu_mgmtsystem_root"
-        sequence="10"
+
+    <menuitem
+        id="menu_mgmt_root"
+        name="Management System"
+        web_icon="mgmt_base,static/description/icon.png"
+        sequence="150"
+        groups="group_mgmt_manager,group_mgmt_viewer"
     />
 
-        <!-- Evaluation Menu -->
-        <menuitem
-        id="menu_management_evaluation"
+    <menuitem
+        id="menu_mgmt_main"
+        name="Management System"
+        parent="menu_mgmt_root"
+        sequence="0"
+        groups="group_mgmt_viewer"
+    />
+
+    <menuitem id="menu_mgmt_audit" name="Audit" parent="menu_mgmt_root" sequence="10" />
+
+    <menuitem
+        id="menu_mgmt_evaluation"
         name="Evaluation"
-        parent="mgmtsystem.menu_mgmtsystem_root"
+        parent="menu_mgmt_root"
         sequence="20"
     />
 
-        <!-- Inventory Menu -->
-        <menuitem
-        id="menu_management_inventory"
+    <menuitem
+        id="menu_mgmt_inventory"
         name="Inventory"
-        parent="mgmtsystem.menu_mgmtsystem_root"
+        parent="menu_mgmt_root"
         sequence="30"
     />
 
-        <!-- Reporting Menu -->
-        <menuitem
-        id="menu_management_reporting"
+    <menuitem
+        id="menu_mgmt_reporting"
         name="Reporting"
-        parent="mgmtsystem.menu_mgmtsystem_root"
+        parent="menu_mgmt_root"
         sequence="40"
     />
 
-        <!-- Configuration Menu -->
-        <menuitem
-        id="menu_management_configuration"
+    <menuitem
+        id="menu_mgmt_configuration"
         name="Configuration"
-        parent="mgmtsystem.menu_mgmtsystem_root"
+        parent="menu_mgmt_root"
         sequence="50"
     />
-        <menuitem
+
+    <menuitem
         id="menu_configuration_settings"
         name="Settings"
-        parent="mgmtsystem.menu_mgmtsystem_configuration"
+        parent="menu_mgmt_configuration"
         sequence="10"
     />
-        <!-- <menuitem id="menu_configuration_systems" name="Systems" parent="mgmtsystem.menu_mgmtsystem_configuration" action="action_mgmtsystem_configuration" sequence="20"/> -->
-        <menuitem
+
+    <menuitem
         id="menu_configuration_audit"
         name="Audit"
-        parent="mgmtsystem.menu_mgmtsystem_configuration"
+        parent="menu_mgmt_configuration"
         sequence="30"
     />
-        <menuitem
+
+    <menuitem
         id="menu_configuration_risk"
         name="Risk"
-        parent="mgmtsystem.menu_mgmtsystem_configuration"
+        parent="menu_mgmt_configuration"
         sequence="40"
     />
 

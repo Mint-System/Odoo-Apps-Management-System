@@ -32,7 +32,7 @@ class MgmtAsset(models.Model):
     @api.depends("ref")
     def _compute_name(self):
         for rec in self:
-            if ref.ref:
+            if rec.ref:
                 model = self.env["ir.model"].search(
                     [("model", "=", rec.ref._name)], limit=1
                 )

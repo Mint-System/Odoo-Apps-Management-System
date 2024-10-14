@@ -48,7 +48,7 @@
     <menuitem
         id="menu_inventory_documents"
         name="Documents"
-        parent="mgmt_base.menu_management_inventory"
+        parent="mgmt_base.menu_mgmt_inventory"
         action="action_mgmt_document_view"
         sequence="30"
     />

@@ -49,7 +49,7 @@
     <menuitem
         id="menu_evaluation_recommendations"
         name="Recommendations"
-        parent="mgmt_base.menu_management_evaluation"
+        parent="mgmt_base.menu_mgmt_evaluation"
         action="action_mgmt_recommendation_view"
         sequence="30"
     />

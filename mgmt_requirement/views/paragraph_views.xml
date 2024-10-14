@@ -54,7 +54,7 @@
     <menuitem
         id="menu_inventory_paragraphs"
         name="Paragraphs"
-        parent="mgmt_base.menu_management_inventory"
+        parent="mgmt_base.menu_mgmt_inventory"
         action="action_mgmt_paragraph_view"
         sequence="40"
     />

@@ -110,7 +110,7 @@
     <menuitem
         id="menu_evaluation_risks"
         name="Risks"
-        parent="mgmt_base.menu_management_evaluation"
+        parent="mgmt_base.menu_mgmt_evaluation"
         action="action_mgmt_risk_view"
         sequence="10"
     />

@@ -51,7 +51,7 @@
     <menuitem
         id="menu_evaluation_nonconformities"
         name="Non-Conformities"
-        parent="mgmt_base.menu_management_evaluation"
+        parent="mgmt_base.menu_mgmt_evaluation"
         action="action_mgmt_nonconformity_view"
         sequence="20"
     />

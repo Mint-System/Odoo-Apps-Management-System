@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <record id="view_mgmtsystem_configuration" model="ir.ui.view">
-        <field name="name">mgmt_base.view_mgmtsystem_configuration</field>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">mgmt_base.res_config_settings_view_form</field>
         <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="mgmtsystem.view_mgmtsystem_configuration" />
-        <field name="priority" eval="99" />
+        <field name="priority" eval="50" />
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
         <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
 
-            <xpath expr="//div[@data-key='mgmtsystem']" position="replace">
-                <div
-                    class="app_settings_block"
+            <app
                     data-string="Management System"
                     string="Management System"
-                    data-key="mgmtsystem"
-                    groups="mgmtsystem.group_mgmtsystem_user_manager"
+                    name="mgmt_base"
+                    groups="mgmt_base.group_mgmt_user_manager"
                 >
+                    <block title="Management Systems" id="mgmt_systems_setting">
+                        <setting
+                            id="mgmt_risk_setting"
+                            help="Manage risks for ISO27001."
+                        >
+                            <field name="module_mgmt_risk" />
+                        </setting>
+                    </block>
+                </app>
 
-                    <h2>Management Systems</h2>
-                    <div
-                        class="row mt16 o_settings_container"
-                        id="mgmtsystem_systems_setting"
-                    />
-
-                </div>
             </xpath>
         </field>
     </record>
+
+    <record id="action_mgmt_configuration" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module': 'mgmt_base'}</field>
+    </record>
+
+    <menuitem
+        id="menu_mgmt_settings"
+        name="Settings"
+        parent="menu_mgmt_configuration"
+        sequence="0"
+        action="action_mgmt_configuration"
+    />
 
 </odoo>

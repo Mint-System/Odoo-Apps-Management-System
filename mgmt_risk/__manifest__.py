@@ -18,6 +18,7 @@
         "views/severity_views.xml",
         "views/probability_views.xml",
         "views/risk_combination_views.xml",
+        "views/res_config_settings.xml",
     ],
     "demo": ["demo/demo.xml"],
     "installable": True,

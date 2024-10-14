@@ -130,7 +130,7 @@
     <menuitem
         id="menu_audit_audits"
         name="Audits"
-        parent="mgmt_base.menu_management_audit"
+        parent="mgmt_base.menu_mgmt_audit"
         action="action_mgmt_audit_view"
         sequence="10"
     />

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.module.category" id="module_category_management_system">
+        <field name="name">Management System</field>
+        <field
+            name="description"
+        >Manage management systems, assets, risks, requirements, audits, statements and nonconformities.</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="group_mgmt_viewer" model="res.groups">
+        <field name="name">Viewer</field>
+        <field name="comment">Module user with general read only access.</field>
+        <field name="category_id" ref="module_category_management_system" />
+    </record>
+
+    <record id="group_mgmt_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="comment">Module user, with general read and write.</field>
+        <field name="category_id" ref="module_category_management_system" />
+        <field name="implied_ids" eval="[(4,ref('group_mgmt_viewer'))]" />
+    </record>
+
+    <record id="group_mgmt_user_manager" model="res.groups">
+        <field name="name">Approving User</field>
+        <field
+            name="comment"
+        >Module user with additional permission for approvals.</field>
+        <field name="category_id" ref="module_category_management_system" />
+        <field name="implied_ids" eval="[(4,ref('group_mgmt_user'))]" />
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+    </record>
+
+    <record id="group_mgmt_auditor" model="res.groups">
+        <field name="name">Auditor</field>
+        <field
+            name="comment"
+        >Module user with additional permission specific for the auditor job, such as effectiveness reviews.</field>
+        <field name="category_id" ref="module_category_management_system" />
+        <field name="implied_ids" eval="[(4,ref('group_mgmt_user'))]" />
+    </record>
+
+    <record id="group_mgmt_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field
+            name="comment"
+        >Module administrator, able to modify configuration data.</field>
+        <field name="category_id" ref="module_category_management_system" />
+        <field name="implied_ids" eval="[(4, ref('group_mgmt_auditor'))]" />
+        <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+    </record>
+
+    <record model="ir.rule" id="mgmt_rule">
+        <field name="name">mgmt multi-company</field>
+        <field name="model_id" ref="model_mgmt_system" />
+        <field name="global" eval="True" />
+        <field
+            name="domain_force"
+        >['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

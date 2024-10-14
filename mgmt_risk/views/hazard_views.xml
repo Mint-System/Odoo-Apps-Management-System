@@ -48,7 +48,7 @@
     <menuitem
         id="menu_inventory_hazards"
         name="Hazards"
-        parent="mgmt_base.menu_management_inventory"
+        parent="mgmt_base.menu_mgmt_inventory"
         action="action_mgmt_hazard_view"
         sequence="20"
     />
