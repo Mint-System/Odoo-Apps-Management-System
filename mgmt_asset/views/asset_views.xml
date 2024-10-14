@@ -20,8 +20,7 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="model_id" />
-                                    <field name="res_id" />
+                                    <field name="ref" />
                                 </group>
                             </group>
                         </page>
@@ -37,8 +36,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
-                <field name="model_name" />
-                <field name="res_id" />
+                <field name="ref" />
             </tree>
         </field>
     </record>

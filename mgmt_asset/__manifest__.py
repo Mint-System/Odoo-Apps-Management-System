@@ -8,7 +8,7 @@
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmt_base", "maintenance"],
+    "depends": ["mgmt_base", "product", "maintenance"],
     "data": ["security/ir.model.access.csv", "views/asset_views.xml"],
     "demo": ["demo/demo.xml"],
     "installable": True,
