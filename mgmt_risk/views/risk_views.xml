@@ -18,13 +18,13 @@
                     <div class="oe_button_box" name="button_box" />
 
                         <h1><field name="name" /></h1>
+                        <field name="description" />
                     <notebook>
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
                                     <field name="description" />
                                     <field name="risk_owner_id" />
-                                    <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="severity_id" />
                                     <field name="probability_id" />
                                     <field name="risk_score" />
@@ -70,11 +70,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <filter
-                    string="Name"
-                    name="name_filter"
-                    domain="[('name', 'ilike', '')]"
-                />
             </search>
         </field>
     </record>

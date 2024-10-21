@@ -22,6 +22,7 @@
                             <field name="name" />
                         </h1>
                     </div>
+                    <field name="description" />
                     <notebook>
                         <page string="General Information" name="general_info">
                             <group>
@@ -33,21 +34,11 @@
                                 </group>
                             </group>
                         </page>
-                        <page string="Requirements" name="requirements">
-                            <field name="requirement_ids" editable="bottom">
-                                <tree>
-                                    <field name="name" />
-                                    <field name="system_id" />
-                                    <field name="description" />
-                                </tree>
-                            </field>
-                        </page>
                         <page string="Statements" name="statements">
                             <field name="statement_ids" nolabel="1">
                                 <tree editable="bottom">
                                     <field name="name" />
                                     <field name="audit_id" />
-                                    <field name="requirement_id" />
                                     <field name="risk_id" />
                                     <field name="nonconformity_id" />
                                 </tree>
@@ -127,11 +118,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <filter
-                    string="Name"
-                    name="name_filter"
-                    domain="[('name', 'ilike', '')]"
-                />
             </search>
         </field>
     </record>

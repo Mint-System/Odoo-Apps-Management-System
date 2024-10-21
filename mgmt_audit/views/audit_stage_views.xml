@@ -49,11 +49,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <filter
-                    string="Name"
-                    name="name_filter"
-                    domain="[('name', 'ilike', '')]"
-                />
             </search>
         </field>
     </record>

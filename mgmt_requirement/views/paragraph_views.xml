@@ -16,6 +16,7 @@
                             <field name="name" />
                         </h1>
                     </div>
+                    <field name="description" />
                     <notebook>
                         <page string="General Information" name="general_info">
                             <group>
@@ -51,11 +52,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <filter
-                    string="Name"
-                    name="name_filter"
-                    domain="[('name', 'ilike', '')]"
-                />
             </search>
         </field>
     </record>

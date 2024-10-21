@@ -13,7 +13,6 @@
         <field name="risk_owner_id" ref="base.user_admin" />
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability1" />
-        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]" />
         <field name="stage" ref="stage_mitigate" />
     </record>
 
@@ -22,7 +21,6 @@
         <field name="risk_owner_id" ref="base.user_admin" />
         <field name="severity_id" ref="demo_severity5" />
         <field name="probability_id" ref="demo_probability3" />
-        <field name="hazard_ids" eval="[(6, 0, [ref('demo_hazard_power_outage')])]" />
         <field name="head_risk_id" ref="demo_risk_server_outage" />
         <field name="stage" ref="stage_evaluate" />
     </record>

@@ -46,7 +46,6 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
-                <filter string="Name" name="name" domain="[('name', 'ilike', self)]" />
             </search>
         </field>
     </record>
