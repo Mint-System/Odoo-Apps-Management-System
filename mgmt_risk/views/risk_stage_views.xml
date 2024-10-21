@@ -39,10 +39,26 @@
         </field>
     </record>
 
+    <record id="risk_stage_search_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_stage_search_view</field>
+        <field name="model">mgmt.risk.stage</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter
+                    string="Name"
+                    name="name_filter"
+                    domain="[('name', 'ilike', '')]"
+                />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_risk_stage_view" model="ir.actions.act_window">
-      <field name="name">Risk Stages</field>
-      <field name="res_model">mgmt.risk.stage</field>
-      <field name="view_mode">tree,form</field>
+        <field name="name">Risk Stages</field>
+        <field name="res_model">mgmt.risk.stage</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="mgmt_risk.risk_stage_search_view" />
     </record>
 
     <menuitem

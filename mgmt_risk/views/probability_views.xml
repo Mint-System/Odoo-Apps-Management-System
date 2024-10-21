@@ -12,10 +12,26 @@
         </field>
     </record>
 
+    <record id="probability_search_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.probability_search_view</field>
+        <field name="model">mgmt.probability</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter
+                    string="Name"
+                    name="name_filter"
+                    domain="[('name', 'ilike', '')]"
+                />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_probability_view" model="ir.actions.act_window">
       <field name="name">Probability</field>
       <field name="res_model">mgmt.probability</field>
       <field name="view_mode">tree</field>
+      <field name="search_view_id" ref="mgmt_risk.probability_search_view" />
     </record>
 
     <menuitem
