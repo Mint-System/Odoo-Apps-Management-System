@@ -10,7 +10,7 @@ class MgmtRisk(models.Model):
     _description = "Mgmt Risk"
 
     name = fields.Char(required=True)
-    description = fields.Text()
+    description = fields.Html()
     risk_owner_id = fields.Many2one("res.users", required=True)
     severity_id = fields.Many2one("mgmt.severity", required=True)
     hazard_ids = fields.Many2many("mgmt.hazard", required=True)

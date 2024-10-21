@@ -10,6 +10,6 @@ class MgmtParagraph(models.Model):
     _description = "Mgmt Paragraph"
 
     name = fields.Char(required=True)
-    description = fields.Text()
+    description = fields.Html()
     reference = fields.Char(required=True)
     document_id = fields.Many2one("mgmt.document")
