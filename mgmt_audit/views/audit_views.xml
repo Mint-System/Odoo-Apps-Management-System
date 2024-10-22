@@ -34,6 +34,15 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="Requirements" name="requirements">
+                            <field name="requirement_ids" editable="bottom">
+                                <tree>
+                                    <field name="name" />
+                                    <field name="system_id" />
+                                    <field name="description" />
+                                </tree>
+                            </field>
+                        </page>
                         <page string="Statements" name="statements">
                             <field name="statement_ids" nolabel="1">
                                 <tree editable="bottom">
