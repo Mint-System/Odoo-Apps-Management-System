@@ -13,3 +13,4 @@ class MgmtParagraph(models.Model):
     description = fields.Html()
     reference = fields.Char(required=True)
     document_id = fields.Many2one("mgmt.document")
+    tag_ids = fields.Many2many("mgmt.requirement.tag")

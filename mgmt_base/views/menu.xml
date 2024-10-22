@@ -54,7 +54,6 @@
         sequence="10"
     />
 
-
     <menuitem
         id="menu_mgmt_configuration_system"
         name="Systems"
@@ -77,5 +76,13 @@
         parent="menu_mgmt_configuration"
         sequence="40"
     />
+
+    <menuitem
+        id="menu_configuration_requirements"
+        name="Requirements"
+        parent="menu_mgmt_configuration"
+        sequence="50"
+    />
+
 
 </odoo>

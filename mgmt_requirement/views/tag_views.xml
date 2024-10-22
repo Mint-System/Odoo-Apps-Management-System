@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="mgmt_requirement_tag_tree_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement_tag.requirement_tag_tree_view</field>
+        <field name="model">mgmt.requirement.tag</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="mgmt_requirement_tag_form_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement_tag.requirement_tag_form_view</field>
+        <field name="model">mgmt.requirement.tag</field>
+        <field name="arch" type="xml">
+            <form>
+                <header></header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mgmt_requirement_tag" model="ir.actions.act_window">
+        <field name="name">Requirement Tags</field>
+        <field name="res_model">mgmt.requirement.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mgmt_requirement_tag" name="Requirement Tags"
+        parent="mgmt_base.menu_configuration_requirements"
+        action="action_mgmt_requirement_tag"
+        sequence="40"/>
+</odoo>
