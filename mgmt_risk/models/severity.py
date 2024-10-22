@@ -11,6 +11,7 @@ class MgmtSeverity(models.Model):
 
     name = fields.Char(required=True)
     value = fields.Integer(required=True)
+    color = fields.Integer(string="Color Index")
 
     @api.model
     def create(self, vals):

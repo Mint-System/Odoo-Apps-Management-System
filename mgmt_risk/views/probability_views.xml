@@ -8,6 +8,7 @@
             <tree editable="top">
                 <field name="name" />
                 <field name="value" />
+                <field name="color" />
             </tree>
         </field>
     </record>
