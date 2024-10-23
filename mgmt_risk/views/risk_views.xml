@@ -42,6 +42,7 @@
                                 <tree>
                                     <field name="name" />
                                     <field name="risk_owner_id" />
+                                    <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="severity_id" />
                                     <field name="probability_id" />
                                     <field name="risk_score" />
