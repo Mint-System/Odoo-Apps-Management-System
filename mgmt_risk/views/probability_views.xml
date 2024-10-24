@@ -8,7 +8,7 @@
             <tree editable="top">
                 <field name="name" />
                 <field name="value" />
-                <field name="color" />
+                <field name="color" widget="color_picker" />
             </tree>
         </field>
     </record>
