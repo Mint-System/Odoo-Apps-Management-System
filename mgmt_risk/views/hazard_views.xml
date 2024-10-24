@@ -39,10 +39,21 @@
         </field>
     </record>
 
+    <record id="hazard_search_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.hazard_search_view</field>
+        <field name="model">mgmt.hazard</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_hazard_view" model="ir.actions.act_window">
       <field name="name">Hazards</field>
       <field name="res_model">mgmt.hazard</field>
       <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="mgmt_risk.hazard_search_view" />
     </record>
 
     <menuitem

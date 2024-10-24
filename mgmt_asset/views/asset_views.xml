@@ -41,10 +41,21 @@
         </field>
     </record>
 
+    <record id="asset_search_view" model="ir.ui.view">
+        <field name="name">mgmt_asset.asset_search_view</field>
+        <field name="model">mgmt.asset</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_asset_view" model="ir.actions.act_window">
       <field name="name">Assets</field>
       <field name="res_model">mgmt.asset</field>
       <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="asset_search_view" />
     </record>
 
     <menuitem

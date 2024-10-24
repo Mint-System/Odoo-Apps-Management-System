@@ -14,6 +14,7 @@
         "views/requirement_views.xml",
         "views/paragraph_views.xml",
         "views/document_views.xml",
+        "views/tag_views.xml",
     ],
     "demo": ["demo/demo.xml"],
     "installable": True,

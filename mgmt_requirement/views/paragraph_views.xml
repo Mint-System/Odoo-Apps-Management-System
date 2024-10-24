@@ -16,6 +16,7 @@
                             <field name="name" />
                         </h1>
                     </div>
+                    <field name="description" />
                     <notebook>
                         <page string="General Information" name="general_info">
                             <group>
@@ -45,10 +46,21 @@
         </field>
     </record>
 
+    <record id="paragraph_search_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement.paragraph_search_view</field>
+        <field name="model">mgmt.paragraph</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_paragraph_view" model="ir.actions.act_window">
       <field name="name">Paragraphs</field>
       <field name="res_model">mgmt.paragraph</field>
       <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="mgmt_requirement.paragraph_search_view" />
     </record>
 
     <menuitem

@@ -16,6 +16,7 @@
                             <field name="name" />
                         </h1>
                     </div>
+                    <field name="description" />
                     <notebook>
                         <page string="General Information" name="general_info">
                             <group>
@@ -26,7 +27,7 @@
                             </group>
                         </page>
                         <page string="Paragraphs" name="paragraphs">
-                            <field name="paragraph_ids" nolable="1">
+                            <field name="paragraph_ids" nolabel="1">
                                 <tree>
                                     <field name="name" />
                                     <field name="reference" />
@@ -54,10 +55,21 @@
         </field>
     </record>
 
+    <record id="requirement_search_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement.requirement_search_view</field>
+        <field name="model">mgmt.requirement</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_requirement_view" model="ir.actions.act_window">
       <field name="name">Requirements</field>
       <field name="res_model">mgmt.requirement</field>
       <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="mgmt_requirement.requirement_search_view" />
     </record>
 
     <record id="action_mgmt_requirement_report_view" model="ir.actions.act_window">

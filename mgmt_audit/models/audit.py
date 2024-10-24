@@ -10,7 +10,7 @@ class MgmtAudit(models.Model):
     _description = "Mgmt Audit"
 
     name = fields.Char(required=True)
-    requirement_ids = fields.Many2many("mgmt.requirement")
+    description = fields.Html()
     type = fields.Selection(
         [
             ("internal", "Internal"),

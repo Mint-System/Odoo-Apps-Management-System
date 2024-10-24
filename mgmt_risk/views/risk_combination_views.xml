@@ -37,10 +37,21 @@
         </field>
     </record>
 
+    <record id="risk_combination_search_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.risk_combination_search_view</field>
+        <field name="model">mgmt.risk.combination</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_mgmt_risk_combination_view" model="ir.actions.act_window">
-      <field name="name">Risk Combination</field>
-      <field name="res_model">mgmt.risk.combination</field>
-      <field name="view_mode">tree,form</field>
+        <field name="name">Risk Combination</field>
+        <field name="res_model">mgmt.risk.combination</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="mgmt_risk.risk_combination_search_view" />
     </record>
 
     <menuitem
