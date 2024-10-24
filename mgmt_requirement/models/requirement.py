@@ -14,3 +14,4 @@ class MgmtRequirement(models.Model):
     system_id = fields.Many2one("mgmt.system")
     paragraph_ids = fields.Many2many("mgmt.paragraph")
     risk_ids = fields.Many2many("mgmt.risk", "requirement_ids")
+    tag_ids = fields.Many2many("mgmt.requirement.tag")
