@@ -13,7 +13,7 @@ class MgmtSeverity(models.Model):
     value = fields.Integer(required=True)
     color = fields.Integer(string="Color Index")
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         severity = super().create(vals)
         probabilities = self.env["mgmt.probability"].search([])
