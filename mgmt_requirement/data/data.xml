@@ -1,0 +1,11 @@
+<odoo>
+
+    <record id="tag_security" model="mgmt.requirement.tag">
+        <field name="name">Security</field>
+    </record>
+
+    <record id="tag_availability" model="mgmt.requirement.tag">
+        <field name="name">Availability</field>
+    </record>
+
+</odoo>

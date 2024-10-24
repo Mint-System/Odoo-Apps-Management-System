@@ -31,12 +31,6 @@
                                 </group>
                             </group>
                         </page>
-                        <page string="Assets" name="assets">
-                            <group>
-                                <group>
-                                </group>
-                            </group>
-                        </page>
                         <page string="Revisions" name="revisions">
                             <field name="revision_risk_ids" nolabel="1">
                                 <tree>
