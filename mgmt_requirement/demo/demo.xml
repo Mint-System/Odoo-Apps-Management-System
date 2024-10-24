@@ -8,6 +8,7 @@
         <field name="reference">A1</field>
         <field name="description">Guidelines about managing a data center.</field>
         <field name="document_id" ref="demo_document_internal_guideline" />
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_security')])]" />
     </record>
 
     <record id="demo_system_isms" model="mgmt.system">
@@ -23,6 +24,7 @@
             name="paragraph_ids"
             eval="[(6, 0, [ref('demo_paragraph_data_center')])]"
         />
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_availability')])]" />
         <field name="system_id" ref="demo_system_isms" />
     </record>
 </odoo>
