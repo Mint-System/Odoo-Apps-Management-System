@@ -6,9 +6,16 @@
         <field name="model">mgmt.risk</field>
         <field name="inherit_id" ref="mgmt_risk.risk_form_view" />
         <field name="arch" type="xml">
-            <field name="name" position="after">
-                <field name="asset_ids" />
-            </field>
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page string="Assets" name="assets">
+                    <field name="asset_ids" nolabel="1">
+                        <tree>
+                            <field name="name" />
+                            <field name="ref" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
         </field>
     </record>
 
