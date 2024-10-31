@@ -26,7 +26,6 @@ class MgmtRisk(models.Model):
         group_expand="_read_group_stage_ids",
     )
     system_id = fields.Many2one("mgmt.system")
-    requirement_ids = fields.Many2many("mgmt.requirement", "risk_ids")
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
