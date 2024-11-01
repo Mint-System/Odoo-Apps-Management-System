@@ -8,7 +8,7 @@
     "category": "Management",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmt_base", "hr", "web_widget_color_picker"],
+    "depends": ["mgmt_base", "hr"],
     "data": [
         "security/ir.model.access.csv",
         "data/data.xml",

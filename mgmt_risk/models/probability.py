@@ -11,7 +11,7 @@ class MgmtProbability(models.Model):
 
     name = fields.Char(required=True)
     value = fields.Integer(required=True)
-    color = fields.Integer(string="Color Index")
+    color = fields.Integer()
 
     @api.model_create_multi
     def create(self, vals):

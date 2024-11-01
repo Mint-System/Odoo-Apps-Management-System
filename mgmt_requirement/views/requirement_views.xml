@@ -23,6 +23,7 @@
                                 <group>
                                     <field name="description" />
                                     <field name="system_id" />
+                                    <field name="tag_ids" widget="many2many_tags" />
                                 </group>
                             </group>
                         </page>
@@ -50,7 +51,8 @@
                 <field name="name" />
                 <field name="description" />
                 <field name="system_id" />
-                <field name="paragraph_ids" />
+                <field name="paragraph_ids" widget="many2many_tags" />
+                <field name="tag_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>
@@ -61,6 +63,7 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
+                <field name="tag_ids" string="Tags" />
             </search>
         </field>
     </record>

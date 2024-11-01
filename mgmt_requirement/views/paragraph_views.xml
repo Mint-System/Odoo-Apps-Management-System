@@ -24,6 +24,7 @@
                                     <field name="reference" />
                                     <field name="description" />
                                     <field name="document_id" />
+                                    <field name="tag_ids" widget="many2many_tags" />
                                 </group>
                             </group>
                         </page>
@@ -42,6 +43,7 @@
                 <field name="reference" />
                 <field name="description" />
                 <field name="document_id" />
+                <field name="tag_ids" widget="many2many_tags" />
             </tree>
         </field>
     </record>
@@ -52,6 +54,7 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
+                <field name="tag_ids" />
             </search>
         </field>
     </record>
