@@ -9,19 +9,20 @@ class MgmtRisk(models.Model):
     _name = "mgmt.risk"
     _description = "Mgmt Risk"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, tracking=True)
     description = fields.Html()
-    risk_owner_id = fields.Many2one("res.users", required=True)
-    severity_id = fields.Many2one("mgmt.severity", required=True)
+    risk_owner_id = fields.Many2one("res.users", required=True, tracking=True)
+    severity_id = fields.Many2one("mgmt.severity", required=True, tracking=True)
     hazard_ids = fields.Many2many("mgmt.hazard")
     revision_risk_ids = fields.One2many("mgmt.risk", "head_risk_id")
-    head_risk_id = fields.Many2one("mgmt.risk")
-    probability_id = fields.Many2one("mgmt.probability", required=True)
+    head_risk_id = fields.Many2one("mgmt.risk", tracking=True)
+    probability_id = fields.Many2one("mgmt.probability", required=True, tracking=True)
     risk_score = fields.Float(compute="_compute_risk_score", store=True)
     color = fields.Integer(compute="_compute_color", store=True)
     stage = fields.Many2one(
         "mgmt.risk.stage",
         required=True,
+        tracking=True,
         default=lambda self: self.env.ref("mgmt_risk.stage_evaluate").id,
         group_expand="_read_group_stage_ids",
     )

@@ -26,4 +26,5 @@ class MgmtRecommendation(models.Model):
         required=True,
         default=_get_default_project_id,
         ondelete="cascade",
+        tracking=True,
     )
