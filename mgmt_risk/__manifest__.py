@@ -21,6 +21,11 @@
         "views/res_config_settings.xml",
     ],
     "demo": ["demo/demo.xml"],
+    "assets": {
+        "web.assets_backend": [
+            "mgmt_risk/static/src/css/styles.css",
+        ],
+    },
     "installable": True,
     "application": False,
     "auto_install": False,

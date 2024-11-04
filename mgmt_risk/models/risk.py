@@ -20,6 +20,9 @@ class MgmtRisk(models.Model):
     probability_id = fields.Many2one("mgmt.probability", required=True, tracking=True)
     risk_score = fields.Float(compute="_compute_risk_score", store=True)
     color = fields.Integer(compute="_compute_color", store=True)
+    severity_color = fields.Integer(related="severity_id.color")
+    probability_color = fields.Integer(related="probability_id.color")
+    risk_color = fields.Integer(compute="_compute_risk_color")
     stage = fields.Many2one(
         "mgmt.risk.stage",
         required=True,
@@ -47,3 +50,13 @@ class MgmtRisk(models.Model):
                 record.risk_score = severity + probability
             else:
                 record.risk_score = 0
+
+    def _compute_risk_color(self):
+        for record in self:
+            record.risk_color = self.env["mgmt.risk.combination"].search(
+                [
+                    ("severity_id", "=", record.severity_id.id),
+                    ("probability_id", "=", record.probability_id.id),
+                ],
+                limit=1,
+            )

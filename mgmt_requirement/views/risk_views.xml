@@ -4,7 +4,7 @@
     <record id="requirement_risk_form_view" model="ir.ui.view">
         <field name="name">mgmt_requirement.risk_form_view</field>
         <field name="model">mgmt.risk</field>
-        <field name="inherit_id" ref="mgmt_risk.risk_form_view"/>
+        <field name="inherit_id" ref="mgmt_risk.risk_form_view" />
         <field name="arch" type="xml">
             <xpath expr="//page[@name='general_info']" position="after">
                 <page string="Requirements" name="requirements">
