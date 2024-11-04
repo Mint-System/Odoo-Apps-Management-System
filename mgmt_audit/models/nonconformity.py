@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 class MgmtNonconformity(models.Model):
     _name = "mgmt.nonconformity"
     _description = "Mgmt Nonconformity"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(required=True)
     type = fields.Selection(

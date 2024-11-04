@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class MgmtAudit(models.Model):
     _name = "mgmt.audit"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Mgmt Audit"
 
     name = fields.Char(required=True, tracking=True)

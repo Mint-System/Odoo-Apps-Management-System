@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class MgmtRisk(models.Model):
     _name = "mgmt.risk"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Mgmt Risk"
 
     name = fields.Char(required=True, tracking=True)

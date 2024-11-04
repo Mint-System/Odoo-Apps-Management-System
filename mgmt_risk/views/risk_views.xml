@@ -73,47 +73,66 @@
                 <field name="name" />
                 <field name="system_id" />
 
-                <filter name="system_id_filter" string="System" domain="[('system_id', '!=', False)]" />
+                <filter
+                    name="system_id_filter"
+                    string="System"
+                    domain="[('system_id', '!=', False)]"
+                />
                 <group expand="0">
-                    <filter name="group_by_system" context="{'group_by': 'system_id'}" />
+                    <filter
+                        name="group_by_system"
+                        context="{'group_by': 'system_id'}"
+                    />
                 </group>
             </search>
         </field>
     </record>
 
     <record id="risk_kanban_view" model="ir.ui.view">
-        <field name="name">mgmt_risk.risk_kanban_view</field>
-        <field name="model">mgmt.risk</field>
-        <field name="arch" type="xml">
-            <kanban
+      <field name="name">mgmt_risk.risk_kanban_view</field>
+      <field name="model">mgmt.risk</field>
+      <field name="arch" type="xml">
+        <kanban
                 class="o_kanban_small_column"
                 default_group_by="stage"
                 quick_create="False"
             >
-                <field name="name" />
-                <field name="risk_owner_id" />
-                <field name="severity_id" />
-                <field name="probability_id" />
-                <field name="risk_score" />
+          <field name="name" />
+          <field name="risk_owner_id" />
+          <field name="severity_id" />
+          <field name="probability_id" />
+          <field name="risk_score" />
 
-                <templates>
-                    <t t-name="kanban-box">
-                        <div t-attf-class="oe_kanban_global_click">
-                            <div t-attf-class="o_kanban_title">
-                                <strong><field name="name" /></strong>
-                            </div>
-                            <div class="o_kanban_details">
-                                <div>Owner: <field name="risk_owner_id" /></div>
-                                <div>Severity: <field name="severity_id" /></div>
-                                <div>Probability: <field name="probability_id" /></div>
-                                <div>Score: <field name="risk_score" /></div>
-                            </div>
-                        </div>
-                    </t>
-                </templates>
-            </kanban>
-        </field>
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_global_click">
+                <div t-attf-class="o_kanban_title">
+                  <strong><field name="name" /></strong>
+                </div>
+                <div class="o_kanban_details">
+                  <div>Owner: <field name="risk_owner_id" /></div>
+                  <div>
+                    Severity:
+                    <span t-attf-class="severity-#{record.severity_id.value}">
+                      <field name="severity_id" />
+                    </span>
+                  </div>
+                  <div>
+                    Probability:
+                    <span t-attf-class="probability-#{record.probability_id.value}">
+                      <field name="probability_id" />
+                    </span>
+                  </div>
+                  <div>Score: <field name="risk_score" /></div>
+                </div>
+              </div>
+            </t>
+          </templates>
+
+        </kanban>
+      </field>
     </record>
+
 
     <record id="action_mgmt_risk_view" model="ir.actions.act_window">
         <field name="name">Risks</field>
