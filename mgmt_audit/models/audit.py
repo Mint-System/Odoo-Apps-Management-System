@@ -7,16 +7,17 @@ _logger = logging.getLogger(__name__)
 
 class MgmtAudit(models.Model):
     _name = "mgmt.audit"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "Mgmt Audit"
 
     name = fields.Char(required=True, tracking=True)
     description = fields.Html()
     type = fields.Selection(
-        tracking=True,
         [
             ("internal", "Internal"),
             ("external", "External"),
-        ]
+        ],
+        tracking=True,
     )
     planned_date = fields.Date(tracking=True)
     stage_id = fields.Many2one(
