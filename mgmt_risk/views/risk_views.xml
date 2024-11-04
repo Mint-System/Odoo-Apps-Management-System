@@ -71,6 +71,12 @@
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
+                <field name="system_id" />
+
+                <filter name="system_id_filter" string="System" domain="[('system_id', '!=', False)]" />
+                <group expand="0">
+                    <filter name="group_by_system" context="{'group_by': 'system_id'}" />
+                </group>
             </search>
         </field>
     </record>
