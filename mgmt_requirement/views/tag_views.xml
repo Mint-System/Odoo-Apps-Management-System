@@ -23,7 +23,6 @@
                             <field name="name" />
                         </h1>
                     </div>
-                    <field name="name" />
                 </sheet>
             </form>
         </field>
