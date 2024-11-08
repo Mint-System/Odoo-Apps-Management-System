@@ -23,7 +23,7 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="description" />
+                                    <field name="system_id" />
                                     <field name="risk_owner_id" />
                                     <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="severity_id" />
@@ -73,12 +73,6 @@
             <search>
                 <field name="name" />
                 <field name="system_id" />
-
-                <filter
-                    name="system_id_filter"
-                    string="System"
-                    domain="[('system_id', '!=', False)]"
-                />
                 <group expand="0">
                     <filter
                         name="group_by_system"

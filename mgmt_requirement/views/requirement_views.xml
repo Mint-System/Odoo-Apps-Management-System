@@ -21,7 +21,6 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="description" />
                                     <field name="system_id" />
                                     <field name="tag_ids" widget="many2many_tags" />
                                 </group>
@@ -64,6 +63,13 @@
             <search>
                 <field name="name" />
                 <field name="tag_ids" string="Tags" />
+                <field name="system_id" />
+                <group expand="0">
+                    <filter
+                        name="group_by_system"
+                        context="{'group_by': 'system_id'}"
+                    />
+                </group>
             </search>
         </field>
     </record>
