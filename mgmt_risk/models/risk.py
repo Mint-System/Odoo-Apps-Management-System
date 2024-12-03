@@ -13,16 +13,24 @@ class MgmtRisk(models.Model):
     name = fields.Char(required=True, tracking=True)
     description = fields.Html()
     risk_owner_id = fields.Many2one("res.users", required=True, tracking=True)
-    severity_id = fields.Many2one("mgmt.severity", required=True, tracking=True)
     hazard_ids = fields.Many2many("mgmt.hazard")
     revision_risk_ids = fields.One2many("mgmt.risk", "head_risk_id")
     head_risk_id = fields.Many2one("mgmt.risk", tracking=True)
-    probability_id = fields.Many2one("mgmt.probability", required=True, tracking=True)
-    risk_score = fields.Float(compute="_compute_risk_score", store=True)
-    color = fields.Integer(compute="_compute_color", store=True)
+
+    severity_id = fields.Many2one("mgmt.severity", required=True, tracking=True)
     severity_color = fields.Integer(related="severity_id.color")
+
+    probability_id = fields.Many2one("mgmt.probability", required=True, tracking=True)
     probability_color = fields.Integer(related="probability_id.color")
-    risk_color = fields.Integer(compute="_compute_risk_color")
+
+    color = fields.Integer(compute="_compute_color", store=True)
+
+    risk_combination_id = fields.Many2one(
+        "mgmt.risk.combination", compute="_compute_risk_combination_id"
+    )
+    risk_combination_color = fields.Integer(compute="_compute_risk_combination_id")
+    risk_score = fields.Float(compute="_compute_risk_score", store=True)
+
     stage = fields.Many2one(
         "mgmt.risk.stage",
         required=True,
@@ -31,6 +39,11 @@ class MgmtRisk(models.Model):
         group_expand="_read_group_stage_ids",
     )
     system_id = fields.Many2one("mgmt.system")
+    risk_acceptance = fields.Selection(
+        [
+            ("accepted", "Accepted"),
+        ],
+    )
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
@@ -51,12 +64,15 @@ class MgmtRisk(models.Model):
             else:
                 record.risk_score = 0
 
-    def _compute_risk_color(self):
+    @api.depends("severity_id", "probability_id")
+    def _compute_risk_combination_id(self):
         for record in self:
-            record.risk_color = self.env["mgmt.risk.combination"].search(
+            risk_combination_id = self.env["mgmt.risk.combination"].search(
                 [
                     ("severity_id", "=", record.severity_id.id),
                     ("probability_id", "=", record.probability_id.id),
                 ],
                 limit=1,
             )
+            rec.risk_combination_color = risk_combination_id.color
+            rec.risk_combination_id = risk_combination_id

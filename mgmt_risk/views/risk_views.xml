@@ -28,7 +28,8 @@
                                     <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="severity_id" />
                                     <field name="probability_id" />
-                                    <field name="risk_score" />
+                                    <field name="risk_combination_id" />
+                                    <field name="write_date" widget="date" />
                                 </group>
                             </group>
                         </page>
@@ -40,8 +41,9 @@
                                     <field name="hazard_ids" widget="many2many_tags" />
                                     <field name="severity_id" />
                                     <field name="probability_id" />
-                                    <field name="risk_score" />
+                                    <field name="risk_combination_id" />
                                     <field name="stage" />
+                                    <field name="write_date" widget="date" />
                                 </tree>
                             </field>
                         </page>
@@ -60,7 +62,7 @@
                 <field name="risk_owner_id" />
                 <field name="severity_id" />
                 <field name="probability_id" />
-                <field name="risk_score" />
+                <field name="risk_combination_id" />
                 <field name="stage" />
             </tree>
         </field>
@@ -96,10 +98,9 @@
           <field name="risk_owner_id" />
           <field name="severity_id" />
           <field name="probability_id" />
-          <field name="risk_score" />
           <field name="severity_color" />
           <field name="probability_color" />
-          <field name="risk_color" />
+          <field name="risk_combination_color" />
 
           <templates>
             <t t-name="kanban-box">
@@ -123,8 +124,10 @@
                   </div>
                   <div>
                     Score:
-                    <span t-attf-class="color-index-#{record.risk_color.value}">
-                      <field name="risk_score" />
+                    <span
+                                        t-attf-class="color-index-#{record.risk_combination_color.value}"
+                                    >
+                      <field name="risk_combination_id" />
                     </span>
                   </div>
                 </div>
