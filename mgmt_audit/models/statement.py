@@ -11,7 +11,7 @@ class MgmtStatement(models.Model):
 
     name = fields.Char(required=True)
     risk_id = fields.Many2one("mgmt.risk")
-    audit_id = fields.Many2one("mgmt.audit", cascade="delete")
+    audit_id = fields.Many2one("mgmt.audit", ondelete="cascade")
     requirement_id = fields.Many2one("mgmt.requirement")
     nonconformity_id = fields.Many2one("mgmt.nonconformity")
     recommendation_id = fields.Many2one("mgmt.recommendation")
