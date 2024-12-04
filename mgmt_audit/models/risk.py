@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 class MgmtRisk(models.Model):
     _inherit = "mgmt.risk"
 
-    last_review_date = fields.Date(compute="_compute_last_review_date", stored=True)
+    last_review_date = fields.Date(compute="_compute_last_review_date", store=True)
 
     @api.depends(
         "requirement_ids",

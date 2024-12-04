@@ -20,7 +20,10 @@
                         <page string="General Information" name="general_info">
                             <group>
                                 <group>
-                                    <field name="risk_id" />
+                                    <field
+                                        name="risk_id"
+                                        domain="[('head_risk_id','=',False)]"
+                                    />
                                     <field name="audit_id" />
                                     <field name="requirement_id" />
                                     <field name="nonconformity_id" />

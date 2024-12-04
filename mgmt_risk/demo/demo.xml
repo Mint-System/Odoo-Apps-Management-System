@@ -87,4 +87,8 @@
         <field name="stage" ref="stage_evaluate" />
     </record>
 
+    <record id="demo_risk_server_outage" model="mgmt.risk">
+        <field name="revision_count">1</field>
+    </record>
+
 </odoo>

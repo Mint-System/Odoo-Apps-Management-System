@@ -1,6 +1,6 @@
 import logging
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -14,7 +14,9 @@ class MgmtRisk(models.Model):
     description = fields.Html()
     risk_owner_id = fields.Many2one("res.users", required=True, tracking=True)
     hazard_ids = fields.Many2many("mgmt.hazard")
+
     revision_risk_ids = fields.One2many("mgmt.risk", "head_risk_id")
+    revision_count = fields.Integer(default=0)
     head_risk_id = fields.Many2one("mgmt.risk", tracking=True)
 
     severity_id = fields.Many2one("mgmt.severity", required=True, tracking=True)
@@ -44,6 +46,13 @@ class MgmtRisk(models.Model):
             ("accepted", "Accepted"),
         ],
     )
+
+    def _compute_display_name(self):
+        for rec in self:
+            if rec.head_risk_id:
+                rec.display_name = f"{rec.name} [{str(rec.revision_count)}]"
+            else:
+                rec.display_name = rec.name
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
@@ -76,3 +85,29 @@ class MgmtRisk(models.Model):
             )
             rec.risk_combination_color = risk_combination_id.color
             rec.risk_combination_id = risk_combination_id
+
+    def action_create_revision(self):
+        self.ensure_one()
+
+        # Create a copy of risk and set head
+        risk_revision = self.copy()
+        self.revision_count += 1
+        risk_revision.write({"head_risk_id": self.id})
+
+        # Client reload and then success notification
+        action = {
+            "type": "ir.actions.client",
+            "tag": "display_notification",
+            "params": {
+                "type": "success",
+                "title": _("Revision Created"),
+                "message": _("A new revision has been created."),
+                "sticky": True,
+                "next": {
+                    "type": "ir.actions.client",
+                    "tag": "reload",
+                },
+            },
+        }
+
+        return action
