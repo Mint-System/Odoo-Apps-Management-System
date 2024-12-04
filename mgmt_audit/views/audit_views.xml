@@ -45,6 +45,12 @@
                                     <field name="name" />
                                     <field name="risk_id" />
                                     <field name="nonconformity_id" />
+                                    <button
+                                        type="object"
+                                        name="get_formview_action"
+                                        string="Open"
+                                        icon="fa-edit"
+                                    />
                                 </tree>
                             </field>
                         </page>

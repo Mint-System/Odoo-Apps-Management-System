@@ -14,6 +14,22 @@ class MgmtRisk(models.Model):
     description = fields.Html()
     risk_owner_id = fields.Many2one("res.users", required=True, tracking=True)
     hazard_ids = fields.Many2many("mgmt.hazard")
+    stage = fields.Many2one(
+        "mgmt.risk.stage",
+        required=True,
+        tracking=True,
+        default=lambda self: self.env.ref("mgmt_risk.stage_evaluate").id,
+        group_expand="_read_group_stage_ids",
+    )
+    system_id = fields.Many2one("mgmt.system")
+    risk_acceptance = fields.Selection(
+        [
+            ("accepted", "Accepted"),
+            ("redcued", "Reduced"),
+            ("transfered", "Transfered"),
+            ("eliminated", "Eliminiated"),
+        ],
+    )
 
     revision_risk_ids = fields.One2many("mgmt.risk", "head_risk_id")
     revision_count = fields.Integer(default=0)
@@ -32,20 +48,6 @@ class MgmtRisk(models.Model):
     )
     risk_combination_color = fields.Integer(compute="_compute_risk_combination_id")
     risk_score = fields.Float(compute="_compute_risk_score", store=True)
-
-    stage = fields.Many2one(
-        "mgmt.risk.stage",
-        required=True,
-        tracking=True,
-        default=lambda self: self.env.ref("mgmt_risk.stage_evaluate").id,
-        group_expand="_read_group_stage_ids",
-    )
-    system_id = fields.Many2one("mgmt.system")
-    risk_acceptance = fields.Selection(
-        [
-            ("accepted", "Accepted"),
-        ],
-    )
 
     def _compute_display_name(self):
         for rec in self:

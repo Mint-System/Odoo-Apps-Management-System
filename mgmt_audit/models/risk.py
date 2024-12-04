@@ -27,3 +27,36 @@ class MgmtRisk(models.Model):
                 "planned_date"
             )
             risk.last_review_date = max(audit_dates) if audit_dates else False
+
+    def create_audit_with_risk_statements(self):
+        """Create an audit with selected risks as statements."""
+        if self.requirement_ids:
+            audit = self.env["mgmt.audit"].create(
+                {
+                    "name": "Risk Audit",
+                    "planned_date": fields.Date.today(),
+                }
+            )
+
+            statement_id = []
+            for risk in self:
+                for requirement in risk.requirement_ids:
+                    statement_id.append(
+                        self.env["mgmt.statement"].create(
+                            {
+                                "name": requirement.name,
+                                "audit_id": audit.id,
+                                "requirement_id": requirement.id,
+                                "risk_id": risk.id,
+                            }
+                        )
+                    )
+
+            return {
+                "type": "ir.actions.act_window",
+                "name": "Audit",
+                "res_model": "mgmt.audit",
+                "view_mode": "form",
+                "res_id": audit.id,
+                "context": {"default_statement_ids": statement_id},
+            }

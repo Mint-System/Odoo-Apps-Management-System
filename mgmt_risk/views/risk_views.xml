@@ -5,7 +5,7 @@
         <field name="name">mgmt_risk.risk_form_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-            <form>
+            <form duplicate="0">
                 <header>
                     <field
                         name="stage"
@@ -39,10 +39,11 @@
                                     <field name="system_id" />
                                     <field name="risk_owner_id" />
                                     <field name="hazard_ids" widget="many2many_tags" />
+                                    <field name="risk_acceptance" />
                                     <field name="severity_id" />
                                     <field name="probability_id" />
                                     <field name="risk_combination_id" />
-                                    <field name="write_date" widget="date" />
+                                    <field name="write_date" />
                                 </group>
                             </group>
                         </page>
@@ -60,7 +61,7 @@
                                     <field name="probability_id" />
                                     <field name="risk_combination_id" />
                                     <field name="stage" />
-                                    <field name="write_date" widget="date" />
+                                    <field name="write_date" />
                                 </tree>
                             </field>
                         </page>
@@ -79,7 +80,7 @@
         <field name="name">mgmt_risk.risk_tree_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree duplicate="0">
                 <field name="name" />
                 <field name="risk_owner_id" />
                 <field name="severity_id" />
@@ -132,22 +133,26 @@
                 </div>
                 <div class="o_kanban_details">
                   <div>Owner: <field name="risk_owner_id" /></div>
-                  <div>
+                  <div class="mt-1 mb-1">
                     Severity:
-                    <span t-attf-class="color-index-#{record.severity_color.value}">
+                    <span
+                                        t-attf-class="p-1  color-index-#{record.severity_color.value}"
+                                    >
                       <field name="severity_id" />
                     </span>
                   </div>
-                  <div>
+                  <div class="mt-1 mb-1">
                     Probability:
-                    <span t-attf-class="color-index-#{record.probability_color.value}">
+                    <span
+                                        t-attf-class="p-1  color-index-#{record.probability_color.value}"
+                                    >
                       <field name="probability_id" />
                     </span>
                   </div>
-                  <div>
+                  <div class="mt-1 mb-1">
                     Score:
                     <span
-                                        t-attf-class="color-index-#{record.risk_combination_color.value}"
+                                        t-attf-class="p-1 color-index-#{record.risk_combination_color.value}"
                                     >
                       <field name="risk_combination_id" />
                     </span>
