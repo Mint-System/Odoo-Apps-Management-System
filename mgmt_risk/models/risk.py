@@ -51,26 +51,26 @@ class MgmtRisk(models.Model):
 
     @api.depends("severity_id", "probability_id")
     def _compute_risk_score(self):
-        for record in self:
-            severity = record.severity_id.value if record.severity_id else 0
-            probability = record.probability_id.value if record.probability_id else 0
+        for rec in self:
+            severity = rec.severity_id.value if rec.severity_id else 0
+            probability = rec.probability_id.value if rec.probability_id else 0
 
             formula = self.env.company.mgmt_risk_formula
 
             if formula == "multiply":
-                record.risk_score = severity * probability
+                rec.risk_score = severity * probability
             elif formula == "sum":
-                record.risk_score = severity + probability
+                rec.risk_score = severity + probability
             else:
-                record.risk_score = 0
+                rec.risk_score = 0
 
     @api.depends("severity_id", "probability_id")
     def _compute_risk_combination_id(self):
-        for record in self:
+        for rec in self:
             risk_combination_id = self.env["mgmt.risk.combination"].search(
                 [
-                    ("severity_id", "=", record.severity_id.id),
-                    ("probability_id", "=", record.probability_id.id),
+                    ("severity_id", "=", rec.severity_id.id),
+                    ("probability_id", "=", rec.probability_id.id),
                 ],
                 limit=1,
             )

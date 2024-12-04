@@ -7,6 +7,8 @@
         <field name="arch" type="xml">
             <tree editable="top">
                 <field name="name" />
+                <field name="severity_id" />
+                <field name="probability_id" />
                 <field name="color" widget="color_picker" />
             </tree>
         </field>
