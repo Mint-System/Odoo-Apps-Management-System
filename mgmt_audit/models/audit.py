@@ -28,7 +28,7 @@ class MgmtAudit(models.Model):
         group_expand="_read_group_stage_ids",
     )
     responsible_id = fields.Many2one("hr.employee", tracking=True)
-    statement_ids = fields.Many2many("mgmt.statement")
+    statement_ids = fields.One2many("mgmt.statement", "audit_id")
     auditor_ids = fields.Many2many("res.partner")
 
     @api.model

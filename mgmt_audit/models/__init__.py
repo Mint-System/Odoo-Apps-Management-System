@@ -3,4 +3,5 @@ from . import audit_stage
 from . import statement
 from . import nonconformity
 from . import recommendation
+from . import requirement
 from . import risk
