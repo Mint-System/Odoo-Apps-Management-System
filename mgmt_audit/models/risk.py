@@ -1,6 +1,6 @@
 import logging
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
@@ -9,23 +9,18 @@ class MgmtRisk(models.Model):
     _inherit = "mgmt.risk"
 
     last_review_date = fields.Date(compute="_compute_last_review_date", store=True)
+    statement_ids = fields.One2many("mgmt.statement", "risk_id")
 
-    @api.depends(
-        "requirement_ids",
-        "requirement_ids.statement_ids",
-        "requirement_ids.statement_ids.audit_id",
-    )
     def _compute_last_review_date(self):
         """
-        Date of the last audit.
-        Connection is risk_id -> requirement_ids ->
-        statement_ids -> audit_id:planned_date.
+        Date of the last audit. Compute method is called when planned_date is changed.
         """
-
         for risk in self:
-            audit_dates = risk.requirement_ids.statement_ids.audit_id.mapped(
-                "planned_date"
+            audit_ids = (
+                risk.requirement_ids.statement_ids.audit_id
+                + risk.statement_ids.audit_id
             )
+            audit_dates = audit_ids.mapped("planned_date")
             risk.last_review_date = max(audit_dates) if audit_dates else False
 
     def create_audit_with_risk_statements(self):
