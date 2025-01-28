@@ -3,7 +3,7 @@
     "summary": """
         Base for the management modules.
     """,
-    "author": "Mint System GmbH, Odoo Community Association (OCA)",
+    "author": "Mint System GmbH",
     "website": "https://github.com/OCA/management-system",
     "category": "Management",
     "version": "17.0.1.0.0",
