@@ -9,10 +9,10 @@
             <xpath expr="//page[@name='general_info']" position="after">
                 <page string="Assets" name="assets">
                     <field name="asset_ids" nolabel="1">
-                        <tree>
+                        <list>
                             <field name="name" />
                             <field name="ref" />
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

@@ -42,7 +42,7 @@
         <field name="name">mgmt_audit.statement_tree_view</field>
         <field name="model">mgmt.statement</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="risk_id" />
                 <field name="audit_id" />
@@ -50,7 +50,7 @@
                 <field name="nonconformity_id" optional="hide" />
                 <field name="recommendation_id" optional="hide" />
                 <field name="attachment_id" optional="hide" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -67,7 +67,7 @@
     <record id="action_mgmt_statement_view" model="ir.actions.act_window">
         <field name="name">Statements</field>
         <field name="res_model">mgmt.statement</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="statement_search_view" />
     </record>
 

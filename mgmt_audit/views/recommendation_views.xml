@@ -34,9 +34,9 @@
         <field name="name">mgmt_audit.recommendation_tree_view</field>
         <field name="model">mgmt.recommendation</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -53,7 +53,7 @@
     <record id="action_mgmt_recommendation_view" model="ir.actions.act_window">
       <field name="name">Recommendations</field>
       <field name="res_model">mgmt.recommendation</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">list,form</field>
       <field name="search_view_id" ref="mgmt_audit.recommendation_search_view" />
     </record>
 

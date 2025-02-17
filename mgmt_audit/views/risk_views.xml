@@ -19,7 +19,7 @@
         <field name="name">Create Audit with Risk Statements</field>
         <field name="model_id" ref="mgmt_risk.model_mgmt_risk" />
         <field name="binding_model_id" ref="mgmt_risk.model_mgmt_risk" />
-        <field name="binding_view_types">tree</field>
+        <field name="binding_view_types">list</field>
         <field name="state">code</field>
         <field name="code">action = records.create_audit_with_risk_statements()</field>
     </record>

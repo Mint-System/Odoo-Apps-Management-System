@@ -9,11 +9,11 @@
             <xpath expr="//page[@name='general_info']" position="after">
                 <page string="Requirements" name="requirements">
                     <field name="requirement_ids" editable="bottom">
-                        <tree>
+                        <list>
                             <field name="name" />
                             <field name="system_id" />
                             <field name="description" />
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </xpath>

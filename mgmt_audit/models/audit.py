@@ -43,5 +43,5 @@ class MgmtAudit(models.Model):
             risk_ids._compute_last_review_date()
 
     @api.model
-    def _read_group_stage_ids(self, stages, domain, order):
+    def _read_group_stage_ids(self, stages, domain):
         return self.env["mgmt.audit.stage"].search([])

@@ -35,11 +35,11 @@
         <field name="name">mgmt_audit.audit_stage_tree_view</field>
         <field name="model">mgmt.audit.stage</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="code" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -56,7 +56,7 @@
     <record id="action_mgmt_audit_stage_view" model="ir.actions.act_window">
         <field name="name">Audit Stages</field>
         <field name="res_model">mgmt.audit.stage</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="audit_stage_search_view" />
     </record>
 

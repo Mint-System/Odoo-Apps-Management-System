@@ -53,7 +53,7 @@
                             invisible="head_risk_id == True"
                         >
                             <field name="revision_risk_ids" nolabel="1">
-                                <tree order="revision_count">
+                                <list order="revision_count">
                                     <field name="display_name" />
                                     <field name="risk_owner_id" />
                                     <field name="hazard_ids" widget="many2many_tags" />
@@ -62,16 +62,12 @@
                                     <field name="risk_combination_id" />
                                     <field name="stage" />
                                     <field name="write_date" />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
@@ -80,14 +76,14 @@
         <field name="name">mgmt_risk.risk_tree_view</field>
         <field name="model">mgmt.risk</field>
         <field name="arch" type="xml">
-            <tree duplicate="0">
+            <list duplicate="0">
                 <field name="name" />
                 <field name="risk_owner_id" />
                 <field name="severity_id" />
                 <field name="probability_id" />
                 <field name="risk_combination_id" />
                 <field name="stage" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -170,7 +166,7 @@
     <record id="action_mgmt_risk_view" model="ir.actions.act_window">
         <field name="name">Risks</field>
         <field name="res_model">mgmt.risk</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,list,form</field>
         <field name="domain">[('head_risk_id', '=', False)]</field>
         <field name="search_view_id" ref="risk_search_view" />
     </record>

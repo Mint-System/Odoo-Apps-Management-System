@@ -38,10 +38,10 @@
                             <field
                                 name="statement_ids"
                                 domain="[('audit_id','=',False)]"
-                                context="{'default_audit_id': active_id}"
+                                context="{'default_audit_id': id}"
                                 nolabel="1"
                             >
-                                <tree editable="bottom">
+                                <list editable="bottom">
                                     <field name="name" />
                                     <field name="risk_id" />
                                     <field name="nonconformity_id" />
@@ -51,16 +51,12 @@
                                         string="Open"
                                         icon="fa-edit"
                                     />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" />
-                    <field name="activity_ids" />
-                    <field name="message_ids" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
@@ -69,13 +65,13 @@
         <field name="name">mgmt_audit.audit_tree_view</field>
         <field name="model">mgmt.audit</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="type" />
                 <field name="planned_date" />
                 <field name="stage_id" />
                 <field name="responsible_id" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -140,7 +136,7 @@
     <record id="action_mgmt_audit_view" model="ir.actions.act_window">
       <field name="name">Audits</field>
       <field name="res_model">mgmt.audit</field>
-      <field name="view_mode">kanban,tree,form</field>
+      <field name="view_mode">kanban,list,form</field>
       <field name="search_view_id" ref="mgmt_audit.audit_search_view" />
     </record>
 

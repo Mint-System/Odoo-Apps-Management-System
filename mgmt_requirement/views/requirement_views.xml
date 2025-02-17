@@ -28,12 +28,12 @@
                         </page>
                         <page string="Paragraphs" name="paragraphs">
                             <field name="paragraph_ids" nolabel="1">
-                                <tree>
+                                <list>
                                     <field name="name" />
                                     <field name="reference" />
                                     <field name="description" />
                                     <field name="document_id" />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
@@ -46,13 +46,13 @@
         <field name="name">mgmt_requirement.requirement_tree_view</field>
         <field name="model">mgmt.requirement</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="description" />
                 <field name="system_id" />
                 <field name="paragraph_ids" widget="many2many_tags" />
                 <field name="tag_ids" widget="many2many_tags" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -77,14 +77,14 @@
     <record id="action_mgmt_requirement_view" model="ir.actions.act_window">
       <field name="name">Requirements</field>
       <field name="res_model">mgmt.requirement</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">list,form</field>
       <field name="search_view_id" ref="mgmt_requirement.requirement_search_view" />
     </record>
 
     <record id="action_mgmt_requirement_report_view" model="ir.actions.act_window">
       <field name="name">Requirement Report</field>
       <field name="res_model">mgmt.requirement</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
