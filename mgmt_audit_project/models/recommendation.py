@@ -14,9 +14,7 @@ class MgmtRecommendation(models.Model):
 
     @api.model
     def _get_default_project_id(self):
-        project = self.env.ref(
-            "mgmt_audit_project.mgmt_project", raise_if_not_found=False
-        )
+        project = self.env.ref("mgmt_audit_project.mgmt_project", raise_if_not_found=False)
         if project:
             return project.id
         return self.env["project.project"].search([], limit=1).id

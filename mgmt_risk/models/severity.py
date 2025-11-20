@@ -29,8 +29,6 @@ class MgmtSeverity(models.Model):
         return severity
 
     def unlink(self):
-        combinations = self.env["mgmt.risk.combination"].search(
-            [("severity_id", "in", self.ids)]
-        )
+        combinations = self.env["mgmt.risk.combination"].search([("severity_id", "in", self.ids)])
         combinations.unlink()
         return super().unlink()

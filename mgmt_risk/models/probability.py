@@ -29,8 +29,6 @@ class MgmtProbability(models.Model):
         return probability
 
     def unlink(self):
-        combinations = self.env["mgmt.risk.combination"].search(
-            [("probability_id", "in", self.ids)]
-        )
+        combinations = self.env["mgmt.risk.combination"].search([("probability_id", "in", self.ids)])
         combinations.unlink()
         return super().unlink()

@@ -36,10 +36,7 @@ class MgmtAudit(models.Model):
         Connection to risk is: audit_id -> statement_ids -> risk_id
         """
         for audit in self:
-            risk_ids = (
-                audit.statement_ids.risk_id
-                + audit.statement_ids.requirement_id.risk_ids
-            )
+            risk_ids = audit.statement_ids.risk_id + audit.statement_ids.requirement_id.risk_ids
             risk_ids._compute_last_review_date()
 
     @api.model

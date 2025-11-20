@@ -43,9 +43,7 @@ class MgmtRisk(models.Model):
 
     color = fields.Integer(compute="_compute_color", store=True)
 
-    risk_combination_id = fields.Many2one(
-        "mgmt.risk.combination", compute="_compute_risk_combination_id"
-    )
+    risk_combination_id = fields.Many2one("mgmt.risk.combination", compute="_compute_risk_combination_id")
     risk_combination_color = fields.Integer(compute="_compute_risk_combination_id")
     risk_score = fields.Float(compute="_compute_risk_score", store=True)
 

@@ -18,6 +18,4 @@ class ResCompany(models.Model):
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
-    mgmt_risk_formula = fields.Selection(
-        related="company_id.mgmt_risk_formula", readonly=False
-    )
+    mgmt_risk_formula = fields.Selection(related="company_id.mgmt_risk_formula", readonly=False)

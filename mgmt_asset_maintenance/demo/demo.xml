@@ -11,7 +11,7 @@
 
     <record id="demo_asset_server" model="mgmt.asset">
         <field name="name">Servers</field>
-        <field name="ref" ref="mgmt_asset.demo_inventory_server" />
+        <field name="ref" ref="demo_inventory_server" />
     </record>
 
 </odoo>

@@ -16,10 +16,7 @@ class MgmtRisk(models.Model):
         Date of the last audit. Compute method is called when planned_date is changed.
         """
         for risk in self:
-            audit_ids = (
-                risk.requirement_ids.statement_ids.audit_id
-                + risk.statement_ids.audit_id
-            )
+            audit_ids = risk.requirement_ids.statement_ids.audit_id + risk.statement_ids.audit_id
             audit_dates = audit_ids.mapped("planned_date")
             risk.last_review_date = max(audit_dates) if audit_dates else False
 
