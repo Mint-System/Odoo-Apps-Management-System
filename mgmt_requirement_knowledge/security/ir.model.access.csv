@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mgmt_requirement_knowledge_user,mgmt.requirement.knowledge.user,mgmt_requirement_knowledge.model_mgmt_documentation,mgmt_base.group_mgmt_user,1,0,0,0
+access_mgmt_requirement_knowledge_manager,mgmt.requirement.knowledge.manager,mgmt_requirement_knowledge.model_mgmt_documentation,mgmt_base.group_mgmt_manager,1,1,1,1

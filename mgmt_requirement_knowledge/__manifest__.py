@@ -9,15 +9,11 @@
     "category": "Repository",
     "development_status": "Production/Stable",
     "version": "17.0.1.0.0",
-    "license": "AGPL-3,OPL-1",
-    "depends": ["base", "mgmt_requirement"],
-    "data": [
-        "security/security.xml",
-        "security/ir.model.access.csv",
-    ],
+    "license": "AGPL-3",
+    "depends": ["base", "mgmt_requirement", "knowledge"],
+    "data": ["security/ir.model.access.csv", "views/paragraph_views.xml"],
     "installable": True,
     "application": False,
     "auto_install": False,
     "images": ["images/screen.png"],
-    "demo": ["demo/demo.xml"],
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="paragraph_form_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement_documentation.paragraph_form_view</field>
+        <field name="model">mgmt.paragraph</field>
+        <field name="inherit_id" ref="mgmt_requirement.paragraph_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page string="Documentation">
+                        <field
+                            name="documentation_ids"
+                            context="{'default_type': 'url'}"
+                        >
+                            <tree editable="bottom">
+                                <field name="type" />
+                                <field name="name" />
+                                <field name="url" />
+                                <field name="knowledge_article_id" />
+                            </tree>
+
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="type" />
+
+                                        <!-- URL documentation -->
+                                        <group
+                                            attrs="{'invisible': [('type','!=','url')]}"
+                                        >
+                                            <field name="name" />
+                                            <field name="url" />
+                                        </group>
+
+                                        <!-- Wiki documentation -->
+                                        <group
+                                            attrs="{'invisible': [('type','!=','wiki')]}"
+                                        >
+                                            <field name="knowledge_article_id" />
+                                        </group>
+
+                                    </group>
+                                </sheet>
+                            </form>
+
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>
