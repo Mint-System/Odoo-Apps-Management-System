@@ -5,7 +5,7 @@
         Links Requirement to Documentation.
     """,
     "author": "Mint System GmbH",
-    "website": "https://www.mint-system.ch",
+    "website": "https://github.com/OCA/management-system",
     "category": "Repository",
     "development_status": "Production/Stable",
     "version": "17.0.1.0.0",
