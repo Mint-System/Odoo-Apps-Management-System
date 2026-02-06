@@ -11,7 +11,11 @@
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["base", "mgmt_requirement", "knowledge"],
-    "data": ["security/ir.model.access.csv", "views/paragraph_views.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/paragraph_views.xml",
+        "views/knowledge_views.xml",
+    ],
     "installable": True,
     "application": False,
     "auto_install": False,

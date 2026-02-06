@@ -1,1 +1,1 @@
-from . import documentation, paragraph
+from . import documentation, paragraph, knowledge_article

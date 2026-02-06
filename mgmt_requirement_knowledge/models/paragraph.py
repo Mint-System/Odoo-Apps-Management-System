@@ -15,3 +15,12 @@ class MgmtParagraph(models.Model):
         "documentation_id",
         string="Documentations",
     )
+
+    def action_open_paragraph(self):
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "mgmt.paragraph",
+            "res_id": self.id,
+            "view_mode": "form",
+            "target": "current",
+        }

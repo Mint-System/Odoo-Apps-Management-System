@@ -16,7 +16,7 @@
                             <tree editable="bottom">
                                 <field name="type" />
                                 <field name="name" />
-                                <field name="url" />
+                                <field name="url" widget="url" />
                                 <field name="knowledge_article_id" />
                             </tree>
 
@@ -24,23 +24,19 @@
                                 <sheet>
                                     <group>
                                         <field name="type" />
-
-                                        <!-- URL documentation -->
-                                        <group
-                                            attrs="{'invisible': [('type','!=','url')]}"
-                                        >
-                                            <field name="name" />
-                                            <field name="url" />
-                                        </group>
-
-                                        <!-- Wiki documentation -->
-                                        <group
-                                            attrs="{'invisible': [('type','!=','wiki')]}"
-                                        >
-                                            <field name="knowledge_article_id" />
-                                        </group>
-
                                     </group>
+
+                                    <!-- URL documentation -->
+                                    <group invisible="type != 'url'">
+                                        <field name="name" />
+                                        <field name="url" widget="url" />
+                                    </group>
+
+                                    <!-- Wiki documentation -->
+                                    <group invisible="type != 'wiki'">
+                                        <field name="knowledge_article_id" />
+                                    </group>
+
                                 </sheet>
                             </form>
 
