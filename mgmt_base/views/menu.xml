@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        id="menu_mgmt_root"
+        name="Management System"
+        web_icon="mgmt_base,static/description/icon.png"
+        sequence="150"
+        groups="group_mgmt_manager,group_mgmt_viewer"
+    />
+
+    <menuitem
+        id="menu_mgmt_main"
+        name="Management System"
+        parent="menu_mgmt_root"
+        sequence="0"
+        groups="group_mgmt_viewer"
+    />
+
+    <menuitem id="menu_mgmt_audit" name="Audit" parent="menu_mgmt_root" sequence="10" />
+
+    <menuitem
+        id="menu_mgmt_evaluation"
+        name="Evaluation"
+        parent="menu_mgmt_root"
+        sequence="20"
+    />
+
+    <menuitem
+        id="menu_mgmt_inventory"
+        name="Inventory"
+        parent="menu_mgmt_root"
+        sequence="30"
+    />
+
+    <menuitem
+        id="menu_mgmt_reporting"
+        name="Reporting"
+        parent="menu_mgmt_root"
+        sequence="40"
+    />
+
+    <menuitem
+        id="menu_mgmt_configuration"
+        name="Configuration"
+        parent="menu_mgmt_root"
+        sequence="50"
+    />
+
+    <menuitem
+        id="menu_configuration_settings"
+        name="Settings"
+        parent="menu_mgmt_configuration"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_mgmt_configuration_system"
+        name="Systems"
+        parent="menu_mgmt_configuration"
+        groups="group_mgmt_manager"
+        sequence="20"
+        action="system_action"
+    />
+
+    <menuitem
+        id="menu_configuration_audit"
+        name="Audit"
+        parent="menu_mgmt_configuration"
+        sequence="30"
+    />
+
+    <menuitem
+        id="menu_configuration_risk"
+        name="Risk"
+        parent="menu_mgmt_configuration"
+        sequence="40"
+    />
+
+    <menuitem
+        id="menu_configuration_requirements"
+        name="Requirements"
+        parent="menu_mgmt_configuration"
+        sequence="50"
+    />
+
+
+</odoo>
