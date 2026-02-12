@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="probability_view_tree" model="ir.ui.view">
+        <field name="name">mgmt_risk.probability_tree_view</field>
+        <field name="model">mgmt.probability</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name" />
+                <field name="value" />
+                <field name="color" widget="color_picker" />
+            </list>
+        </field>
+    </record>
+
+    <record id="probability_search_view" model="ir.ui.view">
+        <field name="name">mgmt_risk.probability_search_view</field>
+        <field name="model">mgmt.probability</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_mgmt_probability_view" model="ir.actions.act_window">
+      <field name="name">Probability</field>
+      <field name="res_model">mgmt.probability</field>
+      <field name="view_mode">list</field>
+      <field name="search_view_id" ref="mgmt_risk.probability_search_view" />
+    </record>
+
+    <menuitem
+        id="menu_risk_probability"
+        name="Probability"
+        parent="mgmt_base.menu_configuration_risk"
+        action="action_mgmt_probability_view"
+        sequence="30"
+    />
+
+</odoo>

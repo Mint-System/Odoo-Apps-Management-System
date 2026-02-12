@@ -1,0 +1,1 @@
+Base for the management modules.
