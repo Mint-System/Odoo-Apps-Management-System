@@ -1,1 +1,1 @@
-* Janik von Rotz <login@janikvonrotz.ch>
+* Ulrich Kilian <uk@sdcience-and-more.de>
