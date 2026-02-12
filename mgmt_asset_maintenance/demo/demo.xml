@@ -1,0 +1,17 @@
+<odoo>
+
+    <record id="demo_inventory_category_servers" model="maintenance.equipment.category">
+        <field name="name">Servers</field>
+    </record>
+
+    <record id="demo_inventory_server" model="maintenance.equipment">
+        <field name="name">Odoo-Server</field>
+        <field name="category_id" ref="demo_inventory_category_servers" />
+    </record>
+
+    <record id="demo_asset_server" model="mgmt.asset">
+        <field name="name">Servers</field>
+        <field name="ref" ref="demo_inventory_server" />
+    </record>
+
+</odoo>
