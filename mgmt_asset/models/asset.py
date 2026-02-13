@@ -51,7 +51,7 @@ class MgmtAsset(models.Model):
                 record_ref = self.env[model.model].browse(rec.ref.id)
                 rec.owner_id = record_ref.owner_id
             else:
-                rec._compute_owner = False
+                rec.owner_id = False
 
     def _inverse_owner_id(self):
         for rec in self:
