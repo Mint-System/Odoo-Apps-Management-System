@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="recommendation_form_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.recommendation_form_view</field>
+        <field name="model">mgmt.recommendation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <!-- <notebook> -->
+                    <!--     <page string="general information" name="general_info"> -->
+                    <!--         <group> -->
+                    <!--             <group> -->
+                    <!--                 <field name="name" /> -->
+                    <!--             </group> -->
+                    <!--         </group> -->
+                    <!--     </page> -->
+                    <!-- </notebook> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="recommendation_view_tree" model="ir.ui.view">
+        <field name="name">mgmt_audit.recommendation_tree_view</field>
+        <field name="model">mgmt.recommendation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+    <record id="recommendation_search_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.recommendation_search_view</field>
+        <field name="model">mgmt.recommendation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_mgmt_recommendation_view" model="ir.actions.act_window">
+      <field name="name">Recommendations</field>
+      <field name="res_model">mgmt.recommendation</field>
+      <field name="view_mode">list,form</field>
+      <field name="search_view_id" ref="mgmt_audit.recommendation_search_view" />
+    </record>
+
+    <menuitem
+        id="menu_evaluation_recommendations"
+        name="Recommendations"
+        parent="mgmt_base.menu_mgmt_evaluation"
+        action="action_mgmt_recommendation_view"
+        sequence="30"
+    />
+
+</odoo>

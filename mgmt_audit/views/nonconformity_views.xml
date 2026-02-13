@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="nonconformity_form_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.nonconformity_form_view</field>
+        <field name="model">mgmt.nonconformity</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="General Information" name="general_info">
+                            <group>
+                                <group>
+                                    <field name="type" />
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="nonconformity_view_tree" model="ir.ui.view">
+        <field name="name">mgmt_audit.nonconformity_tree_view</field>
+        <field name="model">mgmt.nonconformity</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="type" />
+            </list>
+        </field>
+    </record>
+
+    <record id="nonconformity_search_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.nonconformity_search_view</field>
+        <field name="model">mgmt.nonconformity</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_mgmt_nonconformity_view" model="ir.actions.act_window">
+        <field name="name">Nonconformities</field>
+        <field name="res_model">mgmt.nonconformity</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="nonconformity_search_view" />
+    </record>
+
+    <menuitem
+        id="menu_evaluation_nonconformities"
+        name="Non-Conformities"
+        parent="mgmt_base.menu_mgmt_evaluation"
+        action="action_mgmt_nonconformity_view"
+        sequence="20"
+    />
+
+</odoo>

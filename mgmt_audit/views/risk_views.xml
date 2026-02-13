@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="risk_form_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.risk_form_view</field>
+        <field name="model">mgmt.risk</field>
+        <field name="inherit_id" ref="mgmt_risk.risk_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='general_info']//field[@name='write_date']"
+                position="before"
+            >
+                <field name="last_review_date" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_create_audit_with_statements" model="ir.actions.server">
+        <field name="name">Create Audit with Risk Statements</field>
+        <field name="model_id" ref="mgmt_risk.model_mgmt_risk" />
+        <field name="binding_model_id" ref="mgmt_risk.model_mgmt_risk" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.create_audit_with_risk_statements()</field>
+    </record>
+
+</odoo>

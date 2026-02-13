@@ -1,0 +1,47 @@
+<odoo>
+
+    <record id="tag_security" model="mgmt.requirement.tag">
+        <field name="name">Security</field>
+    </record>
+
+    <record id="tag_availability" model="mgmt.requirement.tag">
+        <field name="name">Availability</field>
+    </record>
+
+    <record id="demo_document_internal_guideline" model="mgmt.document">
+        <field name="name">Internal Guideline</field>
+    </record>
+
+    <record id="demo_paragraph_data_center" model="mgmt.paragraph">
+        <field name="name">Data Center</field>
+        <field name="reference">A1</field>
+        <field name="description">Guidelines about managing a data center.</field>
+        <field name="document_id" ref="demo_document_internal_guideline" />
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_security')])]" />
+    </record>
+
+    <record id="demo_system_isms" model="mgmt.system">
+        <field name="name">ISMS</field>
+    </record>
+
+    <record id="demo_requirement_power_redundancy" model="mgmt.requirement">
+        <field name="name">Power Redundancy</field>
+        <field
+            name="description"
+        >Alternative power source the data center is in place.</field>
+        <field
+            name="paragraph_ids"
+            eval="[(6, 0, [ref('demo_paragraph_data_center')])]"
+        />
+        <field name="tag_ids" eval="[(6, 0, [ref('tag_availability')])]" />
+        <field name="system_id" ref="demo_system_isms" />
+    </record>
+
+    <record id="mgmt_risk.demo_risk_server_outage" model="mgmt.risk">
+        <field
+            name="requirement_ids"
+            eval="[(6, 0, [ref('demo_requirement_power_redundancy')])]"
+        />
+    </record>
+
+</odoo>

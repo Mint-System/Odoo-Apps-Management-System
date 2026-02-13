@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+  <record id="audit_form_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.audit_form_view</field>
+        <field name="model">mgmt.audit</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field
+                        name="stage_id"
+                        widget="statusbar"
+                        options="{'clickable': 1}"
+                        statusbar_visible="draft,ready,in_progress,done"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <field name="description" />
+                    <notebook>
+                        <page string="General Information" name="general_info">
+                            <group>
+                                <group>
+                                    <field name="type" />
+                                    <field name="planned_date" />
+                                    <field name="responsible_id" />
+                                    <field name="auditor_ids" widget="many2many_tags" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Statements" name="statements">
+                            <field
+                                name="statement_ids"
+                                domain="[('audit_id','=',False)]"
+                                context="{'default_audit_id': id}"
+                                nolabel="1"
+                            >
+                                <list editable="bottom">
+                                    <field name="name" />
+                                    <field name="risk_id" />
+                                    <field name="nonconformity_id" />
+                                    <button
+                                        type="object"
+                                        name="get_formview_action"
+                                        string="Open"
+                                        icon="fa-edit"
+                                    />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="audit_view_tree" model="ir.ui.view">
+        <field name="name">mgmt_audit.audit_tree_view</field>
+        <field name="model">mgmt.audit</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="type" />
+                <field name="planned_date" />
+                <field name="stage_id" />
+                <field name="responsible_id" />
+            </list>
+        </field>
+    </record>
+
+    <!-- <record id="audit_kanban_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.audit_kanban_view</field>
+        <field name="model">mgmt.audit</field>
+        <field name="arch" type="xml">
+                <kanban
+                class="o_kanban_small_column"
+                default_group_by="stage_id"
+                quick_create="False"
+            >
+                <field name="name" />
+                <field name="type" />
+                <field name="planned_date" />
+                <field name="stage_id" />
+                <field name="responsible_id" />
+
+                <templates>
+                        <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_card">
+                                <div class="o_kanban_title">
+                                <strong><field name="name" /></strong>
+                                </div>
+                                <div class="o_kanban_details">
+                                <div>Type: <field name="type" /></div>
+                                <div>Planned: <field name="planned_date" /></div>
+                                <div>Responsible: <field name="responsible_id" /></div>
+                                </div>
+                        </div>
+                        </t>
+                        <t t-name="kanban-column">
+                        <div
+                            class="o_kanban_column"
+                            t-attf-data-id="column-id-#{record.stage_id}"
+                        >
+                                <div class="o_kanban_header">
+                                <strong><field name="stage_id" /></strong>
+                                </div>
+                                <div class="o_kanban_items">
+                                <t t-foreach="records" t-as="record">
+                                        <t t-call="kanban-box" />
+                                </t>
+                                </div>
+                        </div>
+                        </t>
+                </templates>
+                </kanban>
+        </field>
+    </record> -->
+
+    <record id="audit_kanban_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.audit_kanban_view</field>
+        <field name="model">mgmt.audit</field>
+        <field name="arch" type="xml">
+            <kanban
+                class="o_kanban_small_column"
+                default_group_by="stage_id"
+                quick_create="false"
+            >
+                <!-- fields used in the card -->
+                <field name="name"/>
+                <field name="type"/>
+                <field name="planned_date"/>
+                <field name="stage_id"/>
+                <field name="responsible_id"/>
+
+                <templates>
+
+                    <!-- Odoo 19 card template -->
+                    <t t-name="card">
+                        <div class="o_kanban_record o_kanban_global_click">
+
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name"/>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div class="o_kanban_record_body">
+                                <div>
+                                    <span class="fw-bold">Type:</span>
+                                    <field name="type"/>
+                                </div>
+                                <div>
+                                    <span class="fw-bold">Planned:</span>
+                                    <field name="planned_date"/>
+                                </div>
+                                <div>
+                                    <span class="fw-bold">Responsible:</span>
+                                    <field name="responsible_id"/>
+                                </div>
+                            </div>
+
+                        </div>
+                    </t>
+
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="audit_search_view" model="ir.ui.view">
+        <field name="name">mgmt_audit.audit_search_view</field>
+        <field name="model">mgmt.audit</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record id="action_mgmt_audit_view" model="ir.actions.act_window">
+      <field name="name">Audits</field>
+      <field name="res_model">mgmt.audit</field>
+      <field name="view_mode">kanban,list,form</field>
+      <field name="search_view_id" ref="mgmt_audit.audit_search_view" />
+    </record>
+
+    <menuitem
+        id="menu_audit_audits"
+        name="Audits"
+        parent="mgmt_base.menu_mgmt_audit"
+        action="action_mgmt_audit_view"
+        sequence="10"
+    />
+
+</odoo>

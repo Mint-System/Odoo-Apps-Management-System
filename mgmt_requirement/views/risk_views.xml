@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="requirement_risk_form_view" model="ir.ui.view">
+        <field name="name">mgmt_requirement.risk_form_view</field>
+        <field name="model">mgmt.risk</field>
+        <field name="inherit_id" ref="mgmt_risk.risk_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page string="Requirements" name="requirements">
+                    <field name="requirement_ids" editable="bottom">
+                        <list>
+                            <field name="name" />
+                            <field name="system_id" />
+                            <field name="description" />
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
