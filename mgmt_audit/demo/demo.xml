@@ -5,7 +5,7 @@
         <field name="type">internal</field>
         <field name="planned_date">2023-01-01</field>
         <field name="stage_id" ref="audit_stage_done" />
-        <field name="responsible_id" ref="base.user_admin" />
+        <field name="responsible_id" ref="hr.employee_admin" />
     </record>
 
     <record id="demo_audit_2024" model="mgmt.audit">
@@ -13,7 +13,7 @@
         <field name="type">internal</field>
         <field name="planned_date">2024-01-01</field>
         <field name="stage_id" ref="audit_stage_done" />
-        <field name="responsible_id" ref="base.user_admin" />
+        <field name="responsible_id" ref="hr.employee_admin" />
     </record>
 
     <record id="demo_nonconformity_no_power_supply" model="mgmt.nonconformity">

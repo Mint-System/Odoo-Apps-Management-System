@@ -8,7 +8,7 @@
     "category": "Management",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmt_requirement", "mgmt_risk"],
+    "depends": ["mgmt_requirement", "mgmt_risk", "hr"],
     "data": [
         "security/ir.model.access.csv",
         "data/data.xml",
