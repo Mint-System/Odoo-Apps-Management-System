@@ -1,21 +1,22 @@
 {
-    "name": "Mgmt Requirement",
+    "name": "Mgmt Audit Project",
     "summary": """
-        Manage organisational requirements.
+        Create tasks for nonconformities and recommendations.
     """,
     "author": "Mint System GmbH",
     "website": "https://www.mint-system.ch/",
     "category": "Management",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["mgmt_risk"],
+    "depends": ["mgmt_audit", "project"],
     "data": [
-        "security/ir.model.access.csv",
-        "views/requirement_views.xml",
-        "views/paragraph_views.xml",
-        "views/document_views.xml",
-        "views/tag_views.xml",
-        "views/risk_views.xml",
+        "data/data.xml",
+        "views/nonconformity_views.xml",
+        "views/recommendation_views.xml",
+        "views/project_task_views.xml",
+    ],
+    "demo": [
+        "demo/demo.xml",
     ],
     "installable": True,
     "application": False,

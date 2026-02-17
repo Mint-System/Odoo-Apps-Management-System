@@ -14,7 +14,9 @@
     "data": [
         "views/maintenance_equipment_views.xml",
         "views/maintenance_equipment_category_views.xml",
-        "demo/demo.xml",
+    ],
+    "demo": [
+       "demo/demo.xml",
     ],
     "installable": True,
     "application": False,

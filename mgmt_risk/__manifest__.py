@@ -19,7 +19,9 @@
         "views/probability_views.xml",
         "views/risk_combination_views.xml",
         "views/res_config_settings.xml",
-        "demo/demo.xml",
+    ],
+    "demo": [
+       "demo/demo.xml",
     ],
     "assets": {
         "web.assets_backend": [

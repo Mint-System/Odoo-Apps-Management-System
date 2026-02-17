@@ -18,7 +18,9 @@
         "views/nonconformity_views.xml",
         "views/recommendation_views.xml",
         "views/risk_views.xml",
-        "demo/demo.xml",
+    ],
+    "demo": [
+       "demo/demo.xml",
     ],
     "installable": True,
     "application": False,
