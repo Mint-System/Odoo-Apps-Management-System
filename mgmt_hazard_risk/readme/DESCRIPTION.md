@@ -1,0 +1,1 @@
+Calculate risk based on hazards.
