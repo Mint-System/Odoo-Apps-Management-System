@@ -1,0 +1,24 @@
+<odoo>
+
+    <record id="auditlog_rule_1" model="auditlog.rule">
+        <field name="name">Mgmt Risk</field>
+        <field name="model_id" ref="mgmt_risk.model_mgmt_risk" />
+        <field name="log_type">fast</field>
+        <field name="state">confirmed</field>
+    </record>
+
+    <record id="auditlog_rule_2" model="auditlog.rule">
+        <field name="name">Mgmt Audit</field>
+        <field name="model_id" ref="mgmt_audit.model_mgmt_audit" />
+        <field name="log_type">fast</field>
+        <field name="state">confirmed</field>
+    </record>
+
+    <record id="auditlog_rule_3" model="auditlog.rule">
+        <field name="name">Mgmt Statement</field>
+        <field name="model_id" ref="mgmt_audit.model_mgmt_statement" />
+        <field name="log_type">fast</field>
+        <field name="state">confirmed</field>
+    </record>
+
+</odoo>

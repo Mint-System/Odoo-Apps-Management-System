@@ -1,0 +1,1 @@
+Setup audit log rules for the mgmt modules.
