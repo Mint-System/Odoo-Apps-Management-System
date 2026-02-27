@@ -26,14 +26,8 @@ class MgmtDocumentation(models.Model):
         string="Knowledge Article",
         ondelete="restrict",
     )
+    paragraph_id = fields.Many2one("mgmt.paragraph")
 
-    paragraph_ids = fields.Many2many(
-        "mgmt.paragraph",
-        "mgmt_paragraph_documentation_rel",
-        "documentation_id",
-        "paragraph_id",
-        string="Paragraphs",
-    )
 
     @api.constrains("type", "url", "name", "knowledge_article_id")
     def _check_documentation_type(self):

@@ -13,11 +13,11 @@
                             name="documentation_ids"
                             context="{'default_type': 'url'}"
                         >
-                            <list editable="bottom">
+                            <list editable="top">
                                 <field name="type" />
                                 <field name="name" />
-                                <field name="url" widget="url" />
-                                <field name="knowledge_article_id" />
+                                <field name="url" widget="url" readonly="type =='wiki'"/>
+                                <field name="knowledge_article_id" readonly="type =='url'"/>
                             </list>
 
                             <form>
