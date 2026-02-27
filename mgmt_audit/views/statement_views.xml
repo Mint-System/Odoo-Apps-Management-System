@@ -28,7 +28,6 @@
                                     <field name="requirement_id" />
                                     <field name="nonconformity_id" />
                                     <field name="recommendation_id" />
-                                    <field name="attachment_id" />
                                 </group>
                             </group>
                         </page>
@@ -49,7 +48,6 @@
                 <field name="requirement_id" optional="hide" />
                 <field name="nonconformity_id" optional="hide" />
                 <field name="recommendation_id" optional="hide" />
-                <field name="attachment_id" optional="hide" />
             </list>
         </field>
     </record>

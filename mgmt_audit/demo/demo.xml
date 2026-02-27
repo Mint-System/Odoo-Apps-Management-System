@@ -32,11 +32,6 @@
         <field name="nonconformity_id" ref="demo_nonconformity_no_power_supply" />
     </record>
 
-    <record id="demo_attachment_external_guideline" model="ir.attachment">
-        <field name="name">External Guideline</field>
-        <field name="url">https://example.com</field>
-    </record>
-
     <record id="demo_statement_power_supply_installed" model="mgmt.statement">
         <field name="name">Redundant power supply installed</field>
         <field name="audit_id" ref="demo_audit_2024" />
@@ -45,7 +40,6 @@
             ref="mgmt_requirement.demo_requirement_power_redundancy"
         />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage_revision" />
-        <field name="attachment_id" ref="demo_attachment_external_guideline" />
     </record>
 
 </odoo>

@@ -15,4 +15,3 @@ class MgmtStatement(models.Model):
     requirement_id = fields.Many2one("mgmt.requirement")
     nonconformity_id = fields.Many2one("mgmt.nonconformity")
     recommendation_id = fields.Many2one("mgmt.recommendation")
-    attachment_id = fields.Many2one("ir.attachment")
