@@ -9,31 +9,23 @@
                 <div
                     class="o_knowledge_backlinks_panel border-start"
                     style="width: 300px;"
-                    invisible="not paragraph_ids"
                 >
                     <div class="p-3">
-                        <!-- <h5>Backlinks</h5> -->
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#backlinks" role="button" aria-expanded="false" aria-controls="backlinks">
-                        Backlinks
-                      </a>
-                      <div class="collapse" id="backlinks">
-                          <div class="card card-body">
-                            <field name="paragraph_ids" readonly="1" nolabel="1">
-                                <list>
-                                    <field name="name" />
-                                    <button
-                                        name="action_open_paragraph"
-                                        type="object"
-                                        string="Open"
-                                        icon="fa-external-link"
-                                        class="btn-link"
-                                    />
-                                </list>
-                            </field>
-                          </div>
-                       </div>
+                        <h5>Backlinks</h5>
+                        <field name="paragraph_ids" readonly="1" nolabel="1">
+                            <list>
+                                <field name="name" />
+                                <button
+                                    name="action_open_paragraph"
+                                    type="object"
+                                    string="Open"
+                                    icon="fa-external-link"
+                                    class="btn-link"
+                                />
+                            </list>
+                        </field>
                     </div>
-              </div>
+                </div>
             </xpath>
         </field>
     </record>
