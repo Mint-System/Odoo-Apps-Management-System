@@ -5,28 +5,36 @@
         <field name="model">knowledge.article</field>
         <field name="inherit_id" ref="knowledge.knowledge_article_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//widget[@name='knowledge_properties_panel']" position="after">
-                <div
-                    class="o_knowledge_backlinks_panel border-start"
-                    style="width: 300px;"
-                >
-                    <div class="p-3">
-                        <h5>Backlinks</h5>
-                        <field name="paragraph_ids" readonly="1" nolabel="1">
-                            <list>
-                                <field name="name" />
-                                <button
-                                    name="action_open_paragraph"
-                                    type="object"
-                                    string="Open"
-                                    icon="fa-external-link"
-                                    class="btn-link"
-                                />
-                            </list>
-                        </field>
-                    </div>
-                </div>
-            </xpath>
+
+         <xpath expr="//div[@class='o_knowledge_editor mt-3']" position="after">
+            <style>
+                .o_backlinks {
+                    width: 100%;
+                    max-width: calc(750px + 2 * var(--editor-gutter-size));
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: var(--editor-gutter-size) !important;
+                    padding-right: calc(var(--editor-gutter-size) + 40px) !important;
+                }
+
+            </style>
+            <div class="o_backlinks mt-4" invisible="not paragraph_ids">
+                <h3>Backlinks</h3>
+                     <field name="paragraph_ids" readonly="1" nolabel="1">
+                        <list>
+                            <field name="name" />
+                            <button
+                                name="action_open_paragraph"
+                                type="object"
+                                string="Open"
+                                icon="fa-external-link"
+                                class="btn-link"
+                            />
+                        </list>
+                    </field>
+            </div>
+        </xpath>
+
         </field>
     </record>
 </odoo>
