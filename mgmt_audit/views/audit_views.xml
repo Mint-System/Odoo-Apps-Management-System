@@ -75,54 +75,6 @@
         </field>
     </record>
 
-    <!-- <record id="audit_kanban_view" model="ir.ui.view">
-        <field name="name">mgmt_audit.audit_kanban_view</field>
-        <field name="model">mgmt.audit</field>
-        <field name="arch" type="xml">
-                <kanban
-                class="o_kanban_small_column"
-                default_group_by="stage_id"
-                quick_create="False"
-            >
-                <field name="name" />
-                <field name="type" />
-                <field name="planned_date" />
-                <field name="stage_id" />
-                <field name="responsible_id" />
-
-                <templates>
-                        <t t-name="kanban-box">
-                        <div t-attf-class="oe_kanban_global_click o_kanban_card">
-                                <div class="o_kanban_title">
-                                <strong><field name="name" /></strong>
-                                </div>
-                                <div class="o_kanban_details">
-                                <div>Type: <field name="type" /></div>
-                                <div>Planned: <field name="planned_date" /></div>
-                                <div>Responsible: <field name="responsible_id" /></div>
-                                </div>
-                        </div>
-                        </t>
-                        <t t-name="kanban-column">
-                        <div
-                            class="o_kanban_column"
-                            t-attf-data-id="column-id-#{record.stage_id}"
-                        >
-                                <div class="o_kanban_header">
-                                <strong><field name="stage_id" /></strong>
-                                </div>
-                                <div class="o_kanban_items">
-                                <t t-foreach="records" t-as="record">
-                                        <t t-call="kanban-box" />
-                                </t>
-                                </div>
-                        </div>
-                        </t>
-                </templates>
-                </kanban>
-        </field>
-    </record> -->
-
     <record id="audit_kanban_view" model="ir.ui.view">
         <field name="name">mgmt_audit.audit_kanban_view</field>
         <field name="model">mgmt.audit</field>
@@ -140,37 +92,30 @@
                 <field name="responsible_id"/>
 
                 <templates>
-
                     <!-- Odoo 19 card template -->
                     <t t-name="card">
-                        <div class="o_kanban_record o_kanban_global_click">
-
-                            <div class="o_kanban_record_top">
-                                <div class="o_kanban_record_headings">
-                                    <strong class="o_kanban_record_title">
-                                        <field name="name"/>
-                                    </strong>
-                                </div>
-                            </div>
-
-                            <div class="o_kanban_record_body">
+                        <div class="row mb4">
+                            <div class="col-2 text-nowrap">
+                                <field class="fw-bold" name="name"/>
+                            </div>                      
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
                                 <div>
-                                    <span class="fw-bold">Type:</span>
+                                    <span class="fw-bold">Type: </span>
                                     <field name="type"/>
                                 </div>
                                 <div>
-                                    <span class="fw-bold">Planned:</span>
+                                    <span class="fw-bold">Planned: </span>
                                     <field name="planned_date"/>
                                 </div>
                                 <div>
-                                    <span class="fw-bold">Responsible:</span>
+                                    <span class="fw-bold">Responsible: </span>
                                     <field name="responsible_id"/>
                                 </div>
                             </div>
-
                         </div>
                     </t>
-
                 </templates>
             </kanban>
         </field>
