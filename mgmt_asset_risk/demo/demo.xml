@@ -1,10 +1,8 @@
 <odoo>
-
     <record id="mgmt_risk.demo_risk_server_outage" model="mgmt.risk">
         <field
             name="asset_ids"
             eval="[(6, 0, [ref('mgmt_asset_maintenance.demo_asset_server')])]"
         />
     </record>
-
 </odoo>

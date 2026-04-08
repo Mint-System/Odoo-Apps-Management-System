@@ -21,7 +21,7 @@
         "views/res_config_settings.xml",
     ],
     "demo": [
-       "demo/demo.xml",
+        "demo/demo.xml",
     ],
     "assets": {
         "web.assets_backend": [

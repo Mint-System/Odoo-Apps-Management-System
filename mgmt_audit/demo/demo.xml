@@ -1,5 +1,4 @@
 <odoo>
-
     <record id="demo_audit_2023" model="mgmt.audit">
         <field name="name">Yearly Internal Audit 2023</field>
         <field name="type">internal</field>
@@ -17,8 +16,8 @@
     </record>
 
     <record id="demo_nonconformity_no_power_supply" model="mgmt.nonconformity">
-      <field name="name">No Redundant Power Supply</field>
-      <field name="type">major</field>
+        <field name="name">No Redundant Power Supply</field>
+        <field name="type">major</field>
     </record>
 
     <record id="demo_statement_power_supply_missing" model="mgmt.statement">
@@ -41,5 +40,4 @@
         />
         <field name="risk_id" ref="mgmt_risk.demo_risk_server_outage_revision" />
     </record>
-
 </odoo>

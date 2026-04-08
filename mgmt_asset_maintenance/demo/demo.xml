@@ -1,5 +1,4 @@
 <odoo>
-
     <record id="demo_inventory_category_servers" model="maintenance.equipment.category">
         <field name="name">Servers</field>
     </record>
@@ -13,5 +12,4 @@
         <field name="name">Servers</field>
         <field name="ref" ref="demo_inventory_server" />
     </record>
-
 </odoo>

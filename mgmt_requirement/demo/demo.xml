@@ -1,5 +1,4 @@
 <odoo>
-
     <record id="tag_security" model="mgmt.requirement.tag">
         <field name="name">Security</field>
     </record>
@@ -43,5 +42,4 @@
             eval="[(6, 0, [ref('demo_requirement_power_redundancy')])]"
         />
     </record>
-
 </odoo>

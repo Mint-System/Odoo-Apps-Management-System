@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="view_task_form2" model="ir.ui.view">
         <field name="name">mgmt_audit_project.view_task_form2</field>
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2" />
-          <field name="arch" type="xml">
-            <field name="name" position="after">
-            </field>
-          </field>
+        <field name="arch" type="xml">
+            <field name="name" position="after" />
+        </field>
     </record>
 
     <record id="action_project_task_view" model="ir.actions.act_window">
@@ -27,5 +25,4 @@
         action="action_project_task_view"
         sequence="40"
     />
-
 </odoo>

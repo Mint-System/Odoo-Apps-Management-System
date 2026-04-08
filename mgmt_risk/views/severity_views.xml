@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="severity_view_tree" model="ir.ui.view">
         <field name="name">mgmt_risk.severity_tree_view</field>
         <field name="model">mgmt.severity</field>
@@ -37,5 +36,4 @@
         action="action_mgmt_severity_view"
         sequence="20"
     />
-
 </odoo>

@@ -20,7 +20,7 @@
         "views/risk_views.xml",
     ],
     "demo": [
-       "demo/demo.xml",
+        "demo/demo.xml",
     ],
     "installable": True,
     "application": False,

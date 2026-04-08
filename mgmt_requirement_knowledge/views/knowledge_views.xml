@@ -5,9 +5,8 @@
         <field name="model">knowledge.article</field>
         <field name="inherit_id" ref="knowledge.knowledge_article_view_form" />
         <field name="arch" type="xml">
-
-         <xpath expr="//div[@class='o_knowledge_editor mt-3']" position="after">
-            <style>
+            <xpath expr="//div[@class='o_knowledge_editor mt-3']" position="after">
+                <style>
                 .o_backlinks {
                     width: 100%;
                     max-width: calc(750px + 2 * var(--editor-gutter-size));
@@ -18,9 +17,9 @@
                 }
 
             </style>
-            <div class="o_backlinks mt-4" invisible="not paragraph_ids">
-                <h3>Backlinks</h3>
-                     <field name="paragraph_ids" readonly="1" nolabel="1">
+                <div class="o_backlinks mt-4" invisible="not paragraph_ids">
+                    <h3>Backlinks</h3>
+                    <field name="paragraph_ids" readonly="1" nolabel="1">
                         <list>
                             <field name="name" />
                             <button
@@ -32,9 +31,8 @@
                             />
                         </list>
                     </field>
-            </div>
-        </xpath>
-
+                </div>
+            </xpath>
         </field>
     </record>
 </odoo>

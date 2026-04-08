@@ -28,7 +28,6 @@ class MgmtDocumentation(models.Model):
     )
     paragraph_id = fields.Many2one("mgmt.paragraph")
 
-
     @api.constrains("type", "url", "name", "knowledge_article_id")
     def _check_documentation_type(self):
         for rec in self:

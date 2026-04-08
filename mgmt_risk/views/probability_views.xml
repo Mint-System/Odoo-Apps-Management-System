@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="probability_view_tree" model="ir.ui.view">
         <field name="name">mgmt_risk.probability_tree_view</field>
         <field name="model">mgmt.probability</field>
@@ -24,10 +23,10 @@
     </record>
 
     <record id="action_mgmt_probability_view" model="ir.actions.act_window">
-      <field name="name">Probability</field>
-      <field name="res_model">mgmt.probability</field>
-      <field name="view_mode">list</field>
-      <field name="search_view_id" ref="mgmt_risk.probability_search_view" />
+        <field name="name">Probability</field>
+        <field name="res_model">mgmt.probability</field>
+        <field name="view_mode">list</field>
+        <field name="search_view_id" ref="mgmt_risk.probability_search_view" />
     </record>
 
     <menuitem
@@ -37,5 +36,4 @@
         action="action_mgmt_probability_view"
         sequence="30"
     />
-
 </odoo>

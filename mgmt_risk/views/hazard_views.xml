@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="hazard_form_view" model="ir.ui.view">
         <field name="name">mgmt_risk.hazard_form_view</field>
         <field name="model">mgmt.hazard</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                </header>
+                <header />
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                    </div>
+                    <div class="oe_button_box" name="button_box" />
                     <div class="oe_title">
                         <h1>
                             <field name="name" />
@@ -42,10 +39,10 @@
     </record>
 
     <record id="action_mgmt_hazard_view" model="ir.actions.act_window">
-      <field name="name">Hazards</field>
-      <field name="res_model">mgmt.hazard</field>
-      <field name="view_mode">list,form</field>
-      <field name="search_view_id" ref="mgmt_risk.hazard_search_view" />
+        <field name="name">Hazards</field>
+        <field name="res_model">mgmt.hazard</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="mgmt_risk.hazard_search_view" />
     </record>
 
     <menuitem
@@ -55,5 +52,4 @@
         action="action_mgmt_hazard_view"
         sequence="20"
     />
-
 </odoo>

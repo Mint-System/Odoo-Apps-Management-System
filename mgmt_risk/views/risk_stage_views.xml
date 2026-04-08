@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="risk_stage_form_view" model="ir.ui.view">
         <field name="name">mgmt_risk.risk_stage_form_view</field>
         <field name="model">mgmt.risk.stage</field>
@@ -10,7 +9,9 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box" />
                     <div class="oe_title">
-                        <h1><field name="name" /></h1>
+                        <h1>
+                            <field name="name" />
+                        </h1>
                     </div>
                     <notebook>
                         <page string="General Information" name="general_info">
@@ -63,5 +64,4 @@
         action="action_mgmt_risk_stage_view"
         sequence="10"
     />
-
 </odoo>

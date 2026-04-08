@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="risk_combination_view_tree" model="ir.ui.view">
         <field name="name">mgmt_risk.risk_combination_tree_view</field>
         <field name="model">mgmt.risk.combination</field>
@@ -19,8 +18,7 @@
         <field name="model">mgmt.risk.combination</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                </header>
+                <header />
                 <sheet>
                     <div class="oe_title">
                         <h1>
@@ -63,5 +61,4 @@
         action="action_mgmt_risk_combination_view"
         sequence="40"
     />
-
 </odoo>

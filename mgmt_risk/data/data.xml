@@ -1,5 +1,4 @@
 <odoo noupdate="1">
-
     <record id="stage_identify" model="mgmt.risk.stage">
         <field name="name">Identify</field>
         <field name="code">identify</field>
@@ -17,5 +16,4 @@
         <field name="code">mitigate</field>
         <field name="sequence">3</field>
     </record>
-
 </odoo>

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="requirement_form_view" model="ir.ui.view">
         <field name="name">mgmt_requirement.requirement_form_view</field>
         <field name="model">mgmt.requirement</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                </header>
+                <header />
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                    </div>
+                    <div class="oe_button_box" name="button_box" />
                     <div class="oe_title">
                         <h1>
                             <field name="name" />
@@ -70,25 +67,22 @@
                         context="{'group_by': 'system_id'}"
                     />
                 </group> -->
-                <filter
-                        name="group_by_system"
-                        context="{'group_by': 'system_id'}"
-                    />
+                <filter name="group_by_system" context="{'group_by': 'system_id'}" />
             </search>
         </field>
     </record>
 
     <record id="action_mgmt_requirement_view" model="ir.actions.act_window">
-      <field name="name">Requirements</field>
-      <field name="res_model">mgmt.requirement</field>
-      <field name="view_mode">list,form</field>
-      <field name="search_view_id" ref="mgmt_requirement.requirement_search_view" />
+        <field name="name">Requirements</field>
+        <field name="res_model">mgmt.requirement</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="mgmt_requirement.requirement_search_view" />
     </record>
 
     <record id="action_mgmt_requirement_report_view" model="ir.actions.act_window">
-      <field name="name">Requirement Report</field>
-      <field name="res_model">mgmt.requirement</field>
-      <field name="view_mode">list,form</field>
+        <field name="name">Requirement Report</field>
+        <field name="res_model">mgmt.requirement</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
@@ -106,5 +100,4 @@
         action="action_mgmt_requirement_report_view"
         sequence="10"
     />
-
 </odoo>

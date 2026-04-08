@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="paragraph_form_view" model="ir.ui.view">
         <field name="name">mgmt_requirement_documentation.paragraph_form_view</field>
         <field name="model">mgmt.paragraph</field>
@@ -16,8 +15,15 @@
                             <list editable="top">
                                 <field name="type" />
                                 <field name="name" />
-                                <field name="url" widget="url" readonly="type =='wiki'"/>
-                                <field name="knowledge_article_id" readonly="type =='url'"/>
+                                <field
+                                    name="url"
+                                    widget="url"
+                                    readonly="type =='wiki'"
+                                />
+                                <field
+                                    name="knowledge_article_id"
+                                    readonly="type =='url'"
+                                />
                             </list>
 
                             <form>
@@ -36,10 +42,8 @@
                                     <group invisible="type != 'wiki'">
                                         <field name="knowledge_article_id" />
                                     </group>
-
                                 </sheet>
                             </form>
-
                         </field>
                     </page>
                 </notebook>

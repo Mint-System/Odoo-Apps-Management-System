@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="risk_form_view" model="ir.ui.view">
         <field name="name">mgmt_risk.risk_form_view</field>
         <field name="model">mgmt.risk</field>
@@ -29,7 +28,9 @@
                         invisible="head_risk_id == False"
                     />
                     <div class="oe_title">
-                        <h1><field name="name" /></h1>
+                        <h1>
+                            <field name="name" />
+                        </h1>
                         <field name="description" />
                     </div>
                     <notebook>
@@ -95,74 +96,80 @@
                 <field name="name" />
                 <field name="system_id" />
                 <!-- <group expand="0" string="Group By"> -->
-                    <filter name="group_by_system" string="Group by System" context="{'group_by': 'system_id'}" />
+                <filter
+                    name="group_by_system"
+                    string="Group by System"
+                    context="{'group_by': 'system_id'}"
+                />
                 <!-- </group> -->
             </search>
         </field>
     </record>
 
     <record id="risk_kanban_view" model="ir.ui.view">
-      <field name="name">mgmt_risk.risk_kanban_view</field>
-      <field name="model">mgmt.risk</field>
-      <field name="arch" type="xml">
-        <kanban
+        <field name="name">mgmt_risk.risk_kanban_view</field>
+        <field name="model">mgmt.risk</field>
+        <field name="arch" type="xml">
+            <kanban
                 class="o_kanban_small_column"
                 default_group_by="stage"
                 quick_create="False"
             >
-          <field name="name" />
-          <field name="risk_owner_id" />
-          <field name="severity_id" />
-          <field name="probability_id" />
-          <field name="severity_color" />
-          <field name="probability_color" />
-          <field name="risk_combination_color" />
+                <field name="name" />
+                <field name="risk_owner_id" />
+                <field name="severity_id" />
+                <field name="probability_id" />
+                <field name="severity_color" />
+                <field name="probability_color" />
+                <field name="risk_combination_color" />
 
-          <templates>
-            <t t-name="card">
-              <div t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill o_kanban_card oe_kanban_action_affect_full">
-                <div class="o_kanban_card_header">
-                  <div class="o_kanban_card_header_title">
-                    <div class="o_primary"><field name="name" /></div>
-                  </div>
-                </div>
-                <div class="o_kanban_card_body">
-                  <div class="o_kanban_details">
-                    <div>Owner: <field name="risk_owner_id" /></div>
-                    <div class="mt-1 mb-1">
+                <templates>
+                    <t t-name="card">
+                        <div
+                            t-attf-class="oe_kanban_global_click o_kanban_record_has_image_fill o_kanban_card oe_kanban_action_affect_full"
+                        >
+                            <div class="o_kanban_card_header">
+                                <div class="o_kanban_card_header_title">
+                                    <div class="o_primary">
+                                        <field name="name" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_kanban_card_body">
+                                <div class="o_kanban_details">
+                                    <div>Owner: <field name="risk_owner_id" /></div>
+                                    <div class="mt-1 mb-1">
                       Severity:
                       <span
-                                          t-attf-class="p-1  color-index-#{record.severity_color.value}"
-                                      >
-                        <field name="severity_id" />
-                      </span>
+                                        t-attf-class="p-1  color-index-#{record.severity_color.value}"
+                                    >
+                                        <field name="severity_id" />
+                                    </span>
                     </div>
-                    <div class="mt-1 mb-1">
+                                    <div class="mt-1 mb-1">
                       Probability:
                       <span
-                                          t-attf-class="p-1  color-index-#{record.probability_color.value}"
-                                      >
-                        <field name="probability_id" />
-                      </span>
+                                        t-attf-class="p-1  color-index-#{record.probability_color.value}"
+                                    >
+                                        <field name="probability_id" />
+                                    </span>
                     </div>
-                    <div class="mt-1 mb-1">
+                                    <div class="mt-1 mb-1">
                       Score:
                       <span
-                                          t-attf-class="p-1 color-index-#{record.risk_combination_color.value}"
-                                      >
-                        <field name="risk_combination_id" />
-                      </span>
+                                        t-attf-class="p-1 color-index-#{record.risk_combination_color.value}"
+                                    >
+                                        <field name="risk_combination_id" />
+                                    </span>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </t>
-          </templates>
-
-        </kanban>
-      </field>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
     </record>
-
 
     <record id="action_mgmt_risk_view" model="ir.actions.act_window">
         <field name="name">Risks</field>
@@ -179,5 +186,4 @@
         action="action_mgmt_risk_view"
         sequence="10"
     />
-
 </odoo>

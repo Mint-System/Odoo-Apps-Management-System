@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="risk_form_view" model="ir.ui.view">
         <field name="name">mgmt_risk_risk.risk_form_view</field>
         <field name="model">mgmt.risk</field>
@@ -18,5 +17,4 @@
             </xpath>
         </field>
     </record>
-
 </odoo>
