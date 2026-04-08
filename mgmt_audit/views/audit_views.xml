@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
-  <record id="audit_form_view" model="ir.ui.view">
+    <record id="audit_form_view" model="ir.ui.view">
         <field name="name">mgmt_audit.audit_form_view</field>
         <field name="model">mgmt.audit</field>
         <field name="arch" type="xml">
@@ -15,8 +14,7 @@
                     />
                 </header>
                 <sheet>
-                    <div class="oe_button_box" name="button_box">
-                    </div>
+                    <div class="oe_button_box" name="button_box" />
                     <div class="oe_title">
                         <h1>
                             <field name="name" />
@@ -85,33 +83,33 @@
                 quick_create="false"
             >
                 <!-- fields used in the card -->
-                <field name="name"/>
-                <field name="type"/>
-                <field name="planned_date"/>
-                <field name="stage_id"/>
-                <field name="responsible_id"/>
+                <field name="name" />
+                <field name="type" />
+                <field name="planned_date" />
+                <field name="stage_id" />
+                <field name="responsible_id" />
 
                 <templates>
                     <!-- Odoo 19 card template -->
                     <t t-name="card">
                         <div class="row mb4">
                             <div class="col-2 text-nowrap">
-                                <field class="fw-bold" name="name"/>
-                            </div>                      
+                                <field class="fw-bold" name="name" />
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div>
                                     <span class="fw-bold">Type: </span>
-                                    <field name="type"/>
+                                    <field name="type" />
                                 </div>
                                 <div>
                                     <span class="fw-bold">Planned: </span>
-                                    <field name="planned_date"/>
+                                    <field name="planned_date" />
                                 </div>
                                 <div>
                                     <span class="fw-bold">Responsible: </span>
-                                    <field name="responsible_id"/>
+                                    <field name="responsible_id" />
                                 </div>
                             </div>
                         </div>
@@ -120,7 +118,6 @@
             </kanban>
         </field>
     </record>
-
 
     <record id="audit_search_view" model="ir.ui.view">
         <field name="name">mgmt_audit.audit_search_view</field>
@@ -133,10 +130,10 @@
     </record>
 
     <record id="action_mgmt_audit_view" model="ir.actions.act_window">
-      <field name="name">Audits</field>
-      <field name="res_model">mgmt.audit</field>
-      <field name="view_mode">kanban,list,form</field>
-      <field name="search_view_id" ref="mgmt_audit.audit_search_view" />
+        <field name="name">Audits</field>
+        <field name="res_model">mgmt.audit</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="search_view_id" ref="mgmt_audit.audit_search_view" />
     </record>
 
     <menuitem
@@ -146,5 +143,4 @@
         action="action_mgmt_audit_view"
         sequence="10"
     />
-
 </odoo>
