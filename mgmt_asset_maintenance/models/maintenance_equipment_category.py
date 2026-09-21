@@ -8,6 +8,6 @@ _logger = logging.getLogger(__name__)
 
 
 class MaintenanceEquipmentCategory(models.Model):
-    _inherit = ["maintenance.equipment.category"]
+    _inherit = "maintenance.equipment.category"
 
     owner_id = fields.Many2one("res.partner")

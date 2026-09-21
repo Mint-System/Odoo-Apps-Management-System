@@ -8,6 +8,6 @@ _logger = logging.getLogger(__name__)
 
 
 class HrEmployee(models.Model):
-    _inherit = ["hr.employee"]
+    _inherit = "hr.employee"
 
     owner_id = fields.Many2one("res.partner")

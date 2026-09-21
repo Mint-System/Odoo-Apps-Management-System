@@ -8,6 +8,6 @@ _logger = logging.getLogger(__name__)
 
 
 class ProductProduct(models.Model):
-    _inherit = ["product.product"]
+    _inherit = "product.product"
 
     owner_id = fields.Many2one("res.partner")

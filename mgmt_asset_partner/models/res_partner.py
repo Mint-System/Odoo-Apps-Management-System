@@ -8,6 +8,6 @@ _logger = logging.getLogger(__name__)
 
 
 class ResPartner(models.Model):
-    _inherit = ["res.partner"]
+    _inherit = "res.partner"
 
     owner_id = fields.Many2one("res.partner")
