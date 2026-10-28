@@ -10,7 +10,7 @@
     "development_status": "Production/Stable",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["base", "mgmt_requirement", "knowledge"],
+    "depends": ["mgmt_requirement", "knowledge"],
     "data": [
         "security/ir.model.access.csv",
         "views/paragraph_views.xml",
